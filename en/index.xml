@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yasunori SAWAKI</title>
+    <link>http://example.org/en/</link>
+    <description>Recent content on Yasunori SAWAKI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Mon, 13 Feb 2023 06:56:15 +0900</lastBuildDate><atom:link href="http://example.org/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Links</title>
+      <link>http://example.org/en/link/</link>
+      <pubDate>Sun, 12 Feb 2023 16:56:53 +0900</pubDate>
+      
+      <guid>http://example.org/en/link/</guid>
+      <description>Universities   [EQHZ] Research Center for Earthquake Hazards, DPRI, Kyoto University   Earthquake Research Institute, The University of Tokyo   Research Center for Prediction of Earthquakes and Volcanic Eruptions, Graduate School of Science, Tohoku University   Institute of Seismology and Volcanology, Kyushu University   Research institutes Seismological projects   Science of Slow-to-Fast Earthquakes | Grant-in-Aid for Transformative Research Areas (A)   Science of Slow Earthquakes   Catalogs   Slow Earthquake Database (Kano et al.</description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>http://example.org/en/research/</link>
+      <pubDate>Sun, 12 Feb 2023 16:56:53 +0900</pubDate>
+      
+      <guid>http://example.org/en/research/</guid>
+      <description>Now writing&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Slow-to-Fast Earthquake A03 group workshop in Beppu</title>
+      <link>http://example.org/en/news/2023/02/0004/</link>
+      <pubDate>Sun, 12 Feb 2023 11:33:24 +0900</pubDate>
+      
+      <guid>http://example.org/en/news/2023/02/0004/</guid>
+      <description>A03 group for Slow-to-Fast Earthquake held a workshop in Beppu city in Feb 9&amp;ndash;11 2023. I had a talk about the spatial relationship of slow earthquakes and seismic impedance contrasts in the Nankai subduction zone.</description>
+    </item>
+    
+    <item>
+      <title>CV and publication list</title>
+      <link>http://example.org/en/news/2023/02/0002/</link>
+      <pubDate>Mon, 06 Feb 2023 05:35:48 +0900</pubDate>
+      
+      <guid>http://example.org/en/news/2023/02/0002/</guid>
+      <description>  Publication list was created.  CV was created.  Links was created.  </description>
+    </item>
+    
+    <item>
+      <title>Privacy policy</title>
+      <link>http://example.org/en/privacy/</link>
+      <pubDate>Sun, 05 Feb 2023 21:17:42 +0900</pubDate>
+      
+      <guid>http://example.org/en/privacy/</guid>
+      <description>Copyright The copyright of all text and images on this website belongs to the administrator (Y.S.). Unauthorized reproduction beyond the legally permitted scope of quotation is prohibited.
+Linking to this Website You are free to link to this website, but please refrain from linking directly to images.</description>
+    </item>
+    
+    <item>
+      <title>CV</title>
+      <link>http://example.org/en/about/</link>
+      <pubDate>Sun, 05 Feb 2023 17:46:10 +0900</pubDate>
+      
+      <guid>http://example.org/en/about/</guid>
+      <description>Yasunori Sawaki  PhD student studying seismology at DPRI, Kyoto University, Japan  Degree  Mar. 2020 | M.Sc. in Kyoto University, Japan Mar. 2018 | B.Sc. in Tohoku University, Japan  Academic background  Apr. 2018&amp;ndash;Mar. 2023
+Graduate School of Science, Kyoto University, Japan Apr.</description>
+    </item>
+    
+    <item>
+      <title>Defense of my Doctral Dissertation</title>
+      <link>http://example.org/en/news/2023/01/0003/</link>
+      <pubDate>Fri, 27 Jan 2023 17:03:53 +0900</pubDate>
+      
+      <guid>http://example.org/en/news/2023/01/0003/</guid>
+      <description>The defense of my PhD thesis was held on Jan. 16, 2023. It was the greatest moment ever in my research life.</description>
+    </item>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>http://example.org/en/news/2023/01/0001/</link>
+      <pubDate>Wed, 25 Jan 2023 21:53:34 +0900</pubDate>
+      
+      <guid>http://example.org/en/news/2023/01/0001/</guid>
+      <description>This is the first post. I&amp;rsquo;m testing the English page.</description>
+    </item>
+    
+    <item>
+      <title>Publication list</title>
+      <link>http://example.org/en/publication/</link>
+      <pubDate>Wed, 25 Jan 2023 20:04:50 +0900</pubDate>
+      
+      <guid>http://example.org/en/publication/</guid>
+      <description>Peer-reviewed scientific articles  Sawaki, Yasunori, Yusuke Yamashita, Shukei Ohyanagi, Emmanuel Soliman M. Garcia, Aki Ito, Hiroko Sugioka, Tsutomu Takahashi, Masanao Shinohara, and Yoshihiro Ito, (2022). Seafloor depth controls seismograph orientation uncertainty. Geophysical Journal International, 232(2), 1376–1392, doi: 10.1093/gji/ggac397   Sawaki, Yasunori, Yoshihiro Ito, Kazuaki Ohta, Takuo Shibutani, and Tomotaka Iwata, (2021).</description>
+    </item>
+    
+  </channel>
+</rss>
