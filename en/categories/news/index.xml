@@ -2,44 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>News on Yasunori SAWAKI</title>
-    <link>http://example.org/en/categories/news/</link>
+    <link>https://yasuit21.github.io/en/categories/news/</link>
     <description>Recent content in News on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 12 Feb 2023 11:33:24 +0900</lastBuildDate><atom:link href="http://example.org/en/categories/news/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Feb 2023 08:43:52 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/en/categories/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Published Homepage!</title>
+      <link>https://yasuit21.github.io/en/news/2023/02/0005/</link>
+      <pubDate>Mon, 13 Feb 2023 08:43:52 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/news/2023/02/0005/</guid>
+      <description>&lt;p&gt;I finally published my homepage!&lt;br&gt;
+The URL is here: 
+
+&lt;a href=&#34;https://yasuit21.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://yasuit21.github.io/&lt;/a&gt;
+
+&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Slow-to-Fast Earthquake A03 group workshop in Beppu</title>
-      <link>http://example.org/en/news/2023/02/0004/</link>
+      <link>https://yasuit21.github.io/en/news/2023/02/0004/</link>
       <pubDate>Sun, 12 Feb 2023 11:33:24 +0900</pubDate>
       
-      <guid>http://example.org/en/news/2023/02/0004/</guid>
+      <guid>https://yasuit21.github.io/en/news/2023/02/0004/</guid>
       <description>A03 group for Slow-to-Fast Earthquake held a workshop in Beppu city in Feb 9&amp;ndash;11 2023. I had a talk about the spatial relationship of slow earthquakes and seismic impedance contrasts in the Nankai subduction zone.</description>
     </item>
     
     <item>
       <title>CV and publication list</title>
-      <link>http://example.org/en/news/2023/02/0002/</link>
+      <link>https://yasuit21.github.io/en/news/2023/02/0002/</link>
       <pubDate>Mon, 06 Feb 2023 05:35:48 +0900</pubDate>
       
-      <guid>http://example.org/en/news/2023/02/0002/</guid>
+      <guid>https://yasuit21.github.io/en/news/2023/02/0002/</guid>
       <description>  Publication list was created.  CV was created.  Links was created.  </description>
     </item>
     
     <item>
       <title>Defense of my Doctral Dissertation</title>
-      <link>http://example.org/en/news/2023/01/0003/</link>
+      <link>https://yasuit21.github.io/en/news/2023/01/0003/</link>
       <pubDate>Fri, 27 Jan 2023 17:03:53 +0900</pubDate>
       
-      <guid>http://example.org/en/news/2023/01/0003/</guid>
+      <guid>https://yasuit21.github.io/en/news/2023/01/0003/</guid>
       <description>The defense of my PhD thesis was held on Jan. 16, 2023. It was the greatest moment ever in my research life.</description>
     </item>
     
     <item>
       <title>Hello World!</title>
-      <link>http://example.org/en/news/2023/01/0001/</link>
+      <link>https://yasuit21.github.io/en/news/2023/01/0001/</link>
       <pubDate>Wed, 25 Jan 2023 21:53:34 +0900</pubDate>
       
-      <guid>http://example.org/en/news/2023/01/0001/</guid>
+      <guid>https://yasuit21.github.io/en/news/2023/01/0001/</guid>
       <description>This is the first post. I&amp;rsquo;m testing the English page.</description>
     </item>
     

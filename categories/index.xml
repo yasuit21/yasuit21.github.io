@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Yasunori SAWAKI</title>
-    <link>http://example.org/categories/</link>
+    <link>https://yasuit21.github.io/categories/</link>
     <description>Recent content in Categories on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 13 Feb 2023 01:00:51 +0900</lastBuildDate><atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Feb 2023 08:43:43 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>News</title>
+      <link>https://yasuit21.github.io/categories/news/</link>
+      <pubDate>Mon, 13 Feb 2023 08:43:43 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/categories/news/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ObsPy</title>
-      <link>http://example.org/categories/obspy/</link>
+      <link>https://yasuit21.github.io/categories/obspy/</link>
       <pubDate>Mon, 13 Feb 2023 01:00:51 +0900</pubDate>
       
-      <guid>http://example.org/categories/obspy/</guid>
+      <guid>https://yasuit21.github.io/categories/obspy/</guid>
       <description>このページは，学生や研究者がObsPyを使用する際の参考になるような資料を提供することを目指す．</description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>http://example.org/categories/python/</link>
+      <link>https://yasuit21.github.io/categories/python/</link>
       <pubDate>Sun, 12 Feb 2023 23:24:45 +0900</pubDate>
       
-      <guid>http://example.org/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>News</title>
-      <link>http://example.org/categories/news/</link>
-      <pubDate>Sun, 12 Feb 2023 11:33:21 +0900</pubDate>
-      
-      <guid>http://example.org/categories/news/</guid>
+      <guid>https://yasuit21.github.io/categories/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>http://example.org/categories/hugo/</link>
+      <link>https://yasuit21.github.io/categories/hugo/</link>
       <pubDate>Thu, 26 Jan 2023 01:50:57 +0900</pubDate>
       
-      <guid>http://example.org/categories/hugo/</guid>
+      <guid>https://yasuit21.github.io/categories/hugo/</guid>
       <description></description>
     </item>
     

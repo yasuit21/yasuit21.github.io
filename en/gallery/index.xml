@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gallery on Yasunori SAWAKI</title>
-    <link>http://example.org/en/gallery/</link>
+    <link>https://yasuit21.github.io/en/gallery/</link>
     <description>Recent content in Gallery on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 07 Feb 2023 01:34:53 +0900</lastBuildDate><atom:link href="http://example.org/en/gallery/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Feb 2023 01:34:53 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/en/gallery/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

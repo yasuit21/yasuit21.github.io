@@ -2,17 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yasunori SAWAKI</title>
-    <link>http://example.org/</link>
+    <link>https://yasuit21.github.io/</link>
     <description>Recent content on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 13 Feb 2023 06:56:15 +0900</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Feb 2023 06:56:15 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ホームページを公開しました</title>
+      <link>https://yasuit21.github.io/news/2023/02/0005/</link>
+      <pubDate>Mon, 13 Feb 2023 08:43:43 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/news/2023/02/0005/</guid>
+      <description>&lt;p&gt;ホームページを無事公開しました！&lt;br&gt;
+URLはこちらです： 
+
+&lt;a href=&#34;https://yasuit21.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://yasuit21.github.io/&lt;/a&gt;
+
+&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>経歴</title>
-      <link>http://example.org/about/</link>
+      <link>https://yasuit21.github.io/about/</link>
       <pubDate>Mon, 13 Feb 2023 06:56:15 +0900</pubDate>
       
-      <guid>http://example.org/about/</guid>
+      <guid>https://yasuit21.github.io/about/</guid>
       <description>佐脇 泰典 (Yasunori SAWAKI)  京都大学防災研究所地震災害研究センター・博士課程大学院生  職歴  2021年10月&amp;ndash;2023年03月
 京都大学大学院教育支援機構奨励研究員  学歴  2020年04月&amp;ndash;2023年03月
 京都大学　大学院理学研究科地球惑星科学専攻地球物理学分野（博士後期課程） 2018年04月&amp;ndash;2020年03月
@@ -24,10 +38,10 @@
     
     <item>
       <title>ObsPy解説記事の執筆予定</title>
-      <link>http://example.org/post/2023/02/0002/</link>
+      <link>https://yasuit21.github.io/post/2023/02/0002/</link>
       <pubDate>Sun, 12 Feb 2023 23:24:45 +0900</pubDate>
       
-      <guid>http://example.org/post/2023/02/0002/</guid>
+      <guid>https://yasuit21.github.io/post/2023/02/0002/</guid>
       <description>&lt;p&gt;
 
 &lt;a href=&#34;https://docs.obspy.org/master/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;ObsPy&lt;/a&gt;
@@ -42,28 +56,28 @@
     
     <item>
       <title>リンク集</title>
-      <link>http://example.org/link/</link>
+      <link>https://yasuit21.github.io/link/</link>
       <pubDate>Sun, 12 Feb 2023 16:56:53 +0900</pubDate>
       
-      <guid>http://example.org/link/</guid>
+      <guid>https://yasuit21.github.io/link/</guid>
       <description>大学関係   京都大学防災研究所 地震災害研究センター   京都大学防災研究所 宮崎観測所   東京大学地震研究所   東北大学大学院理学研究科 地震・噴火予知研究観測センター   九州大学大学院理学研究院 地震火山観測研究センター   北海道大学大学院理学研究院 地震火山研究観測センター   研究機関関係 地震学関係   Slow-to-Fast地震学｜令和3〜7年度 文部科学省 科学研究費助成事業 学術変革領域研究(A)   新学術領域研究「スロー地震学」   カタログ   Slow Earthquake Database (Kano et al.</description>
     </item>
     
     <item>
       <title>研究成果</title>
-      <link>http://example.org/research/</link>
+      <link>https://yasuit21.github.io/research/</link>
       <pubDate>Sun, 12 Feb 2023 16:56:53 +0900</pubDate>
       
-      <guid>http://example.org/research/</guid>
+      <guid>https://yasuit21.github.io/research/</guid>
       <description>現在作成中です&amp;hellip;</description>
     </item>
     
     <item>
       <title>SF地震学A03班ミニ研究会@別府に参加しました</title>
-      <link>http://example.org/news/2023/02/0004/</link>
+      <link>https://yasuit21.github.io/news/2023/02/0004/</link>
       <pubDate>Sun, 12 Feb 2023 11:33:21 +0900</pubDate>
       
-      <guid>http://example.org/news/2023/02/0004/</guid>
+      <guid>https://yasuit21.github.io/news/2023/02/0004/</guid>
       <description>2023年2月9-11日に別府市で行われたSlow-to-Fast地震学A03班ミニ研究会に参加しました． 構造地質学，地球化学，測地学，沈み込み帯テクトニクス，観測地震学などの観点から 幅広い発表が行われ，活発な議論が繰り広げられていました．
 私は「南海トラフ沈み込み帯のインピーダンスコントラストとスロー地震」というタイトルで発表しました． 沈み込み帯の不均質構造とスロー地震活動との空間関係について議論させていただきました．
 関係者の皆さま，ありがとうございました．</description>
@@ -71,29 +85,29 @@
     
     <item>
       <title>研究成果リスト等の作成</title>
-      <link>http://example.org/news/2023/02/0002/</link>
+      <link>https://yasuit21.github.io/news/2023/02/0002/</link>
       <pubDate>Mon, 06 Feb 2023 05:35:47 +0900</pubDate>
       
-      <guid>http://example.org/news/2023/02/0002/</guid>
+      <guid>https://yasuit21.github.io/news/2023/02/0002/</guid>
       <description>  研究成果リスト を作成しました．  経歴 を作成しました．  リンク集 を作成しました．  </description>
     </item>
     
     <item>
       <title>プライバシーポリシー</title>
-      <link>http://example.org/privacy/</link>
+      <link>https://yasuit21.github.io/privacy/</link>
       <pubDate>Sun, 05 Feb 2023 17:29:05 +0900</pubDate>
       
-      <guid>http://example.org/privacy/</guid>
+      <guid>https://yasuit21.github.io/privacy/</guid>
       <description>著作権について 本ウェブサイトに掲載している文章や画像の著作権は，管理者に帰属します． 法的に認められている引用範囲を超えて無断転載することは禁止します．
 リンクについて 本ウェブサイトへのリンクは自由です． ただし，画像等の直リンクはご遠慮ください．</description>
     </item>
     
     <item>
       <title>博士論文公聴会を終えました</title>
-      <link>http://example.org/news/2023/01/0003/</link>
+      <link>https://yasuit21.github.io/news/2023/01/0003/</link>
       <pubDate>Fri, 27 Jan 2023 17:00:00 +0900</pubDate>
       
-      <guid>http://example.org/news/2023/01/0003/</guid>
+      <guid>https://yasuit21.github.io/news/2023/01/0003/</guid>
       <description>2023年01月16日に私の博士論文公聴会が開かれました．
 発表タイトルは，
 「近地深発地震波形記録を含む広義レシーバ関数が示す南海トラフ沈み込み帯の陸域並びに海域下の不均質構造」 です．
@@ -102,10 +116,10 @@
     
     <item>
       <title>Hugoの設定（備忘録）</title>
-      <link>http://example.org/post/2023/01/0001/</link>
+      <link>https://yasuit21.github.io/post/2023/01/0001/</link>
       <pubDate>Thu, 26 Jan 2023 01:50:57 +0900</pubDate>
       
-      <guid>http://example.org/post/2023/01/0001/</guid>
+      <guid>https://yasuit21.github.io/post/2023/01/0001/</guid>
       <description>&lt;h3 id=&#34;いずれ自分の役に立つかも&#34;&gt;いずれ自分の役に立つかも&amp;hellip;？&lt;/h3&gt;
 &lt;p&gt;とりあえず試してみた
 
@@ -121,19 +135,19 @@
     
     <item>
       <title>研究成果リスト</title>
-      <link>http://example.org/publication/</link>
+      <link>https://yasuit21.github.io/publication/</link>
       <pubDate>Wed, 25 Jan 2023 20:04:50 +0900</pubDate>
       
-      <guid>http://example.org/publication/</guid>
+      <guid>https://yasuit21.github.io/publication/</guid>
       <description>査読付き論文  Sawaki, Yasunori, Yusuke Yamashita, Shukei Ohyanagi, Emmanuel Soliman M. Garcia, Aki Ito, Hiroko Sugioka, Tsutomu Takahashi, Masanao Shinohara, and Yoshihiro Ito, (2022). Seafloor depth controls seismograph orientation uncertainty. Geophysical Journal International, 232(2), 1376–1392, doi: 10.1093/gji/ggac397   Sawaki, Yasunori, Yoshihiro Ito, Kazuaki Ohta, Takuo Shibutani, and Tomotaka Iwata, (2021).</description>
     </item>
     
     <item>
       <title>Hello World!</title>
-      <link>http://example.org/news/2023/01/0001/</link>
+      <link>https://yasuit21.github.io/news/2023/01/0001/</link>
       <pubDate>Wed, 25 Jan 2023 18:22:25 +0900</pubDate>
       
-      <guid>http://example.org/news/2023/01/0001/</guid>
+      <guid>https://yasuit21.github.io/news/2023/01/0001/</guid>
       <description>ただいまホームページ作成中です． Hugo と Mainroad テーマを用いています．</description>
     </item>
     

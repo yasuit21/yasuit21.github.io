@@ -20,7 +20,7 @@ WSL Ubuntu なら apt install で一発
 sudo apt install hugo
 "><meta itemprop="datePublished" content="2023-02-05T20:31:00+09:00" />
 <meta itemprop="dateModified" content="2023-02-13T00:37:41+09:00" />
-<meta itemprop="wordCount" content="90">
+<meta itemprop="wordCount" content="103">
 <meta itemprop="keywords" content="hugo,mainroad,備忘録," />
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hugoの設定（備忘録）"/>
@@ -247,6 +247,7 @@ sudo apt install hugo
         <li><a href="#layoutsの活用"><code>layouts</code>の活用</a></li>
         <li><a href="#その他">その他</a></li>
         <li><a href="#hugoをローカルでテストする場合">Hugoをローカルでテストする場合</a></li>
+        <li><a href="#公開の流れ">公開の流れ</a></li>
         <li><a href="#参考文献">参考文献</a></li>
       </ul>
     </li>
@@ -324,6 +325,16 @@ git submodule add https://github.com/vimux/mainroad.git themes/mainroad
 hugo -t mainroad
 hugo server -D
 </code></pre><p>localhost:1313にアクセス</p>
+<h3 id="公開の流れ">公開の流れ</h3>
+<ol>
+<li><code>xxx.github.io</code>のpublicレポジトリ作成</li>
+<li><code>public</code>を作業用レポジトリ<code>yyy</code>の管理下から外す
+<pre tabindex="0"><code>git rm -r public/
+</code></pre></li>
+<li><code>xxx.github.io</code>を作業用レポジトリ<code>yyy</code>のsubmoduleとして，<code>public</code>に指定する
+<pre tabindex="0"><code>git submodule add https://github.com/xxx/xxx.github.io.git public
+</code></pre></li>
+</ol>
 <h3 id="参考文献">参考文献</h3>
 <ul>
 <li>
@@ -390,11 +401,11 @@ hugo server -D
 	<h4 class="widget__title">最近の投稿</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/news/2023/02/0005/">ホームページを公開しました</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/2023/02/0002/">ObsPy解説記事の執筆予定</a></li>
 			<li class="widget__item"><a class="widget__link" href="/news/2023/02/0004/">SF地震学A03班ミニ研究会@別府に参加しました</a></li>
 			<li class="widget__item"><a class="widget__link" href="/news/2023/02/0002/">研究成果リスト等の作成</a></li>
 			<li class="widget__item"><a class="widget__link" href="/news/2023/01/0003/">博士論文公聴会を終えました</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/2023/01/0001/">Hugoの設定（備忘録）</a></li>
 		</ul>
 	</div>
 </div>
@@ -408,7 +419,7 @@ hugo server -D
 				</li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/news/">News</a>&nbsp;
-				<span class="widget__counter widget__counter--bubble">4</span>
+				<span class="widget__counter widget__counter--bubble">5</span>
 				</li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/obspy/">ObsPy</a>&nbsp;

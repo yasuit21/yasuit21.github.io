@@ -2,211 +2,224 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/en/</loc>
-    <lastmod>2023-02-13T06:56:15+09:00</lastmod>
+    <loc>https://yasuit21.github.io/en/categories/</loc>
+    <lastmod>2023-02-13T08:43:52+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/"
+                href="https://yasuit21.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/"
+                href="https://yasuit21.github.io/en/categories/"
                 />
   </url><url>
-    <loc>http://example.org/en/link/</loc>
+    <loc>https://yasuit21.github.io/en/categories/news/</loc>
+    <lastmod>2023-02-13T08:43:52+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/categories/news/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/categories/news/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/news/2023/02/0005/</loc>
+    <lastmod>2023-02-13T08:43:52+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/news/2023/02/0005/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/news/2023/02/0005/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/</loc>
+    <lastmod>2023-02-13T06:56:15+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/link/</loc>
     <lastmod>2023-02-12T16:56:53+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/link/"
+                href="https://yasuit21.github.io/link/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/link/"
+                href="https://yasuit21.github.io/en/link/"
                 />
   </url><url>
-    <loc>http://example.org/en/research/</loc>
+    <loc>https://yasuit21.github.io/en/research/</loc>
     <lastmod>2023-02-12T16:56:53+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/research/"
+                href="https://yasuit21.github.io/research/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/research/"
+                href="https://yasuit21.github.io/en/research/"
                 />
   </url><url>
-    <loc>http://example.org/en/categories/</loc>
+    <loc>https://yasuit21.github.io/en/news/2023/02/0004/</loc>
     <lastmod>2023-02-13T06:56:15+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/categories/"
+                href="https://yasuit21.github.io/news/2023/02/0004/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/categories/"
+                href="https://yasuit21.github.io/en/news/2023/02/0004/"
                 />
   </url><url>
-    <loc>http://example.org/en/categories/news/</loc>
-    <lastmod>2023-02-13T06:56:15+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://example.org/categories/news/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://example.org/en/categories/news/"
-                />
-  </url><url>
-    <loc>http://example.org/en/news/2023/02/0004/</loc>
-    <lastmod>2023-02-13T06:56:15+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://example.org/news/2023/02/0004/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://example.org/en/news/2023/02/0004/"
-                />
-  </url><url>
-    <loc>http://example.org/en/gallery/</loc>
+    <loc>https://yasuit21.github.io/en/gallery/</loc>
     <lastmod>2023-02-07T01:34:53+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/gallery/"
+                href="https://yasuit21.github.io/gallery/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/gallery/"
+                href="https://yasuit21.github.io/en/gallery/"
                 />
   </url><url>
-    <loc>http://example.org/en/news/</loc>
+    <loc>https://yasuit21.github.io/en/news/</loc>
     <lastmod>2023-02-07T01:34:53+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/news/"
+                href="https://yasuit21.github.io/news/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/news/"
+                href="https://yasuit21.github.io/en/news/"
                 />
   </url><url>
-    <loc>http://example.org/en/news/2023/02/0002/</loc>
+    <loc>https://yasuit21.github.io/en/news/2023/02/0002/</loc>
     <lastmod>2023-02-13T00:37:41+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/news/2023/02/0002/"
+                href="https://yasuit21.github.io/news/2023/02/0002/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/news/2023/02/0002/"
+                href="https://yasuit21.github.io/en/news/2023/02/0002/"
                 />
   </url><url>
-    <loc>http://example.org/en/privacy/</loc>
+    <loc>https://yasuit21.github.io/en/privacy/</loc>
     <lastmod>2023-02-07T01:34:53+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/privacy/"
+                href="https://yasuit21.github.io/privacy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/privacy/"
+                href="https://yasuit21.github.io/en/privacy/"
                 />
   </url><url>
-    <loc>http://example.org/en/about/</loc>
+    <loc>https://yasuit21.github.io/en/about/</loc>
     <lastmod>2023-02-05T17:46:10+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/about/"
+                href="https://yasuit21.github.io/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/about/"
+                href="https://yasuit21.github.io/en/about/"
                 />
   </url><url>
-    <loc>http://example.org/en/news/2023/01/0003/</loc>
+    <loc>https://yasuit21.github.io/en/news/2023/01/0003/</loc>
     <lastmod>2023-02-13T00:37:41+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/news/2023/01/0003/"
+                href="https://yasuit21.github.io/news/2023/01/0003/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/news/2023/01/0003/"
+                href="https://yasuit21.github.io/en/news/2023/01/0003/"
                 />
   </url><url>
-    <loc>http://example.org/en/post/</loc>
+    <loc>https://yasuit21.github.io/en/post/</loc>
     <lastmod>2023-01-27T10:29:57+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/post/"
+                href="https://yasuit21.github.io/post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/post/"
+                href="https://yasuit21.github.io/en/post/"
                 />
   </url><url>
-    <loc>http://example.org/en/news/2023/01/0001/</loc>
+    <loc>https://yasuit21.github.io/en/news/2023/01/0001/</loc>
     <lastmod>2023-02-13T00:37:41+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/news/2023/01/0001/"
+                href="https://yasuit21.github.io/news/2023/01/0001/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/news/2023/01/0001/"
+                href="https://yasuit21.github.io/en/news/2023/01/0001/"
                 />
   </url><url>
-    <loc>http://example.org/en/publication/</loc>
+    <loc>https://yasuit21.github.io/en/publication/</loc>
     <lastmod>2023-02-13T00:37:41+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/publication/"
+                href="https://yasuit21.github.io/publication/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/publication/"
+                href="https://yasuit21.github.io/en/publication/"
                 />
   </url><url>
-    <loc>http://example.org/en/tags/</loc>
+    <loc>https://yasuit21.github.io/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://example.org/tags/"
+                href="https://yasuit21.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/tags/"
+                href="https://yasuit21.github.io/en/tags/"
                 />
   </url>
 </urlset>
