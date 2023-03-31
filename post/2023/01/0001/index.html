@@ -56,7 +56,7 @@ sudo apt install hugo
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/fontawesome-6.3.0/css/all.css">
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
@@ -205,13 +205,27 @@ sudo apt install hugo
         
       </a>
     </li>
-    <li class="menu__item">
+    <li class="menu__item menu__dropdown">
       <a class="menu__link" href="/gallery/">
         
-          <span class="menu__text">ギャラリー</span>
+        <span class="menu__text">ギャラリー</span>
+        <label class="drop-icon" for="ギャラリー">▾</label>
         
       </a>
+      <input type="checkbox" id="ギャラリー">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/categories/photo/">
+            
+            <span class="menu__text">写真</span>
+            
+          </a>
+          </li>
+        
+      </ul>
     </li>
+    
     <li class="menu__item">
       <a class="menu__link" href="/link/">
         
@@ -316,8 +330,8 @@ git submodule add https://github.com/vimux/mainroad.git themes/mainroad
 
  も作成．<code>000x/index.en.md</code>とする．<code>[languages.en]</code>内に指定</li>
 </ul>
-<!-- - [英語版ページ](/en)を`content_english`ディレクトリ直下に構成し，`[languages.en]`内に指定 -->
-<!-- - `content_english`内の`.md`は原則`content`内のシンボリックリンクとする -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h3 id="layoutsの活用"><code>layouts</code>の活用</h3>
 <ul>
 <li><code>shortcodes/r.html</code>: markdown中に生htmlを書ける: {{&lt; r &gt;}}&hellip;{{&lt; /r &gt;}}</li>
@@ -415,11 +429,11 @@ hugo server -D
 	<h4 class="widget__title">最近の投稿</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/news/2023/03/0007/">博士の学位を取得しました</a></li>
+			<li class="widget__item"><a class="widget__link" href="/news/2023/03/0006/">SF地震学研究集会@台湾に参加しました</a></li>
 			<li class="widget__item"><a class="widget__link" href="/news/2023/02/0005/">ホームページを公開しました</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/2023/02/0002/">ObsPy解説記事の執筆予定</a></li>
 			<li class="widget__item"><a class="widget__link" href="/news/2023/02/0004/">SF地震学A03班ミニ研究会@別府に参加しました</a></li>
-			<li class="widget__item"><a class="widget__link" href="/news/2023/02/0002/">研究成果リスト等の作成</a></li>
-			<li class="widget__item"><a class="widget__link" href="/news/2023/01/0003/">博士論文公聴会を終えました</a></li>
 		</ul>
 	</div>
 </div>
@@ -433,7 +447,7 @@ hugo server -D
 				</li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/news/">News</a>&nbsp;
-				<span class="widget__counter widget__counter--bubble">5</span>
+				<span class="widget__counter widget__counter--bubble">7</span>
 				</li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/obspy/">ObsPy</a>&nbsp;
