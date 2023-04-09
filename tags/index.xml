@@ -6,20 +6,38 @@
     <description>Recent content in Tags on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 12 Feb 2023 23:24:45 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Apr 2023 21:00:40 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>ObsPy</title>
-      <link>https://yasuit21.github.io/tags/obspy/</link>
-      <pubDate>Sun, 12 Feb 2023 23:24:45 +0900</pubDate>
+      <title>Anaconda</title>
+      <link>https://yasuit21.github.io/tags/anaconda/</link>
+      <pubDate>Sun, 09 Apr 2023 21:00:40 +0900</pubDate>
       
-      <guid>https://yasuit21.github.io/tags/obspy/</guid>
+      <guid>https://yasuit21.github.io/tags/anaconda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JupyterLab</title>
+      <link>https://yasuit21.github.io/tags/jupyterlab/</link>
+      <pubDate>Sun, 09 Apr 2023 21:00:40 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/tags/jupyterlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PyGMT</title>
+      <link>https://yasuit21.github.io/tags/pygmt/</link>
+      <pubDate>Sun, 09 Apr 2023 21:00:40 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/tags/pygmt/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
       <link>https://yasuit21.github.io/tags/python/</link>
-      <pubDate>Sun, 12 Feb 2023 23:24:45 +0900</pubDate>
+      <pubDate>Sun, 09 Apr 2023 21:00:40 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/tags/python/</guid>
       <description></description>
@@ -28,9 +46,18 @@
     <item>
       <title>備忘録</title>
       <link>https://yasuit21.github.io/tags/%E5%82%99%E5%BF%98%E9%8C%B2/</link>
-      <pubDate>Sun, 12 Feb 2023 23:24:45 +0900</pubDate>
+      <pubDate>Sun, 09 Apr 2023 21:00:40 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/tags/%E5%82%99%E5%BF%98%E9%8C%B2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ObsPy</title>
+      <link>https://yasuit21.github.io/tags/obspy/</link>
+      <pubDate>Sun, 12 Feb 2023 23:24:45 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/tags/obspy/</guid>
       <description></description>
     </item>
     
