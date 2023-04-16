@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://yasuit21.github.io/en/categories/</loc>
-    <lastmod>2023-04-03T23:59:20+09:00</lastmod>
+    <lastmod>2023-04-16T13:03:46+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -249,6 +249,19 @@
                 href="https://yasuit21.github.io/en/publication/"
                 />
   </url><url>
+    <loc>https://yasuit21.github.io/en/categories/photo/</loc>
+    <lastmod>2023-04-16T13:03:46+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/categories/photo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/categories/photo/"
+                />
+  </url><url>
     <loc>https://yasuit21.github.io/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -259,6 +272,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yasuit21.github.io/en/tags/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/gallery/photo/202303_taiwan/</loc>
+    <lastmod>2023-04-16T13:03:46+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/gallery/photo/202303_taiwan/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/gallery/photo/202303_taiwan/"
                 />
   </url>
 </urlset>

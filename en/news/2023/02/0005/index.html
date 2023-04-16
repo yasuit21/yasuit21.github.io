@@ -150,13 +150,27 @@ https://yasuit21.github.io/en/
         
       </a>
     </li>
-    <li class="menu__item">
+    <li class="menu__item menu__dropdown">
       <a class="menu__link" href="/en/gallery/">
         
-          <span class="menu__text">Gallery</span>
+        <span class="menu__text">Gallery</span>
+        <label class="drop-icon" for="Gallery">▾</label>
         
       </a>
+      <input type="checkbox" id="Gallery">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/en/categories/photo/">
+            
+            <span class="menu__text">Photo</span>
+            
+          </a>
+          </li>
+        
+      </ul>
     </li>
+    
     <li class="menu__item">
       <a class="menu__link" href="/en/link/">
         
@@ -244,6 +258,10 @@ The URL is here:
 			<li class="widget__item">
 				<a class="widget__link" href="/en/categories/news/">News</a>&nbsp;
 				<span class="widget__counter widget__counter--bubble">8</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/photo/">Photo</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">1</span>
 				</li>
 		</ul>
 	</div>
