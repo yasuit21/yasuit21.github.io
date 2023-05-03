@@ -8,13 +8,26 @@
     <language>ja-jp</language>
     <lastBuildDate>Fri, 31 Mar 2023 16:04:26 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/en/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Taiwan</title>
+      <link>https://yasuit21.github.io/en/gallery/photo/202303_taiwan/</link>
+      <pubDate>Sun, 16 Apr 2023 13:08:13 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/gallery/photo/202303_taiwan/</guid>
+      <description>&lt;h2 id=&#34;slow-to-fast-earthquake-workshop-in-taiwan&#34;&gt;Slow-to-Fast Earthquake Workshop in Taiwan&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Period: March 13&amp;ndash;17, 2023&lt;/li&gt;
+&lt;li&gt;Visited cities: Tainan, Kaohsiung, Taitung, Hualien&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>CV</title>
       <link>https://yasuit21.github.io/en/about/</link>
       <pubDate>Mon, 03 Apr 2023 23:59:20 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/en/about/</guid>
-      <description>Yasunori Sawaki Career  Apr. 2023&amp;ndash;now
-Post-doctoral researcher in Geological Survey of Japan (AIST)  Degree  Mar. 2023 | Ph.D. (Science) in Kyoto University, Japan Mar. 2020 | M.Sc. in Kyoto University, Japan Mar. 2018 | B.Sc. in Tohoku University, Japan  Academic background  Apr.</description>
+      <description>Yasunori Sawaki Career Apr. 2023&amp;ndash;now
+Post-doctoral researcher in Geological Survey of Japan (AIST) Degree Mar. 2023 | Ph.D. (Science) in Kyoto University, Japan Mar. 2020 | M.Sc. in Kyoto University, Japan Mar. 2018 | B.Sc. in Tohoku University, Japan Academic background Apr.</description>
     </item>
     
     <item>
@@ -68,7 +81,7 @@ The URL is here:
       <pubDate>Sun, 12 Feb 2023 16:56:53 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/en/link/</guid>
-      <description>Universities   [EQHZ] Research Center for Earthquake Hazards, DPRI, Kyoto University   Earthquake Research Institute, The University of Tokyo   Research Center for Prediction of Earthquakes and Volcanic Eruptions, Graduate School of Science, Tohoku University   Institute of Seismology and Volcanology, Kyushu University   Research institutes Seismological projects   Science of Slow-to-Fast Earthquakes | Grant-in-Aid for Transformative Research Areas (A)   Science of Slow Earthquakes   Catalogs   Slow Earthquake Database (Kano et al.</description>
+      <description>Universities [EQHZ] Research Center for Earthquake Hazards, DPRI, Kyoto University Earthquake Research Institute, The University of Tokyo Research Center for Prediction of Earthquakes and Volcanic Eruptions, Graduate School of Science, Tohoku University Institute of Seismology and Volcanology, Kyushu University Research institutes Seismological projects Science of Slow-to-Fast Earthquakes | Grant-in-Aid for Transformative Research Areas (A) Science of Slow Earthquakes Catalogs Slow Earthquake Database (Kano et al.</description>
     </item>
     
     <item>
@@ -95,7 +108,7 @@ The URL is here:
       <pubDate>Mon, 06 Feb 2023 05:35:48 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/en/news/2023/02/0002/</guid>
-      <description>  Publication list was created.  CV was created.  Links was created.  </description>
+      <description> Publication list was created. CV was created. Links was created. </description>
     </item>
     
     <item>
@@ -132,20 +145,7 @@ You can disable this feature by disabling cookies.</description>
       <pubDate>Wed, 25 Jan 2023 20:04:50 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/en/publication/</guid>
-      <description>Peer-reviewed scientific articles  Akuhara, Takeshi, Yusuke Yamashita, Shukei Ohyanagi, Yasunori Sawaki, Tomoaki Yamada, and Masanao Shinohara, (2023). Shallow low-velocity layer in the Hyuga-nada accretionary prism and its hydrological implications: Insights from a passive seismic array. Journal of Geophysical Research: Solid Earth, 128, e2022JB026298.</description>
-    </item>
-    
-    <item>
-      <title>Taiwan</title>
-      <link>https://yasuit21.github.io/en/gallery/photo/202303_taiwan/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yasuit21.github.io/en/gallery/photo/202303_taiwan/</guid>
-      <description>&lt;h2 id=&#34;slow-to-fast-earthquake-workshop-in-taiwan&#34;&gt;Slow-to-Fast Earthquake Workshop in Taiwan&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Period: March 13&amp;ndash;17, 2023&lt;/li&gt;
-&lt;li&gt;Visited cities: Tainan, Kaohsiung, Taitung, Hualien&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>Peer-reviewed scientific articles Akuhara, Takeshi, Yusuke Yamashita, Shukei Ohyanagi, Yasunori Sawaki, Tomoaki Yamada, and Masanao Shinohara, (2023). Shallow low-velocity layer in the Hyuga-nada accretionary prism and its hydrological implications: Insights from a passive seismic array. Journal of Geophysical Research: Solid Earth, 128, e2022JB026298.</description>
     </item>
     
   </channel>

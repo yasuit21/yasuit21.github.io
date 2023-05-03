@@ -8,9 +8,20 @@
     <language>ja-jp</language>
     <lastBuildDate>Sun, 09 Apr 2023 22:33:44 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Intel® OneAPIをローカル環境に導入する</title>
+      <link>https://yasuit21.github.io/post/2023/04/0005/</link>
+      <pubDate>Fri, 28 Apr 2023 16:12:08 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/post/2023/04/0005/</guid>
+      <description>&lt;p&gt;Intel® OneAPIの登場によって，気楽に&lt;code&gt;ifort&lt;/code&gt;などが使えるようになった．
+Ubuntuだと&lt;code&gt;apt&lt;/code&gt;で簡単に導入できるが，非&lt;code&gt;sudo&lt;/code&gt;環境でのセットアップということで，
+以下自分向けの備忘録．&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>臺灣</title>
       <link>https://yasuit21.github.io/gallery/photo/202303_taiwan/</link>
-      <pubDate>Sun, 09 Apr 2023 22:33:44 +0900</pubDate>
+      <pubDate>Sun, 16 Apr 2023 13:08:13 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/gallery/photo/202303_taiwan/</guid>
       <description>&lt;h2 id=&#34;slow-to-fast-earthquake-workshop-in-taiwan&#34;&gt;Slow-to-Fast Earthquake Workshop in Taiwan&lt;/h2&gt;
@@ -36,15 +47,16 @@
       <pubDate>Mon, 03 Apr 2023 23:59:20 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/about/</guid>
-      <description>佐脇 泰典 (Yasunori SAWAKI)  産総研特別研究員（ポスドク研究員）
-（国立研究開発法人産業技術総合研究所　活断層・火山研究部門　地震テクトニクス研究グループ）  職歴  2023年04月&amp;ndash;現在
+      <description>佐脇 泰典 (Yasunori SAWAKI) 産総研特別研究員（ポスドク研究員）
+（国立研究開発法人産業技術総合研究所　活断層・火山研究部門　地震テクトニクス研究グループ） 職歴 2023年04月&amp;ndash;現在
 国立研究開発法人産業技術総合研究所　活断層・火山研究部門　産総研特別研究員（ポスドク） 2021年10月&amp;ndash;2023年03月
-京都大学大学院教育支援機構奨励研究員  学歴  2020年04月&amp;ndash;2023年03月
+京都大学大学院教育支援機構奨励研究員 学歴 2020年04月&amp;ndash;2023年03月
 京都大学　大学院理学研究科地球惑星科学専攻地球物理学分野（博士後期課程） 2018年04月&amp;ndash;2020年03月
 京都大学　大学院理学研究科地球惑星科学専攻地球物理学分野（修士課程） 2014年04月&amp;ndash;2018年03月
-東北大学　理学部地球惑星物質科学科  学位  2023年03月　博士（理学）・京都大学
+東北大学　理学部地球惑星物質科学科 学位 2023年03月　博士（理学）・京都大学
 「近地深発地震波形記録を含む広義レシーバ関数が示す南海トラフ沈み込み帯の陸域並びに海域下の不均質構造」 2020年03月　修士（理学）・京都大学
-「スロー地震発生領域周辺の地震学的構造の空間的特徴 –広帯域レシーバ関数法の検証と室内摩擦実験への適用–」 2018年03月　学士（理学）・東北大学</description>
+「スロー地震発生領域周辺の地震学的構造の空間的特徴 –広帯域レシーバ関数法の検証と室内摩擦実験への適用–」 2018年03月　学士（理学）・東北大学
+「phase A の格子選択配向と cold slab の地震波速度異方性」 教育経験 2021年04月&amp;ndash;2021年07月</description>
     </item>
     
     <item>
@@ -122,7 +134,7 @@ URLはこちらです：
       <pubDate>Sun, 12 Feb 2023 16:56:53 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/link/</guid>
-      <description>大学関係   京都大学防災研究所 地震災害研究センター   京都大学防災研究所 宮崎観測所   東京大学地震研究所   東北大学大学院理学研究科 地震・噴火予知研究観測センター   九州大学大学院理学研究院 地震火山観測研究センター   北海道大学大学院理学研究院 地震火山研究観測センター   研究機関関係 地震学関係   Slow-to-Fast地震学｜令和3〜7年度 文部科学省 科学研究費助成事業 学術変革領域研究(A)   新学術領域研究「スロー地震学」   カタログ   Slow Earthquake Database (Kano et al.</description>
+      <description>大学関係 京都大学防災研究所 地震災害研究センター 京都大学防災研究所 宮崎観測所 東京大学地震研究所 東北大学大学院理学研究科 地震・噴火予知研究観測センター 九州大学大学院理学研究院 地震火山観測研究センター 北海道大学大学院理学研究院 地震火山研究観測センター 研究機関関係 地震学関係 Slow-to-Fast地震学｜令和3〜7年度 文部科学省 科学研究費助成事業 学術変革領域研究(A) 新学術領域研究「スロー地震学」 カタログ Slow Earthquake Database (Kano et al., 2018) </description>
     </item>
     
     <item>
@@ -151,7 +163,7 @@ URLはこちらです：
       <pubDate>Mon, 06 Feb 2023 05:35:47 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/news/2023/02/0002/</guid>
-      <description>  研究成果リスト を作成しました．  経歴 を作成しました．  リンク集 を作成しました．  </description>
+      <description> 研究成果リスト を作成しました． 経歴 を作成しました． リンク集 を作成しました． </description>
     </item>
     
     <item>
@@ -192,8 +204,10 @@ URLはこちらです：
 基本的に自分用．&lt;/p&gt;
 &lt;h3 id=&#34;hugoのインストール&#34;&gt;&lt;code&gt;Hugo&lt;/code&gt;のインストール&lt;/h3&gt;
 &lt;p&gt;WSL Ubuntu なら apt install で一発&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install hugo
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div&gt;
+    &lt;div class=&#34;codeblock--content&#34;&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install hugo&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</description>
     </item>
     
     <item>
@@ -202,7 +216,7 @@ URLはこちらです：
       <pubDate>Wed, 25 Jan 2023 20:04:50 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/publication/</guid>
-      <description>査読付き論文  Akuhara, Takeshi, Yusuke Yamashita, Shukei Ohyanagi, Yasunori Sawaki, Tomoaki Yamada, and Masanao Shinohara, (2023). Shallow low-velocity layer in the Hyuga-nada accretionary prism and its hydrological implications: Insights from a passive seismic array. Journal of Geophysical Research: Solid Earth, 128, e2022JB026298.</description>
+      <description>査読付き論文 Akuhara, Takeshi, Yusuke Yamashita, Shukei Ohyanagi, Yasunori Sawaki, Tomoaki Yamada, and Masanao Shinohara, (2023). Shallow low-velocity layer in the Hyuga-nada accretionary prism and its hydrological implications: Insights from a passive seismic array. Journal of Geophysical Research: Solid Earth, 128, e2022JB026298.</description>
     </item>
     
     <item>

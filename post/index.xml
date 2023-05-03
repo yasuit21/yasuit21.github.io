@@ -8,6 +8,17 @@
     <language>ja-jp</language>
     <lastBuildDate>Fri, 27 Jan 2023 10:29:57 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Intel® OneAPIをローカル環境に導入する</title>
+      <link>https://yasuit21.github.io/post/2023/04/0005/</link>
+      <pubDate>Fri, 28 Apr 2023 16:12:08 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/post/2023/04/0005/</guid>
+      <description>&lt;p&gt;Intel® OneAPIの登場によって，気楽に&lt;code&gt;ifort&lt;/code&gt;などが使えるようになった．
+Ubuntuだと&lt;code&gt;apt&lt;/code&gt;で簡単に導入できるが，非&lt;code&gt;sudo&lt;/code&gt;環境でのセットアップということで，
+以下自分向けの備忘録．&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>PyGMTをAnacondaに入れて若干躓いた話</title>
       <link>https://yasuit21.github.io/post/2023/04/0004/</link>
       <pubDate>Sun, 09 Apr 2023 21:00:40 +0900</pubDate>
@@ -50,8 +61,10 @@
 基本的に自分用．&lt;/p&gt;
 &lt;h3 id=&#34;hugoのインストール&#34;&gt;&lt;code&gt;Hugo&lt;/code&gt;のインストール&lt;/h3&gt;
 &lt;p&gt;WSL Ubuntu なら apt install で一発&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install hugo
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div&gt;
+    &lt;div class=&#34;codeblock--content&#34;&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install hugo&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</description>
     </item>
     
   </channel>

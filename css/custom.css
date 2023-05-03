@@ -19,8 +19,27 @@ h2:not(.list__title.post__title) {
     border-left: solid 5px #228B22;
 }
 
+pre {
+    border: none;
+    margin-top: 0;
+}
+
 .list__thumbnail {
     float: right;
+}
+
+.codeblock--name {
+    width: fit-content;
+    margin: 1rem 0 0;
+    padding: 0.2rem;
+    padding-inline: 0.4rem;
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+    background-color: #595857;
+}
+
+.codeblock--name + .codeblock--content {
+    margin-top: 0;
 }
 
 /* scroll */

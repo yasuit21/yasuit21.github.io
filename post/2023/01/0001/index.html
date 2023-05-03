@@ -31,8 +31,10 @@ Hugo
 基本的に自分用．
 Hugoのインストール
 WSL Ubuntu なら apt install で一発
-sudo apt install hugo
-"><meta itemprop="datePublished" content="2023-02-05T20:31:00+09:00" />
+
+    sudo apt install hugo
+    
+  "><meta itemprop="datePublished" content="2023-02-05T20:31:00+09:00" />
 <meta itemprop="dateModified" content="2023-02-13T09:49:19+09:00" />
 <meta itemprop="wordCount" content="103">
 <meta itemprop="keywords" content="hugo,mainroad,備忘録," />
@@ -47,8 +49,10 @@ Hugo
 基本的に自分用．
 Hugoのインストール
 WSL Ubuntu なら apt install で一発
-sudo apt install hugo
-"/>
+
+    sudo apt install hugo
+    
+  "/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -292,18 +296,22 @@ sudo apt install hugo
 基本的に自分用．</p>
 <h3 id="hugoのインストール"><code>Hugo</code>のインストール</h3>
 <p>WSL Ubuntu なら apt install で一発</p>
-<pre tabindex="0"><code>sudo apt install hugo
-</code></pre><h3 id="githubのレポジトリ作成">GitHubのレポジトリ作成</h3>
+<div>
+    <div class="codeblock--content"><pre tabindex="0"><code>sudo apt install hugo</code></pre>
+    </div>
+  </div><h3 id="githubのレポジトリ作成">GitHubのレポジトリ作成</h3>
 <ul>
 <li>公開用(<code>xxx.github.io</code>)</li>
 <li>非公開作業用(<code>yyy</code>)</li>
 </ul>
 <p><code>yyy</code>をcloneしておく</p>
 <p><code>yyy</code>直下でひな形作成</p>
-<pre tabindex="0"><code>cd yyy
+<div>
+    <div class="codeblock--content"><pre tabindex="0"><code>cd yyy
 hugo new site sample
-mv sample/* .
-</code></pre><h3 id="テーマの選定">テーマの選定</h3>
+mv sample/* .</code></pre>
+    </div>
+  </div><h3 id="テーマの選定">テーマの選定</h3>
 <p><code>Hugo</code>は色んな人がテーマを提供しているが，その中で良さげなものを選択．<br>
 今回は 
 
@@ -316,9 +324,11 @@ mv sample/* .
 
 を参考に，
 <code>themes/mainroad</code>にサブディレクトリとしてインストール</p>
-<pre tabindex="0"><code>cd /path/to/yyy
-git submodule add https://github.com/vimux/mainroad.git themes/mainroad
-</code></pre><h3 id="configtomlの編集"><code>config.toml</code>の編集</h3>
+<div>
+    <div class="codeblock--content"><pre tabindex="0"><code>cd /path/to/yyy
+git submodule add https://github.com/vimux/mainroad.git themes/mainroad</code></pre>
+    </div>
+  </div><h3 id="configtomlの編集"><code>config.toml</code>の編集</h3>
 <p>これもdocumentationを参考に作成</p>
 <ul>
 <li><code>[Params]</code>の<code>authorbox</code>は不要</li>
@@ -349,19 +359,25 @@ git submodule add https://github.com/vimux/mainroad.git themes/mainroad
 <li><code>static/img</code>: ホームのアイコンなど</li>
 </ul>
 <h3 id="hugoをローカルでテストする場合">Hugoをローカルでテストする場合</h3>
-<pre tabindex="0"><code>cd yyy
+<div>
+    <div class="codeblock--content"><pre tabindex="0"><code>cd yyy
 hugo -t mainroad
-hugo server -D
-</code></pre><p>localhost:1313にアクセス</p>
+hugo server -D</code></pre>
+    </div>
+  </div><p>localhost:1313にアクセス</p>
 <h3 id="公開の流れ">公開の流れ</h3>
 <ol>
 <li><code>xxx.github.io</code>のpublicレポジトリ作成</li>
 <li><code>public</code>を作業用レポジトリ<code>yyy</code>の管理下から外す
-<pre tabindex="0"><code>git rm -r public/
-</code></pre></li>
+<div>
+    <div class="codeblock--content"><pre tabindex="0"><code>git rm -r public/</code></pre>
+    </div>
+  </div></li>
 <li><code>xxx.github.io</code>を作業用レポジトリ<code>yyy</code>のsubmoduleとして，<code>public</code>に指定する
-<pre tabindex="0"><code>git submodule add https://github.com/xxx/xxx.github.io.git public
-</code></pre></li>
+<div>
+    <div class="codeblock--content"><pre tabindex="0"><code>git submodule add https://github.com/xxx/xxx.github.io.git public</code></pre>
+    </div>
+  </div></li>
 </ol>
 <h3 id="参考文献">参考文献</h3>
 <ul>
@@ -429,12 +445,12 @@ hugo server -D
 	<h4 class="widget__title">最近の投稿</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/2023/04/0005/">Intel® OneAPIをローカル環境に導入する</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/2023/04/0004/">PyGMTをAnacondaに入れて若干躓いた話</a></li>
 			<li class="widget__item"><a class="widget__link" href="/news/2023/04/0008/">ポスドク研究員になりました</a></li>
 			<li class="widget__item"><a class="widget__link" href="/news/2023/03/0007/">博士の学位を取得しました</a></li>
 			<li class="widget__item"><a class="widget__link" href="/news/2023/03/0006/">SF地震学研究集会@台湾に参加しました</a></li>
 			<li class="widget__item"><a class="widget__link" href="/news/2023/02/0005/">ホームページを公開しました</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/2023/02/0002/">ObsPy解説記事の執筆予定</a></li>
 		</ul>
 	</div>
 </div>
@@ -480,10 +496,11 @@ hugo server -D
 		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="hugo">hugo (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/jupyterlab/" title="JupyterLab">JupyterLab (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/mainroad/" title="mainroad">mainroad (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mpi/" title="MPI">MPI (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/obspy/" title="ObsPy">ObsPy (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/pygmt/" title="PyGMT">PyGMT (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/python/" title="Python">Python (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/%E5%82%99%E5%BF%98%E9%8C%B2/" title="備忘録">備忘録 (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%E5%82%99%E5%BF%98%E9%8C%B2/" title="備忘録">備忘録 (4)</a>
 	</div>
 </div>
 <div class="widget-social widget">

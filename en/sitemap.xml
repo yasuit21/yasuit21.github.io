@@ -2,6 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://yasuit21.github.io/en/categories/</loc>
+    <lastmod>2023-04-16T13:08:13+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/categories/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/categories/photo/</loc>
+    <lastmod>2023-04-16T13:08:13+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/categories/photo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/categories/photo/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/gallery/photo/202303_taiwan/</loc>
+    <lastmod>2023-04-16T13:08:13+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/gallery/photo/202303_taiwan/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/gallery/photo/202303_taiwan/"
+                />
+  </url><url>
     <loc>https://yasuit21.github.io/en/about/</loc>
     <lastmod>2023-04-03T23:59:20+09:00</lastmod>
     <xhtml:link
@@ -15,21 +54,8 @@
                 href="https://yasuit21.github.io/en/about/"
                 />
   </url><url>
-    <loc>https://yasuit21.github.io/en/categories/</loc>
-    <lastmod>2023-04-16T13:03:46+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/categories/"
-                />
-  </url><url>
     <loc>https://yasuit21.github.io/en/categories/news/</loc>
-    <lastmod>2023-04-03T23:59:20+09:00</lastmod>
+    <lastmod>2023-04-16T13:08:13+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -81,7 +107,7 @@
                 />
   </url><url>
     <loc>https://yasuit21.github.io/en/news/2023/03/0006/</loc>
-    <lastmod>2023-03-31T16:04:26+09:00</lastmod>
+    <lastmod>2023-04-16T13:08:13+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -249,19 +275,6 @@
                 href="https://yasuit21.github.io/en/publication/"
                 />
   </url><url>
-    <loc>https://yasuit21.github.io/en/categories/photo/</loc>
-    <lastmod>2023-04-16T13:03:46+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/categories/photo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/categories/photo/"
-                />
-  </url><url>
     <loc>https://yasuit21.github.io/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -272,19 +285,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yasuit21.github.io/en/tags/"
-                />
-  </url><url>
-    <loc>https://yasuit21.github.io/en/gallery/photo/202303_taiwan/</loc>
-    <lastmod>2023-04-16T13:03:46+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/gallery/photo/202303_taiwan/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/gallery/photo/202303_taiwan/"
                 />
   </url>
 </urlset>

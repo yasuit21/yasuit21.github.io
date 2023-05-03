@@ -265,18 +265,22 @@ gtag('config', 'G-594401RXHW');
 <h2 id="問題">問題</h2>
 <p>Anacondaの<code>base</code>環境で立ち上げたJupyterLabから，非<code>base</code>環境の<code>ghostscript</code>を動かせない．
 なお，当該非<code>base</code>環境のIPythonカーネルは正しく登録済みで，notebookの環境を正しく選択．</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> pygmt
-
-fig <span style="color:#f92672">=</span> pygmt<span style="color:#f92672">.</span>Figure()
-fig<span style="color:#f92672">.</span>coast(region<span style="color:#f92672">=</span>[<span style="color:#f92672">-</span><span style="color:#ae81ff">69</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">68</span>, <span style="color:#ae81ff">43.75</span>, <span style="color:#ae81ff">44.75</span>], shorelines<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
-fig<span style="color:#f92672">.</span>show()
-</code></pre></div><p>=&gt; <code>GMTClibError</code>が返ってきた</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">psconvert [ERROR]: Cannot execute Ghostscript (gs)<span style="color:#f92672">.</span>
-Traceback (most recent call last):  
-<span style="color:#f92672">...</span>
-GMTCLibError: Module <span style="color:#e6db74">&#39;psconvert&#39;</span> failed <span style="color:#66d9ef">with</span> status code <span style="color:#ae81ff">79</span>:
-psconvert [ERROR]: Cannot execute Ghostscript (gs)<span style="color:#f92672">.</span>
-</code></pre></div><p>ちなみに，非<code>base</code>環境で立ち上げたJupyterLabだと普通に<code>ghostscript</code>が動く．．</p>
+<div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> pygmt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fig <span style="color:#f92672">=</span> pygmt<span style="color:#f92672">.</span>Figure()
+</span></span><span style="display:flex;"><span>fig<span style="color:#f92672">.</span>coast(region<span style="color:#f92672">=</span>[<span style="color:#f92672">-</span><span style="color:#ae81ff">69</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">68</span>, <span style="color:#ae81ff">43.75</span>, <span style="color:#ae81ff">44.75</span>], shorelines<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>fig<span style="color:#f92672">.</span>show()</span></span></code></pre></div>
+    </div>
+  </div><p>=&gt; <code>GMTClibError</code>が返ってきた</p>
+<div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>psconvert [ERROR]: Cannot execute Ghostscript (gs)<span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span>Traceback (most recent call last):  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>GMTCLibError: Module <span style="color:#e6db74">&#39;psconvert&#39;</span> failed <span style="color:#66d9ef">with</span> status code <span style="color:#ae81ff">79</span>:
+</span></span><span style="display:flex;"><span>psconvert [ERROR]: Cannot execute Ghostscript (gs)<span style="color:#f92672">.</span></span></span></code></pre></div>
+    </div>
+  </div><p>ちなみに，非<code>base</code>環境で立ち上げたJupyterLabだと普通に<code>ghostscript</code>が動く．．</p>
 <h2 id="環境">環境</h2>
 <ul>
 <li>WSL2 (Windows Subsystem for Linux): Ubuntu 22.04.2</li>
@@ -287,19 +291,25 @@ psconvert [ERROR]: Cannot execute Ghostscript (gs)<span style="color:#f92672">.<
 <code>pygmt</code>環境の作成方法は次の通り．</p>
 <ul>
 <li>ライブラリのインストール
-<pre tabindex="0"><code>mamba create --name pygmt python=3.11 numpy pandas xarray netcdf4 packaging gmt
+<div>
+    <div class="codeblock--content"><pre tabindex="0"><code>mamba create --name pygmt python=3.11 numpy pandas xarray netcdf4 packaging gmt
 mamba activate pygmt
 mamba install jupyter
-mamba install pygmt -c conda-forge
-</code></pre></li>
+mamba install pygmt -c conda-forge</code></pre>
+    </div>
+  </div></li>
 <li>環境変数の設定
-<pre tabindex="0"><code>export GMT_LIBRARY_PATH=$HOME/anaconda3/envs/pygmt/lib &gt;&gt; ~/.bashrc
-source ~/.bashrc
-</code></pre></li>
+<div>
+    <div class="codeblock--content"><pre tabindex="0"><code>export GMT_LIBRARY_PATH=$HOME/anaconda3/envs/pygmt/lib &gt;&gt; ~/.bashrc
+source ~/.bashrc</code></pre>
+    </div>
+  </div></li>
 <li>IPythonカーネルの追加
-<pre tabindex="0"><code>mamba activate pygmt
-ipython kernel install --user --name pygmt
-</code></pre></li>
+<div>
+    <div class="codeblock--content"><pre tabindex="0"><code>mamba activate pygmt
+ipython kernel install --user --name pygmt</code></pre>
+    </div>
+  </div></li>
 </ul>
 <p><code>base</code>はPython 3.10系だが，<code>pygmt</code>はPython 3.11系で環境構築．</p>
 <h2 id="解決法">解決法</h2>
@@ -309,8 +319,10 @@ ipython kernel install --user --name pygmt
 <p>IPythonカーネルは正しく設定できているのに，
 <code>base</code>で立ち上げたJupyterLabから<code>pygmt</code>環境のコマンドが通らないという問題らしい．
 でも，</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> pygmt
-</code></pre></div><p>は正しく通っているから（<code>base</code>にPyGMTは入れていない），恐らくターミナルが<code>base</code>環境のままなんだろう．</p>
+<div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> pygmt</span></span></code></pre></div>
+    </div>
+  </div><p>は正しく通っているから（<code>base</code>にPyGMTは入れていない），恐らくターミナルが<code>base</code>環境のままなんだろう．</p>
 <p>ということで，<code>base</code>環境にも<code>ghostscript</code>をインストールすると，エラーが消え，セル下に図が描画できた．
 これはAnacondaかJupyterLabの問題だと思うので，これ以上は踏み込まないことにしよう&hellip;</p>
 <h2 id="まとめ">まとめ</h2>
@@ -354,6 +366,12 @@ ipython kernel install --user --name pygmt
 			<p class="pager__title">ObsPy解説記事の執筆予定</p>
 		</a>
 	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/post/2023/04/0005/" rel="next">
+			<span class="pager__subtitle">次の投稿&thinsp;»</span>
+			<p class="pager__title">Intel® OneAPIをローカル環境に導入する</p>
+		</a>
+	</div>
 </nav>
 
 
@@ -363,12 +381,12 @@ ipython kernel install --user --name pygmt
 	<h4 class="widget__title">最近の投稿</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/2023/04/0005/">Intel® OneAPIをローカル環境に導入する</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/2023/04/0004/">PyGMTをAnacondaに入れて若干躓いた話</a></li>
 			<li class="widget__item"><a class="widget__link" href="/news/2023/04/0008/">ポスドク研究員になりました</a></li>
 			<li class="widget__item"><a class="widget__link" href="/news/2023/03/0007/">博士の学位を取得しました</a></li>
 			<li class="widget__item"><a class="widget__link" href="/news/2023/03/0006/">SF地震学研究集会@台湾に参加しました</a></li>
 			<li class="widget__item"><a class="widget__link" href="/news/2023/02/0005/">ホームページを公開しました</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/2023/02/0002/">ObsPy解説記事の執筆予定</a></li>
 		</ul>
 	</div>
 </div>
@@ -414,10 +432,11 @@ ipython kernel install --user --name pygmt
 		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="hugo">hugo (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/jupyterlab/" title="JupyterLab">JupyterLab (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/mainroad/" title="mainroad">mainroad (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mpi/" title="MPI">MPI (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/obspy/" title="ObsPy">ObsPy (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/pygmt/" title="PyGMT">PyGMT (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/python/" title="Python">Python (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/%E5%82%99%E5%BF%98%E9%8C%B2/" title="備忘録">備忘録 (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%E5%82%99%E5%BF%98%E9%8C%B2/" title="備忘録">備忘録 (4)</a>
 	</div>
 </div>
 <div class="widget-social widget">

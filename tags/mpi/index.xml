@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MPI on Yasunori SAWAKI</title>
+    <link>https://yasuit21.github.io/tags/mpi/</link>
+    <description>Recent content in MPI on Yasunori SAWAKI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Fri, 28 Apr 2023 16:12:08 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/tags/mpi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intel® OneAPIをローカル環境に導入する</title>
+      <link>https://yasuit21.github.io/post/2023/04/0005/</link>
+      <pubDate>Fri, 28 Apr 2023 16:12:08 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/post/2023/04/0005/</guid>
+      <description>&lt;p&gt;Intel® OneAPIの登場によって，気楽に&lt;code&gt;ifort&lt;/code&gt;などが使えるようになった．
+Ubuntuだと&lt;code&gt;apt&lt;/code&gt;で簡単に導入できるが，非&lt;code&gt;sudo&lt;/code&gt;環境でのセットアップということで，
+以下自分向けの備忘録．&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
