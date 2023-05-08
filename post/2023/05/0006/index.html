@@ -18,21 +18,49 @@ gtag('config', 'G-594401RXHW');
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SF地震学A03班ミニ研究会@別府に参加しました - Yasunori SAWAKI</title>
+	<title>pygmt.grdtrack()の引数順序 - Yasunori SAWAKI</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta itemprop="name" content="SF地震学A03班ミニ研究会@別府に参加しました">
-<meta itemprop="description" content="2023年2月9-11日に別府市で行われたSlow-to-Fast地震学A03班ミニ研究会に参加しました． 構造地質学，地球化学，測地学，沈み込み帯テクトニクス，観測地震学などの観点から 幅広い発表が行われ，活発な議論が繰り広げられていました．
-私は「南海トラフ沈み込み帯のインピーダンスコントラストとスロー地震」というタイトルで発表しました． 沈み込み帯の不均質構造とスロー地震活動との空間関係について議論させていただきました．
-関係者の皆さま，ありがとうございました．"><meta itemprop="datePublished" content="2023-02-12T11:33:21+09:00" />
-<meta itemprop="dateModified" content="2023-02-13T00:37:41+09:00" />
-<meta itemprop="wordCount" content="6">
-<meta itemprop="keywords" content="" />
+		<meta itemprop="name" content="pygmt.grdtrack()の引数順序">
+<meta itemprop="description" content="ここ2年ほどは地図情報の描画のために
+
+PyGMT
+
+を用いている．
+「生
+
+GMT
+
+」のような特殊な記載を極力減らし，
+Pythonicな分かりやすい関数や引数が与えられている点は，
+（自分のような）GMTをあまり使っていない人にとっても恩恵を授かれる．
+ここでは，PyGMTの関数
+
+grdtrack()
+
+で少し気になった点を記載する．"><meta itemprop="datePublished" content="2023-05-07T23:53:19+09:00" />
+<meta itemprop="dateModified" content="2023-05-08T01:07:59+09:00" />
+<meta itemprop="wordCount" content="140">
+<meta itemprop="keywords" content="PyGMT,Python,備忘録," />
 		<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="SF地震学A03班ミニ研究会@別府に参加しました"/>
-<meta name="twitter:description" content="2023年2月9-11日に別府市で行われたSlow-to-Fast地震学A03班ミニ研究会に参加しました． 構造地質学，地球化学，測地学，沈み込み帯テクトニクス，観測地震学などの観点から 幅広い発表が行われ，活発な議論が繰り広げられていました．
-私は「南海トラフ沈み込み帯のインピーダンスコントラストとスロー地震」というタイトルで発表しました． 沈み込み帯の不均質構造とスロー地震活動との空間関係について議論させていただきました．
-関係者の皆さま，ありがとうございました．"/>
+<meta name="twitter:title" content="pygmt.grdtrack()の引数順序"/>
+<meta name="twitter:description" content="ここ2年ほどは地図情報の描画のために
+
+PyGMT
+
+を用いている．
+「生
+
+GMT
+
+」のような特殊な記載を極力減らし，
+Pythonicな分かりやすい関数や引数が与えられている点は，
+（自分のような）GMTをあまり使っていない人にとっても恩恵を授かれる．
+ここでは，PyGMTの関数
+
+grdtrack()
+
+で少し気になった点を記載する．"/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -235,44 +263,128 @@ gtag('config', 'G-594401RXHW');
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">SF地震学A03班ミニ研究会@別府に参加しました</h1>
-			<p class="post__lead">「南海トラフ沈み込み帯のインピーダンスコントラストとスロー地震」</p>
+			<h1 class="post__title">pygmt.grdtrack()の引数順序</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-02-12T11:33:21&#43;09:00">2023-02-12</time>
-	<time class="meta__text" datetime="2023-02-13T00:37:41&#43;09:00">(最終更新: 2023-02-13)</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/news/" rel="category">News</a>
-	</span>
-</div>
-<div class="meta__item-translations meta__item">
-	<span class="meta__text">翻訳: <a class="meta__link" href="/en/news/2023/02/0004/">EN</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-05-07T23:53:19&#43;09:00">2023-05-07</time>
+	<time class="meta__text" datetime="2023-05-08T01:07:59&#43;09:00">(最終更新: 2023-05-08)</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/pygmt/" rel="category">PyGMT</a>, <a class="meta__link" href="/categories/python/" rel="category">Python</a>
 	</span>
 </div></div>
 		</header>
 		<div class="content post__content clearfix">
-			<p>2023年2月9-11日に別府市で行われたSlow-to-Fast地震学A03班ミニ研究会に参加しました．
-構造地質学，地球化学，測地学，沈み込み帯テクトニクス，観測地震学などの観点から
-幅広い発表が行われ，活発な議論が繰り広げられていました．</p>
-<p>私は「南海トラフ沈み込み帯のインピーダンスコントラストとスロー地震」というタイトルで発表しました．
-沈み込み帯の不均質構造とスロー地震活動との空間関係について議論させていただきました．</p>
-<p>関係者の皆さま，ありがとうございました．</p>
-<!-- raw HTML omitted -->
+			<p>ここ2年ほどは地図情報の描画のために
 
+<a href="https://www.pygmt.org/latest/" target="_blank" rel="noopener noreferrer">PyGMT</a>
+
+を用いている．
+「生
+
+<a href="https://www.generic-mapping-tools.org/" target="_blank" rel="noopener noreferrer">GMT</a>
+
+」のような特殊な記載を極力減らし，
+Pythonicな分かりやすい関数や引数が与えられている点は，
+（自分のような）GMTをあまり使っていない人にとっても恩恵を授かれる．</p>
+<p>ここでは，PyGMTの関数
+
+<a href="https://www.pygmt.org/latest/api/generated/pygmt.grdtrack.html" target="_blank" rel="noopener noreferrer">grdtrack()</a>
+
+で少し気になった点を記載する．</p>
+<p>PyGMTは2020年の
+
+<a href="https://doi.org/10.5281/zenodo.3782862" target="_blank" rel="noopener noreferrer">Version 0.1.0</a>
+
+リリースから，約4ヶ月間隔でマイナーアップデートを行っており，2023年5月8日現在では
+
+<a href="https://doi.org/10.5281/zenodo.7772533" target="_blank" rel="noopener noreferrer">Version 0.9.0</a>
+
+が最新である．初期バージョンではラッパーの種類が少なく，使用には苦労したが，現在はGMTの多くのコマンドがPyGMTに取り込まれており，既に十分実用的である．</p>
+<p>一方，そのような開発の速さは，バージョン間のマイナーチェンジによる弊害を生むことも多い．
+
+
+<a href="https://www.pygmt.org/latest/api/generated/pygmt.grdtrack.html" target="_blank" rel="noopener noreferrer">grdtrack()</a>
+
+は，gridファイルから指定した座標値の物理量を抽出する関数である．引数には，gridファイルのパスかDataArrayを指定する<code>grid</code>と，抽出したい座標値データを含むDataFrameなどを指定する<code>points</code>を指定する必要がある．</p>
+<!-- raw HTML omitted -->
+<p>Version 0.6.1までは，次のような引数を取っていた．</p>
+<ul>
+<li>
+
+<a href="https://github.com/GenericMappingTools/pygmt/blob/f619079498df8a8a7decf3746629b4efd5edb1b2/pygmt/src/grdtrack.py#L46" target="_blank" rel="noopener noreferrer">v0.6.1のgrdtrack()</a>
+
+
+<div><div class="codeblock--name">grdtrack.py</div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-py" data-lang="py"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">grdtrack</span>(points, grid, newcolname<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, outfile<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Sample grids at specified (x,y) locations. ...
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Parameters
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ----------
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#e6db74">    points : str or {table-like}
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#e6db74">        Pass in either a file name to an ASCII data table, a 2D
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#e6db74">        {table-classes}.
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#e6db74">    grid : xarray.DataArray or str
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#e6db74">        Gridded array from which to sample values from, or a filename
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#e6db74">        (netcdf format).</span></span></span></code></pre></div>
+    </div>
+  </div></li>
+</ul>
+<p>この関数では，第1引数に<code>points</code>，第2引数に<code>grid</code>を必ず与えなければならない．</p>
+<p>一方，次のVersion 0.7.0では引数の取り方が変わっていた．</p>
+<ul>
+<li>
+
+<a href="https://github.com/GenericMappingTools/pygmt/blob/e5f5da9ba4713912ee96bd5eed80aa697d40de46/pygmt/src/grdtrack.py#L50" target="_blank" rel="noopener noreferrer">v0.7.0のgrdtrack()</a>
+
+
+<div><div class="codeblock--name">grdtrack.py</div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-py" data-lang="py"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">grdtrack</span>(grid, points<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, newcolname<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, outfile<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Sample grids at specified (x,y) locations. ...
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Parameters
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ----------
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#e6db74">    grid : xarray.DataArray or str
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#e6db74">        Gridded array from which to sample values from, or a filename
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#e6db74">        (netcdf format).
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#e6db74">    points : str or {table-like}
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#e6db74">        Pass in either a file name to an ASCII data table, a 2D
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#e6db74">        {table-classes}.</span></span></span></code></pre></div>
+    </div>
+  </div></li>
+</ul>
+<p>この関数の記載では，必ず第1引数に<code>grid</code>を与える必要があり，<code>points</code>の与える位置は制約されない．
+ただし，関数を作用させるには<code>points</code>または<code>profile</code>のどちらかを指定する必要がある．</p>
+<p>つまり，v0.6.1からv0.7.0以上にアップデートした場合，<code>grdtrack()</code>を使用していれば引数の順序を変える必要があるということだ．幸い，<code>grid</code>はnetCDF形式，<code>points</code>はtable形式のため，仮に順序を変えていなくてもエラーを吐いてプログラムは止まる．だが，これらのファイル形式などが同一の引数だった場合，エラーを吐かずに大きなバグを生み出している可能性がある．</p>
+<p>&hellip;とはいえ，v0.6.1以前にWarningが出されていたかもしれない．見落としていたらそれまでだが，今後もPyGMTの最新バージョンを使っていく際には，注意して実行していく必要がありそうだ．</p>
 		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/pygmt/" rel="tag">PyGMT</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/python/" rel="tag">Python</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/%E5%82%99%E5%BF%98%E9%8C%B2/" rel="tag">備忘録</a>
+		</li>
+	</ul>
+</div>
+		</footer>
 	</article>
 </main>
 
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/news/2023/02/0002/" rel="prev">
+		<a class="pager__link" href="/post/2023/04/0005/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;前の投稿</span>
-			<p class="pager__title">研究成果リスト等の作成</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/news/2023/02/0005/" rel="next">
-			<span class="pager__subtitle">次の投稿&thinsp;»</span>
-			<p class="pager__title">ホームページを公開しました</p>
+			<p class="pager__title">Intel® OneAPIをローカル環境に導入する</p>
 		</a>
 	</div>
 </nav>

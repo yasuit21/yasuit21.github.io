@@ -8,6 +8,31 @@
     <language>ja-jp</language>
     <lastBuildDate>Sun, 09 Apr 2023 22:33:44 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>pygmt.grdtrack()の引数順序</title>
+      <link>https://yasuit21.github.io/post/2023/05/0006/</link>
+      <pubDate>Sun, 07 May 2023 23:53:19 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/post/2023/05/0006/</guid>
+      <description>&lt;p&gt;ここ2年ほどは地図情報の描画のために
+
+&lt;a href=&#34;https://www.pygmt.org/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PyGMT&lt;/a&gt;
+
+を用いている．
+「生
+
+&lt;a href=&#34;https://www.generic-mapping-tools.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;GMT&lt;/a&gt;
+
+」のような特殊な記載を極力減らし，
+Pythonicな分かりやすい関数や引数が与えられている点は，
+（自分のような）GMTをあまり使っていない人にとっても恩恵を授かれる．&lt;/p&gt;
+&lt;p&gt;ここでは，PyGMTの関数
+
+&lt;a href=&#34;https://www.pygmt.org/latest/api/generated/pygmt.grdtrack.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;grdtrack()&lt;/a&gt;
+
+で少し気になった点を記載する．&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Intel® OneAPIをローカル環境に導入する</title>
       <link>https://yasuit21.github.io/post/2023/04/0005/</link>
       <pubDate>Fri, 28 Apr 2023 16:12:08 +0900</pubDate>
