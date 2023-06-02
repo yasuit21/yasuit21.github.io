@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 07 May 2023 23:53:19 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Jun 2023 21:34:11 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>News</title>
+      <link>https://yasuit21.github.io/categories/news/</link>
+      <pubDate>Fri, 02 Jun 2023 21:34:11 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/categories/news/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>PyGMT</title>
       <link>https://yasuit21.github.io/categories/pygmt/</link>
@@ -40,15 +49,6 @@
       <pubDate>Sun, 09 Apr 2023 21:00:40 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/categories/jupyterlab/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>News</title>
-      <link>https://yasuit21.github.io/categories/news/</link>
-      <pubDate>Mon, 03 Apr 2023 08:30:24 +0900</pubDate>
-      
-      <guid>https://yasuit21.github.io/categories/news/</guid>
       <description></description>
     </item>
     
