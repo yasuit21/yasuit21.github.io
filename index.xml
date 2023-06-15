@@ -8,6 +8,24 @@
     <language>ja-jp</language>
     <lastBuildDate>Sun, 09 Apr 2023 22:33:44 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>経歴</title>
+      <link>https://yasuit21.github.io/about/</link>
+      <pubDate>Sat, 10 Jun 2023 23:42:36 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/about/</guid>
+      <description>佐脇 泰典 (Yasunori SAWAKI) 産総研特別研究員（ポスドク研究員）
+（国立研究開発法人産業技術総合研究所 地質調査総合センター 活断層・火山研究部門） 職歴 2023年04月&amp;ndash;現在
+国立研究開発法人産業技術総合研究所 地質調査総合センター 産総研特別研究員（ポスドク） 2021年10月&amp;ndash;2023年03月
+京都大学大学院教育支援機構奨励研究員 学歴 2020年04月&amp;ndash;2023年03月
+京都大学　大学院理学研究科地球惑星科学専攻地球物理学分野（博士後期課程） 2018年04月&amp;ndash;2020年03月
+京都大学　大学院理学研究科地球惑星科学専攻地球物理学分野（修士課程） 2014年04月&amp;ndash;2018年03月
+東北大学　理学部地球惑星物質科学科 学位 2023年03月　博士（理学）・京都大学
+「近地深発地震波形記録を含む広義レシーバ関数が示す南海トラフ沈み込み帯の陸域並びに海域下の不均質構造」 2020年03月　修士（理学）・京都大学
+「スロー地震発生領域周辺の地震学的構造の空間的特徴 –広帯域レシーバ関数法の検証と室内摩擦実験への適用–」 2018年03月　学士（理学）・東北大学
+「phase A の格子選択配向と cold slab の地震波速度異方性」 教育経験 2021年04月&amp;ndash;2021年07月</description>
+    </item>
+    
+    <item>
       <title>リンク集</title>
       <link>https://yasuit21.github.io/link/</link>
       <pubDate>Sun, 04 Jun 2023 14:38:20 +0900</pubDate>
@@ -82,24 +100,6 @@ Ubuntuだと&lt;code&gt;apt&lt;/code&gt;で簡単に導入できるが，非&lt;
       <guid>https://yasuit21.github.io/post/2023/04/0004/</guid>
       <description>&lt;p&gt;新しいラップトップPCにAnacondaで環境を作っている時に生じた問題&lt;br&gt;
 「&lt;code&gt;PyGMT&lt;/code&gt;で描画が上手くいかない&amp;hellip;」&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>経歴</title>
-      <link>https://yasuit21.github.io/about/</link>
-      <pubDate>Mon, 03 Apr 2023 23:59:20 +0900</pubDate>
-      
-      <guid>https://yasuit21.github.io/about/</guid>
-      <description>佐脇 泰典 (Yasunori SAWAKI) 産総研特別研究員（ポスドク研究員）
-（国立研究開発法人産業技術総合研究所 地質調査総合センター 活断層・火山研究部門） 職歴 2023年04月&amp;ndash;現在
-国立研究開発法人産業技術総合研究所 地質調査総合センター 産総研特別研究員（ポスドク） 2021年10月&amp;ndash;2023年03月
-京都大学大学院教育支援機構奨励研究員 学歴 2020年04月&amp;ndash;2023年03月
-京都大学　大学院理学研究科地球惑星科学専攻地球物理学分野（博士後期課程） 2018年04月&amp;ndash;2020年03月
-京都大学　大学院理学研究科地球惑星科学専攻地球物理学分野（修士課程） 2014年04月&amp;ndash;2018年03月
-東北大学　理学部地球惑星物質科学科 学位 2023年03月　博士（理学）・京都大学
-「近地深発地震波形記録を含む広義レシーバ関数が示す南海トラフ沈み込み帯の陸域並びに海域下の不均質構造」 2020年03月　修士（理学）・京都大学
-「スロー地震発生領域周辺の地震学的構造の空間的特徴 –広帯域レシーバ関数法の検証と室内摩擦実験への適用–」 2018年03月　学士（理学）・東北大学
-「phase A の格子選択配向と cold slab の地震波速度異方性」 教育経験 2021年04月&amp;ndash;2021年07月</description>
     </item>
     
     <item>

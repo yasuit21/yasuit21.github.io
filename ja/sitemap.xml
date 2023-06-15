@@ -2,6 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://yasuit21.github.io/about/</loc>
+    <lastmod>2023-06-10T23:42:36+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/about/"
+                />
+  </url><url>
     <loc>https://yasuit21.github.io/link/</loc>
     <lastmod>2023-06-04T14:38:20+09:00</lastmod>
     <xhtml:link
@@ -141,19 +154,6 @@
   </url><url>
     <loc>https://yasuit21.github.io/post/2023/04/0004/</loc>
     <lastmod>2023-04-09T22:55:27+09:00</lastmod>
-  </url><url>
-    <loc>https://yasuit21.github.io/about/</loc>
-    <lastmod>2023-04-03T23:59:20+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/about/"
-                />
   </url><url>
     <loc>https://yasuit21.github.io/news/2023/04/0008/</loc>
     <lastmod>2023-04-03T23:59:20+09:00</lastmod>
