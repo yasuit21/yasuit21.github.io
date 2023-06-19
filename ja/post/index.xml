@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>投稿一覧 on Yasunori SAWAKI</title>
+    <link>https://yasuit21.github.io/ja/post/</link>
+    <description>Recent content in 投稿一覧 on Yasunori SAWAKI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language><atom:link href="https://yasuit21.github.io/ja/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>pygmt.grdtrack()の引数順序</title>
+      <link>https://yasuit21.github.io/ja/post/2023/05/0006/</link>
+      <pubDate>Sun, 07 May 2023 23:53:19 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/post/2023/05/0006/</guid>
+      <description>&lt;p&gt;ここ2年ほどは地図情報の描画のために
+
+&lt;a href=&#34;https://www.pygmt.org/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PyGMT&lt;/a&gt;
+
+を用いている．
+「生
+
+&lt;a href=&#34;https://www.generic-mapping-tools.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;GMT&lt;/a&gt;
+
+」のような特殊な記載を極力減らし，
+Pythonicな分かりやすい関数や引数が与えられている点は，
+（自分のような）GMTをあまり使っていない人にとっても恩恵を授かれる．&lt;/p&gt;
+&lt;p&gt;ここでは，PyGMTの関数
+
+&lt;a href=&#34;https://www.pygmt.org/latest/api/generated/pygmt.grdtrack.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;grdtrack()&lt;/a&gt;
+
+で少し気になった点を記載する．&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Intel® OneAPIをローカル環境に導入する</title>
+      <link>https://yasuit21.github.io/ja/post/2023/04/0005/</link>
+      <pubDate>Fri, 28 Apr 2023 16:12:08 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/post/2023/04/0005/</guid>
+      <description>&lt;p&gt;Intel® OneAPIの登場によって，気楽に&lt;code&gt;ifort&lt;/code&gt;などが使えるようになった．
+Ubuntuだと&lt;code&gt;apt&lt;/code&gt;で簡単に導入できるが，非&lt;code&gt;sudo&lt;/code&gt;環境でのセットアップということで，
+以下自分向けの備忘録．&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PyGMTをAnacondaに入れて若干躓いた話</title>
+      <link>https://yasuit21.github.io/ja/post/2023/04/0004/</link>
+      <pubDate>Sun, 09 Apr 2023 21:00:40 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/post/2023/04/0004/</guid>
+      <description>&lt;p&gt;新しいラップトップPCにAnacondaで環境を作っている時に生じた問題&lt;br&gt;
+「&lt;code&gt;PyGMT&lt;/code&gt;で描画が上手くいかない&amp;hellip;」&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ObsPy解説記事の執筆予定</title>
+      <link>https://yasuit21.github.io/ja/post/2023/02/0002/</link>
+      <pubDate>Sun, 12 Feb 2023 23:24:45 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/post/2023/02/0002/</guid>
+      <description>&lt;p&gt;
+
+&lt;a href=&#34;https://docs.obspy.org/master/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;ObsPy&lt;/a&gt;
+
+は地震波形解析などを行うPythonパッケージである&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;．
+地震波形データの基本処理には
+
+&lt;a href=&#34;https://ds.iris.edu/ds/nodes/dmc/software/downloads/sac/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Seismic Analysis Code (SAC)&lt;/a&gt;
+
+が用いられることが多いが，&lt;code&gt;ObsPy&lt;/code&gt;は地震カタログや波形データのダウンロードから基本処理，スペクトル解析，描画など，多様な処理をPythonフレームワークで実現できる．&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugoの設定（備忘録）</title>
+      <link>https://yasuit21.github.io/ja/post/2023/01/0001/</link>
+      <pubDate>Thu, 26 Jan 2023 01:50:57 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/post/2023/01/0001/</guid>
+      <description>&lt;h3 id=&#34;いずれ自分の役に立つかも&#34;&gt;いずれ自分の役に立つかも&amp;hellip;？&lt;/h3&gt;
+&lt;p&gt;とりあえず試してみた
+
+&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Hugo&lt;/a&gt;
+
+の設定やらなんやらをメモ．
+基本的に自分用．&lt;/p&gt;
+&lt;h3 id=&#34;hugoのインストール&#34;&gt;&lt;code&gt;Hugo&lt;/code&gt;のインストール&lt;/h3&gt;
+&lt;p&gt;WSL Ubuntu なら apt install で一発&lt;/p&gt;
+&lt;div&gt;
+    &lt;div class=&#34;codeblock--content&#34;&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install hugo&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Yasunori SAWAKI</title>
+    <link>https://yasuit21.github.io/ja/tags/</link>
+    <description>Recent content in Tags on Yasunori SAWAKI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 07 May 2023 23:53:19 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/ja/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PyGMT</title>
+      <link>https://yasuit21.github.io/ja/tags/pygmt/</link>
+      <pubDate>Sun, 07 May 2023 23:53:19 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/tags/pygmt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://yasuit21.github.io/ja/tags/python/</link>
+      <pubDate>Sun, 07 May 2023 23:53:19 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>備忘録</title>
+      <link>https://yasuit21.github.io/ja/tags/%E5%82%99%E5%BF%98%E9%8C%B2/</link>
+      <pubDate>Sun, 07 May 2023 23:53:19 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/tags/%E5%82%99%E5%BF%98%E9%8C%B2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MPI</title>
+      <link>https://yasuit21.github.io/ja/tags/mpi/</link>
+      <pubDate>Fri, 28 Apr 2023 16:12:08 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/tags/mpi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Anaconda</title>
+      <link>https://yasuit21.github.io/ja/tags/anaconda/</link>
+      <pubDate>Sun, 09 Apr 2023 21:00:40 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/tags/anaconda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JupyterLab</title>
+      <link>https://yasuit21.github.io/ja/tags/jupyterlab/</link>
+      <pubDate>Sun, 09 Apr 2023 21:00:40 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/tags/jupyterlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ObsPy</title>
+      <link>https://yasuit21.github.io/ja/tags/obspy/</link>
+      <pubDate>Sun, 12 Feb 2023 23:24:45 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/tags/obspy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://yasuit21.github.io/ja/tags/hugo/</link>
+      <pubDate>Thu, 26 Jan 2023 01:50:57 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mainroad</title>
+      <link>https://yasuit21.github.io/ja/tags/mainroad/</link>
+      <pubDate>Thu, 26 Jan 2023 01:50:57 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/tags/mainroad/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

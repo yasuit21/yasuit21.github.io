@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ja">
+<head>
+	
+	
+	
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-594401RXHW"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-594401RXHW');
+</script>
+
+	
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Intel® OneAPIをローカル環境に導入する - Yasunori SAWAKI</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta itemprop="name" content="Intel® OneAPIをローカル環境に導入する">
+<meta itemprop="description" content="Intel® OneAPIの登場によって，気楽にifortなどが使えるようになった．
+Ubuntuだとaptで簡単に導入できるが，非sudo環境でのセットアップということで，
+以下自分向けの備忘録．"><meta itemprop="datePublished" content="2023-04-28T16:12:08+09:00" />
+<meta itemprop="dateModified" content="2023-04-28T16:12:08+09:00" />
+<meta itemprop="wordCount" content="219">
+<meta itemprop="keywords" content="MPI,備忘録," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Intel® OneAPIをローカル環境に導入する"/>
+<meta name="twitter:description" content="Intel® OneAPIの登場によって，気楽にifortなどが使えるようになった．
+Ubuntuだとaptで簡単に導入できるが，非sudo環境でのセットアップということで，
+以下自分向けの備忘録．"/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/fontawesome-6.3.0/css/all.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/ja/" title="Yasunori Sawaki&#39;s homepage" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/myicon.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Yasunori Sawaki&#39;s homepage</div>
+					<div class="logo__tagline">Promoting Python seismology</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+  <button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+    <span class="menu__btn-title" tabindex="-1">メニュー</span>
+  </button>
+  <ul class="menu__list">
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/">
+        
+          <span class="menu__text">ホーム</span>
+        
+      </a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/news/">
+        
+          <span class="menu__text">おしらせ</span>
+        
+      </a>
+    </li>
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/about/">
+        
+        <span class="menu__text">About Me</span>
+        <label class="drop-icon" for="About Me">▾</label>
+        
+      </a>
+      <input type="checkbox" id="About Me">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E8%81%B7%E6%AD%B4">
+            
+            <span class="menu__text">職歴</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E5%AD%A6%E6%AD%B4">
+            
+            <span class="menu__text">学歴</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E6%95%99%E8%82%B2%E7%B5%8C%E9%A8%93">
+            
+            <span class="menu__text">教育</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E5%8F%97%E8%B3%9E%E6%AD%B4">
+            
+            <span class="menu__text">受賞歴</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/publication/">
+        
+        <span class="menu__text">学術出版物など</span>
+        <label class="drop-icon" for="学術出版物など">▾</label>
+        
+      </a>
+      <input type="checkbox" id="学術出版物など">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/publication/#%E6%9F%BB%E8%AA%AD%E4%BB%98%E3%81%8D%E8%AB%96%E6%96%87">
+            
+            <span class="menu__text">査読付き論文</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/publication/#%E5%AD%A6%E4%BC%9A%E7%99%BA%E8%A1%A8%E3%81%AA%E3%81%A9%E7%99%BA%E8%A1%A8%E8%80%85">
+            
+            <span class="menu__text">学会発表</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/research/">
+        
+          <span class="menu__text">研究成果</span>
+        
+      </a>
+    </li>
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/post/">
+        
+        <span class="menu__text">投稿一覧</span>
+        <label class="drop-icon" for="投稿一覧">▾</label>
+        
+      </a>
+      <input type="checkbox" id="投稿一覧">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/python">
+            
+            <span class="menu__text">Python</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/hugo">
+            
+            <span class="menu__text">Hugo</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/categories/obspy/">
+        
+          <span class="menu__text">ObsPy</span>
+        
+      </a>
+    </li>
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/gallery/">
+        
+        <span class="menu__text">ギャラリー</span>
+        <label class="drop-icon" for="ギャラリー">▾</label>
+        
+      </a>
+      <input type="checkbox" id="ギャラリー">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/photo/">
+            
+            <span class="menu__text">写真</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/link/">
+        
+          <span class="menu__text">リンク集</span>
+        
+      </a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="/en/">
+        
+          <span class="menu__text">English [EN]</span>
+        
+      </a>
+    </li>
+  </ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Intel® OneAPIをローカル環境に導入する</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-04-28T16:12:08&#43;09:00">2023-04-28</time></div></div>
+		</header>
+		
+<div class="post__toc toc">
+	<div class="toc__title">目次</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#環境">環境</a></li>
+    <li><a href="#toolkits">Toolkits</a></li>
+    <li><a href="#手順">手順</a></li>
+    <li><a href="#その他">その他</a>
+      <ul>
+        <li><a href="#読み込むモジュールを指定できる">読み込むモジュールを指定できる</a></li>
+        <li><a href="#bashrcの記載に注意"><code>.bashrc</code>の記載に注意</a></li>
+        <li><a href="#bashrcに加えておこう"><code>.bashrc</code>に加えておこう</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p>Intel® OneAPIの登場によって，気楽に<code>ifort</code>などが使えるようになった．
+Ubuntuだと<code>apt</code>で簡単に導入できるが，非<code>sudo</code>環境でのセットアップということで，
+以下自分向けの備忘録．</p>
+<h2 id="環境">環境</h2>
+<ul>
+<li>Ubuntu 22.04 (WSL)</li>
+</ul>
+<h2 id="toolkits">Toolkits</h2>
+<p>
+
+<a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html#gs.wjhncc" target="_blank" rel="noopener noreferrer">インストールできるToolkit</a>
+
+のうち，今回は</p>
+<ul>
+<li>
+
+<a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html#base-kit" target="_blank" rel="noopener noreferrer">Base Toolkit</a>
+
+</li>
+<li>
+
+<a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html#hpc-kit" target="_blank" rel="noopener noreferrer">HPC Toolkit</a>
+
+</li>
+</ul>
+<p>をインストールする．なお，HPC Toolkit は Intel® Fortran Compiler や MPI Library を含む．</p>
+<h2 id="手順">手順</h2>
+<p>以下，Base Toolkitのインストールを代表して記載する．
+今回は，インストールをコマンドラインで行う．</p>
+<ol>
+<li>インストーラ（スクリプト）のダウンロード<br>
+
+
+<a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html#base-kit" target="_blank" rel="noopener noreferrer">Base Toolkit</a>
+
+ から
+&ldquo;Linux&rdquo;/&ldquo;Online Installer&rdquo;/&ldquo;最新版&rdquo; を選び，
+シェルスクリプト(<code>l_BaseKit_[version].sh</code>)をダウンロードする．</li>
+<li>シェルスクリプト（ここでは<code>l_BaseKit_p_20231.0.46401.sh</code>）を実行する．
+<div>
+    <div class="codeblock--content"><pre tabindex="0"><code>$ cd /path/to/script
+$ chmod 744 l_BaseKit_p_20231.0.46401.sh</code></pre>
+    </div>
+  </div>ここで<!-- raw HTML omitted --><code>sudo</code>を付けない<!-- raw HTML omitted -->ことが大事．
+<div>
+    <div class="codeblock--content"><pre tabindex="0"><code>$ sh ./l_BaseKit_p_20231.0.46401.sh -a --cli</code></pre>
+    </div>
+  </div>あとはターミナルの指示に従う．完了すると，<br>
+<code>~/intel/oneapi/</code>にインストールされているはず．ちなみに<code>sudo</code>だと，<code>/opt/intel/oneapi/</code>になる</li>
+<li>環境変数設定ファイルの読み込み<br>
+インストールが完了しても，環境変数設定ファイル(<code>setvars.sh</code>)を読み込まないと有効化されない．
+<div>
+    <div class="codeblock--content"><pre tabindex="0"><code>$ ifort
+Command &#39;ifort&#39; not found, did you mean:
+    command &#39;isort&#39; from deb isort (5.6.4-1)
+    command &#39;fort&#39; from deb fort-validator (1.5.3-1build1)
+Try: sudo apt install &lt;deb name&gt;</code></pre>
+    </div>
+  </div><code>~/intel/oneapi/setvars.sh</code>を読み込んでおくと
+<div>
+    <div class="codeblock--content"><pre tabindex="0"><code>$ source ~/intel/oneapi/setvars.sh
+...
+$ ifort
+ifort: command line error: no files specified; for help type &#34;ifort -help&#34;</code></pre>
+    </div>
+  </div>実行可能な状況になっている！</li>
+<li>
+
+<a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html#hpc-kit" target="_blank" rel="noopener noreferrer">HPC Toolkit</a>
+
+も同様にインストール</li>
+</ol>
+<h2 id="その他">その他</h2>
+<h3 id="読み込むモジュールを指定できる">読み込むモジュールを指定できる</h3>
+<p>デフォルトではインストールした全てのモジュールを読み込む設定になっている．
+特定のモジュールのみを読み込むには，<code>config.txt</code>ファイルを作成して，スクリプトの引数に渡せば良いらしい．</p>
+<p>例えば，<code>compiler</code>, <code>mpi</code>, <code>mkl</code>のみを読み込む場合，<code>config.txt</code>に</p>
+<div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>default=exclude
+</span></span><span style="display:flex;"><span>compiler=latest
+</span></span><span style="display:flex;"><span>mpi=latest
+</span></span><span style="display:flex;"><span>mkl=latest</span></span></code></pre></div>
+    </div>
+  </div><p>と記載し，</p>
+<div>
+    <div class="codeblock--content"><pre tabindex="0"><code>$ source ~/intel/oneapi/setvars.sh --config=/path/to/config.txt</code></pre>
+    </div>
+  </div><p>と実行する．</p>
+<h3 id="bashrcの記載に注意"><code>.bashrc</code>の記載に注意</h3>
+<p>実は最初に<code>source ~/intel/oneapi/setvars.sh</code>を試したときは，次のようなエラーが出た</p>
+<div>
+    <div class="codeblock--content"><pre tabindex="0"><code>:: ERROR: No env scripts found: No &#34;env/vars.sh&#34; scripts to process.
+   This can be caused by a bad or incomplete &#34;--config&#34; file.
+   Can also be caused by an incomplete or missing oneAPI installation.</code></pre>
+    </div>
+  </div><p>困っていたが，
+
+<a href="https://stackoverflow.com/questions/73388849/bash-script-to-set-env-variables-does-not-work-when-using-source-and-only-works" target="_blank" rel="noopener noreferrer">Stack Overflowのこの記事</a>
+
+に助けられた．</p>
+<p>どうも<code>.bashrc</code>に</p>
+<div><div class="codeblock--name">.bashrc</div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cdls<span style="color:#f92672">(){</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">\c</span>d <span style="color:#e6db74">&#34;</span>$@<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&amp;&amp;</span> ls
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>alias cd<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cdls&#34;</span></span></span></code></pre></div>
+    </div>
+  </div><p>と記載していたのがマズかったらしい．<code>ls</code>の標準出力か何かに問題あるのかもしれない．</p>
+<p>いずれにせよ，このaliasをコメントアウトすれば，問題なく<code>setvars.sh</code>を読み込める．</p>
+<h3 id="bashrcに加えておこう"><code>.bashrc</code>に加えておこう</h3>
+<p>自分の場合は常にOneAPIを使いたいので，上記の<code>cdls()</code>の直前に，</p>
+<div><div class="codeblock--name">.bashrc</div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source ~/intel/oneapi/setvars.sh --config<span style="color:#f92672">=</span>/path/to/config.txt</span></span></code></pre></div>
+    </div>
+  </div><p>と記載しておいた．これでいつでも使える状態になる．</p>
+<h2 id="参考">参考</h2>
+<ul>
+<li>
+
+<a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html#gs.wjhncc" target="_blank" rel="noopener noreferrer">Intel® oneAPI Toolkits</a>
+
+</li>
+<li>
+
+<a href="https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/2023-0/install-with-command-line.html#INTERACTIVE" target="_blank" rel="noopener noreferrer">Install with Command Line</a>
+
+</li>
+<li>
+
+<a href="https://www.intel.com/content/www/us/en/docs/oneapi/programming-guide/2023-0/use-a-config-file-for-setvars-sh-on-linux-or-macos.html" target="_blank" rel="noopener noreferrer">Use a Config file for setvars.sh on Linux or macOS</a>
+
+</li>
+<li>
+
+<a href="https://stackoverflow.com/questions/73388849/bash-script-to-set-env-variables-does-not-work-when-using-source-and-only-works" target="_blank" rel="noopener noreferrer">Stack Overflow: Bash script to set env variables does not work when using source and only works with bash -c</a>
+
+</li>
+</ul>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/ja/tags/mpi/" rel="tag">MPI</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/ja/tags/%E5%82%99%E5%BF%98%E9%8C%B2/" rel="tag">備忘録</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/ja/post/2023/04/0004/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;前の投稿</span>
+			<p class="pager__title">PyGMTをAnacondaに入れて若干躓いた話</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/ja/post/2023/05/0006/" rel="next">
+			<span class="pager__subtitle">次の投稿&thinsp;»</span>
+			<p class="pager__title">pygmt.grdtrack()の引数順序</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			<aside class="sidebar">
+<div class="widget-recent widget">
+	<h4 class="widget__title">最近の投稿</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/ja/news/2023/06/0009/">日本地球惑星科学連合2023年大会に参加しました</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ja/post/2023/05/0006/">pygmt.grdtrack()の引数順序</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ja/post/2023/04/0005/">Intel® OneAPIをローカル環境に導入する</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ja/post/2023/04/0004/">PyGMTをAnacondaに入れて若干躓いた話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ja/news/2023/04/0008/">ポスドク研究員になりました</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ja/news/2023/03/0007/">博士の学位を取得しました</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">カテゴリー</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/hugo/">Hugo</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">1</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/jupyterlab/">JupyterLab</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">1</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/news/">News</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">9</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/obspy/">ObsPy</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">1</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/photo/">Photo</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">1</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/pygmt/">PyGMT</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">2</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/python/">Python</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">3</span>
+				</li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">タグ</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/anaconda/" title="Anaconda">Anaconda (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/hugo/" title="hugo">hugo (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/jupyterlab/" title="JupyterLab">JupyterLab (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/mainroad/" title="mainroad">mainroad (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/mpi/" title="MPI">MPI (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/obspy/" title="ObsPy">ObsPy (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/pygmt/" title="PyGMT">PyGMT (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/python/" title="Python">Python (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E5%82%99%E5%BF%98%E9%8C%B2/" title="備忘録">備忘録 (5)</a>
+	</div>
+</div>
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">その他の個人メディア</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/yasuit21" target="_blank">
+				<svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
+				<span>Twitter</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/yasuit21" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="ORCiD"  rel="noopener noreferrer" href="https://orcid.org/0000-0002-4043-3391" target="_blank">
+				<span>ORCiD</span>
+			</a>
+		</div>
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Google Scholar"  rel="noopener noreferrer" href="https://scholar.google.com/citations?user=NyhvdCUAAAAJ&amp;hl=ja" target="_blank">
+				<span>Google Scholar</span>
+			</a>
+		</div>
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="researchmap"  rel="noopener noreferrer" href="https://researchmap.jp/YasunoriSawaki" target="_blank">
+				<span>researchmap</span>
+			</a>
+		</div>
+		
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+<div class="footer__links">
+	<a class="footer__link" href="/ja/privacy/">プライバシーポリシー</a> | <a class="footer__link" href="/en/">EN</a>
+</div>
+		<div class="footer__copyright">
+			&copy; 2023 Yasunori Sawaki.
+			<span class="footer__copyright-credits">このサイトは <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> と <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> テーマで生成されています。</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
