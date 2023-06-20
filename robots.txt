@@ -1,2 +1,4 @@
 User-agent: *
+Disallow:
+
 Sitemap: https://yasuit21.github.io/sitemap.xml

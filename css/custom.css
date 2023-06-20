@@ -12,6 +12,11 @@ img:not([class]) {
 }
 
 /* h2 */
+h2.toppage {
+    padding: 0.5em;
+    padding-left: 0em;
+    color: black;
+}
 h2:not(.list__title.post__title) {
     padding: 0.5em;
     color: black;

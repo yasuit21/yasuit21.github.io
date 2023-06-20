@@ -8,6 +8,55 @@
     <language>ja-jp</language>
     <lastBuildDate>Sun, 09 Apr 2023 22:33:44 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/ja/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>リンク集</title>
+      <link>https://yasuit21.github.io/ja/link/</link>
+      <pubDate>Mon, 19 Jun 2023 22:25:20 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/link/</guid>
+      <description>大学関係 京都大学防災研究所 地震災害研究センター 京都大学防災研究所 宮崎観測所 東京大学地震研究所 東北大学大学院理学研究科 地震・噴火予知研究観測センター 九州大学大学院理学研究院 地震火山観測研究センター 北海道大学大学院理学研究院 地震火山研究観測センター 研究機関関係 国立研究開発法人産業技術総合研究所 地質調査総合センター 活断層・火山研究部門 プロジェクト Slow-to-Fast地震学｜令和3〜7年度 文部科学省 科学研究費助成事業 学術変革領域研究(A) 文部科学省　情報科学を活用した地震調査研究プロジェクト（STAR-Eプロジェクト） 新学術領域研究「スロー地震学」 データベース・地震カタログ Slow Earthquake Database (Kano et al., 2018) USGS Earthquake Catalog 気象庁 | 地震月報(カタログ編) 防災科学技術研究所 陸海統合地震津波火山観測網 MOWLAS 防災科学技術研究所 高感度地震観測網 Hi-net 海洋研究開発機構 地殻構造探査データベースサイト 地下構造可視化システム（産総研地質調査総合センター） 地質図Navi（産総研地質調査総合センター） 地下水観測データベース Well Web（産総研地質調査総合センター） </description>
+    </item>
+    
+    <item>
+      <title>経歴</title>
+      <link>https://yasuit21.github.io/ja/about/</link>
+      <pubDate>Mon, 19 Jun 2023 22:25:20 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/about/</guid>
+      <description>佐脇 泰典 (Yasunori SAWAKI) 産総研特別研究員（ポスドク研究員）
+（国立研究開発法人産業技術総合研究所 地質調査総合センター 活断層・火山研究部門） 職歴 2023年04月&amp;ndash;現在
+国立研究開発法人産業技術総合研究所 地質調査総合センター 産総研特別研究員（ポスドク） 2021年10月&amp;ndash;2023年03月
+京都大学大学院教育支援機構奨励研究員 学歴 2020年04月&amp;ndash;2023年03月
+京都大学　大学院理学研究科地球惑星科学専攻地球物理学分野（博士後期課程） 2018年04月&amp;ndash;2020年03月
+京都大学　大学院理学研究科地球惑星科学専攻地球物理学分野（修士課程） 2014年04月&amp;ndash;2018年03月
+東北大学　理学部地球惑星物質科学科 学位 2023年03月　博士（理学）・京都大学
+「近地深発地震波形記録を含む広義レシーバ関数が示す南海トラフ沈み込み帯の陸域並びに海域下の不均質構造」 2020年03月　修士（理学）・京都大学
+「スロー地震発生領域周辺の地震学的構造の空間的特徴 –広帯域レシーバ関数法の検証と室内摩擦実験への適用–」 2018年03月　学士（理学）・東北大学
+「phase A の格子選択配向と cold slab の地震波速度異方性」 教育経験 2021年04月&amp;ndash;2021年07月</description>
+    </item>
+    
+    <item>
+      <title>研究成果</title>
+      <link>https://yasuit21.github.io/ja/research/</link>
+      <pubDate>Mon, 19 Jun 2023 22:25:20 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/research/</guid>
+      <description>現在作成中です&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>臺灣</title>
+      <link>https://yasuit21.github.io/ja/gallery/photo/202303_taiwan/</link>
+      <pubDate>Mon, 19 Jun 2023 22:25:20 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/gallery/photo/202303_taiwan/</guid>
+      <description>&lt;h2 id=&#34;slow-to-fast-earthquake-workshop-in-taiwan&#34;&gt;Slow-to-Fast Earthquake Workshop in Taiwan&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;期間：2023年3月13日&amp;ndash;17日&lt;/li&gt;
+&lt;li&gt;滞在都市：臺南市，高雄市，臺東縣，花蓮縣&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>日本地球惑星科学連合2023年大会に参加しました</title>
       <link>https://yasuit21.github.io/ja/news/2023/06/0009/</link>
       <pubDate>Fri, 02 Jun 2023 21:34:11 +0900</pubDate>
@@ -211,55 +260,6 @@ URLはこちらです：
       
       <guid>https://yasuit21.github.io/ja/news/2023/01/0001/</guid>
       <description>ただいまホームページ作成中です． Hugo と Mainroad テーマを用いています．</description>
-    </item>
-    
-    <item>
-      <title>リンク集</title>
-      <link>https://yasuit21.github.io/ja/link/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yasuit21.github.io/ja/link/</guid>
-      <description>大学関係 京都大学防災研究所 地震災害研究センター 京都大学防災研究所 宮崎観測所 東京大学地震研究所 東北大学大学院理学研究科 地震・噴火予知研究観測センター 九州大学大学院理学研究院 地震火山観測研究センター 北海道大学大学院理学研究院 地震火山研究観測センター 研究機関関係 国立研究開発法人産業技術総合研究所 地質調査総合センター 活断層・火山研究部門 プロジェクト Slow-to-Fast地震学｜令和3〜7年度 文部科学省 科学研究費助成事業 学術変革領域研究(A) 文部科学省　情報科学を活用した地震調査研究プロジェクト（STAR-Eプロジェクト） 新学術領域研究「スロー地震学」 データベース・地震カタログ Slow Earthquake Database (Kano et al., 2018) USGS Earthquake Catalog 気象庁 | 地震月報(カタログ編) 防災科学技術研究所 陸海統合地震津波火山観測網 MOWLAS 防災科学技術研究所 高感度地震観測網 Hi-net 海洋研究開発機構 地殻構造探査データベースサイト 地下構造可視化システム（産総研地質調査総合センター） 地質図Navi（産総研地質調査総合センター） 地下水観測データベース Well Web（産総研地質調査総合センター） </description>
-    </item>
-    
-    <item>
-      <title>経歴</title>
-      <link>https://yasuit21.github.io/ja/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yasuit21.github.io/ja/about/</guid>
-      <description>佐脇 泰典 (Yasunori SAWAKI) 産総研特別研究員（ポスドク研究員）
-（国立研究開発法人産業技術総合研究所 地質調査総合センター 活断層・火山研究部門） 職歴 2023年04月&amp;ndash;現在
-国立研究開発法人産業技術総合研究所 地質調査総合センター 産総研特別研究員（ポスドク） 2021年10月&amp;ndash;2023年03月
-京都大学大学院教育支援機構奨励研究員 学歴 2020年04月&amp;ndash;2023年03月
-京都大学　大学院理学研究科地球惑星科学専攻地球物理学分野（博士後期課程） 2018年04月&amp;ndash;2020年03月
-京都大学　大学院理学研究科地球惑星科学専攻地球物理学分野（修士課程） 2014年04月&amp;ndash;2018年03月
-東北大学　理学部地球惑星物質科学科 学位 2023年03月　博士（理学）・京都大学
-「近地深発地震波形記録を含む広義レシーバ関数が示す南海トラフ沈み込み帯の陸域並びに海域下の不均質構造」 2020年03月　修士（理学）・京都大学
-「スロー地震発生領域周辺の地震学的構造の空間的特徴 –広帯域レシーバ関数法の検証と室内摩擦実験への適用–」 2018年03月　学士（理学）・東北大学
-「phase A の格子選択配向と cold slab の地震波速度異方性」 教育経験 2021年04月&amp;ndash;2021年07月</description>
-    </item>
-    
-    <item>
-      <title>研究成果</title>
-      <link>https://yasuit21.github.io/ja/research/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yasuit21.github.io/ja/research/</guid>
-      <description>現在作成中です&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>臺灣</title>
-      <link>https://yasuit21.github.io/ja/gallery/photo/202303_taiwan/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yasuit21.github.io/ja/gallery/photo/202303_taiwan/</guid>
-      <description>&lt;h2 id=&#34;slow-to-fast-earthquake-workshop-in-taiwan&#34;&gt;Slow-to-Fast Earthquake Workshop in Taiwan&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;期間：2023年3月13日&amp;ndash;17日&lt;/li&gt;
-&lt;li&gt;滞在都市：臺南市，高雄市，臺東縣，花蓮縣&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
     
   </channel>
