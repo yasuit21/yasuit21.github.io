@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://yasuit21.github.io/en/about/</loc>
-    <lastmod>2023-09-18T01:00:45+09:00</lastmod>
+    <lastmod>2023-09-18T12:40:29+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -15,8 +15,21 @@
                 href="https://yasuit21.github.io/en/about/"
                 />
   </url><url>
+    <loc>https://yasuit21.github.io/en/link/</loc>
+    <lastmod>2023-09-18T12:40:29+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/link/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/link/"
+                />
+  </url><url>
     <loc>https://yasuit21.github.io/en/categories/</loc>
-    <lastmod>2023-09-18T01:00:45+09:00</lastmod>
+    <lastmod>2023-09-18T12:40:29+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -42,7 +55,7 @@
                 />
   </url><url>
     <loc>https://yasuit21.github.io/en/categories/news/</loc>
-    <lastmod>2023-09-18T01:00:45+09:00</lastmod>
+    <lastmod>2023-09-18T12:40:29+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -93,19 +106,6 @@
                 href="https://yasuit21.github.io/en/news/2023/06/0010/"
                 />
   </url><url>
-    <loc>https://yasuit21.github.io/en/link/</loc>
-    <lastmod>2023-06-04T14:38:20+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/link/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/link/"
-                />
-  </url><url>
     <loc>https://yasuit21.github.io/en/news/2023/06/0009/</loc>
     <lastmod>2023-06-02T22:31:58+09:00</lastmod>
     <xhtml:link
@@ -146,7 +146,7 @@
                 />
   </url><url>
     <loc>https://yasuit21.github.io/en/news/2023/04/0008/</loc>
-    <lastmod>2023-06-19T22:25:20+09:00</lastmod>
+    <lastmod>2023-09-18T12:40:29+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
