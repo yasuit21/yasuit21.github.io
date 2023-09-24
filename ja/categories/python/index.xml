@@ -6,7 +6,25 @@
     <description>Recent content in Python on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 07 May 2023 23:53:19 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/ja/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Sep 2023 12:45:26 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/ja/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gmt coupeをPyGMTでも使いたい！</title>
+      <link>https://yasuit21.github.io/ja/post/2023/09/0007/</link>
+      <pubDate>Sun, 24 Sep 2023 12:45:26 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/post/2023/09/0007/</guid>
+      <description>&lt;p&gt;2023年9月現在，GMTの
+
+&lt;a href=&#34;https://docs.generic-mapping-tools.org/6.4/supplements/seis/coupe.html&#34; title=&#34;gmt coupe (v6.4)&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;coupe&lt;/a&gt;
+
+コマンドは
+
+&lt;a href=&#34;https://www.pygmt.org/latest/index.html&#34; title=&#34;Python interface for the Generic Mapping Tools&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PyGMT&lt;/a&gt;
+
+で実装されていないため，そのラッパーもどきを作成してみた．&lt;code&gt;coupe&lt;/code&gt;は震源メカニズム解のビーチボールを他の視点から描画するコマンドで，特に深さ断面に投影する際に用いられる．そのため，&lt;code&gt;PyGMT&lt;/code&gt;で統一的に描画することを検討するなら，&lt;code&gt;coupe&lt;/code&gt;も何とか使えるようにしたい．&lt;/p&gt;
+&lt;p&gt;今回は&lt;code&gt;PyGMT&lt;/code&gt;の内部を探り，&lt;code&gt;pygmt.Figure&lt;/code&gt;オブジェクトに直接作用する関数を作成して，深さ断面への震源メカニズム解の投影を実現したい．&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>pygmt.grdtrack()の引数順序</title>
       <link>https://yasuit21.github.io/ja/post/2023/05/0006/</link>

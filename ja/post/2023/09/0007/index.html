@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ja">
+<head>
+	
+	
+	
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-594401RXHW"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-594401RXHW');
+</script>
+
+	
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>gmt coupeをPyGMTでも使いたい！ - Yasunori SAWAKI</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta itemprop="name" content="gmt coupeをPyGMTでも使いたい！">
+<meta itemprop="description" content="2023年9月現在，GMTの
+
+coupe
+
+コマンドは
+
+PyGMT
+
+で実装されていないため，そのラッパーもどきを作成してみた．coupeは震源メカニズム解のビーチボールを他の視点から描画するコマンドで，特に深さ断面に投影する際に用いられる．そのため，PyGMTで統一的に描画することを検討するなら，coupeも何とか使えるようにしたい．
+今回はPyGMTの内部を探り，pygmt.Figureオブジェクトに直接作用する関数を作成して，深さ断面への震源メカニズム解の投影を実現したい．"><meta itemprop="datePublished" content="2023-09-24T12:45:26+09:00" />
+<meta itemprop="dateModified" content="2023-09-24T12:45:26+09:00" />
+<meta itemprop="wordCount" content="632">
+<meta itemprop="keywords" content="PyGMT,Seismology,Python," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="gmt coupeをPyGMTでも使いたい！"/>
+<meta name="twitter:description" content="2023年9月現在，GMTの
+
+coupe
+
+コマンドは
+
+PyGMT
+
+で実装されていないため，そのラッパーもどきを作成してみた．coupeは震源メカニズム解のビーチボールを他の視点から描画するコマンドで，特に深さ断面に投影する際に用いられる．そのため，PyGMTで統一的に描画することを検討するなら，coupeも何とか使えるようにしたい．
+今回はPyGMTの内部を探り，pygmt.Figureオブジェクトに直接作用する関数を作成して，深さ断面への震源メカニズム解の投影を実現したい．"/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/fontawesome-6.3.0/css/all.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/ja/" title="Yasunori Sawaki&#39;s homepage" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/myicon.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Yasunori Sawaki&#39;s homepage</div>
+					<div class="logo__tagline">Promoting Python seismology</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+  <button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+    <span class="menu__btn-title" tabindex="-1">メニュー</span>
+  </button>
+  <ul class="menu__list">
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/">
+        
+          <span class="menu__text">ホーム</span>
+        
+      </a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/news/">
+        
+          <span class="menu__text">おしらせ</span>
+        
+      </a>
+    </li>
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/about/">
+        
+        <span class="menu__text">About Me</span>
+        <label class="drop-icon" for="About Me">▾</label>
+        
+      </a>
+      <input type="checkbox" id="About Me">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E8%81%B7%E6%AD%B4">
+            
+            <span class="menu__text">職歴</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E5%AD%A6%E6%AD%B4">
+            
+            <span class="menu__text">学歴</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E6%95%99%E8%82%B2%E7%B5%8C%E9%A8%93">
+            
+            <span class="menu__text">教育経験</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E5%8F%97%E8%B3%9E%E6%AD%B4">
+            
+            <span class="menu__text">受賞歴</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E7%AB%B6%E4%BA%89%E7%9A%84%E8%B3%87%E9%87%91%E7%AD%89%E3%81%AE%E7%A0%94%E7%A9%B6%E8%AA%B2%E9%A1%8C">
+            
+            <span class="menu__text">競争的資金</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E5%AD%A6%E8%A1%93%E8%AA%BF%E6%9F%BB%E7%B5%8C%E9%A8%93%E6%B5%B7%E5%BA%95%E5%9C%B0%E9%9C%87%E8%A6%B3%E6%B8%AC">
+            
+            <span class="menu__text">学術調査経験</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/publication/">
+        
+        <span class="menu__text">学術出版物など</span>
+        <label class="drop-icon" for="学術出版物など">▾</label>
+        
+      </a>
+      <input type="checkbox" id="学術出版物など">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/publication/#%E6%9F%BB%E8%AA%AD%E4%BB%98%E3%81%8D%E8%AB%96%E6%96%87">
+            
+            <span class="menu__text">査読付き論文</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/publication/#%E5%AD%A6%E4%BC%9A%E7%99%BA%E8%A1%A8%E3%81%AA%E3%81%A9%E7%99%BA%E8%A1%A8%E8%80%85">
+            
+            <span class="menu__text">学会発表</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/research/">
+        
+          <span class="menu__text">研究成果</span>
+        
+      </a>
+    </li>
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/post/">
+        
+        <span class="menu__text">投稿一覧</span>
+        <label class="drop-icon" for="投稿一覧">▾</label>
+        
+      </a>
+      <input type="checkbox" id="投稿一覧">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/pygmt">
+            
+            <span class="menu__text">PyGMT</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/python">
+            
+            <span class="menu__text">Python</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/hugo">
+            
+            <span class="menu__text">Hugo</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/categories/obspy/">
+        
+          <span class="menu__text">ObsPy</span>
+        
+      </a>
+    </li>
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/gallery/">
+        
+        <span class="menu__text">ギャラリー</span>
+        <label class="drop-icon" for="ギャラリー">▾</label>
+        
+      </a>
+      <input type="checkbox" id="ギャラリー">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/photo/">
+            
+            <span class="menu__text">写真</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/link/">
+        
+          <span class="menu__text">リンク集</span>
+        
+      </a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="/en/">
+        
+          <span class="menu__text">English [EN]</span>
+        
+      </a>
+    </li>
+  </ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">gmt coupeをPyGMTでも使いたい！</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-09-24T12:45:26&#43;09:00">2023-09-24</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/ja/categories/pygmt/" rel="category">PyGMT</a>, <a class="meta__link" href="/ja/categories/seismology/" rel="category">Seismology</a>, <a class="meta__link" href="/ja/categories/python/" rel="category">Python</a>
+	</span>
+</div></div>
+		</header>
+		
+	<figure class="post__thumbnail thumbnail">
+		
+		<img class="thumbnail__image" src="/ja/post/2023/09/0007/coupe_example_depth.webp" alt="gmt coupeをPyGMTでも使いたい！">
+		
+	</figure>
+<div class="post__toc toc">
+	<div class="toc__title">目次</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#はじめに">はじめに</a></li>
+    <li><a href="#作成したモジュールcoupepyについて">作成したモジュール<code>coupe.py</code>について</a>
+      <ul>
+        <li><a href="#デコレータについて">デコレータについて</a></li>
+        <li><a href="#コードの中で行われていること">コードの中で行われていること</a></li>
+        <li><a href="#引数設定について">引数設定について</a></li>
+      </ul>
+    </li>
+    <li><a href="#動作確認">動作確認</a></li>
+    <li><a href="#まとめ展望">まとめ・展望</a></li>
+    <li><a href="#参考文献">参考文献</a></li>
+    <li><a href="#余談">余談</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p>2023年9月現在，GMTの
+
+<a href="https://docs.generic-mapping-tools.org/6.4/supplements/seis/coupe.html" title="gmt coupe (v6.4)" target="_blank" rel="noopener noreferrer">coupe</a>
+
+コマンドは
+
+<a href="https://www.pygmt.org/latest/index.html" title="Python interface for the Generic Mapping Tools" target="_blank" rel="noopener noreferrer">PyGMT</a>
+
+で実装されていないため，そのラッパーもどきを作成してみた．<code>coupe</code>は震源メカニズム解のビーチボールを他の視点から描画するコマンドで，特に深さ断面に投影する際に用いられる．そのため，<code>PyGMT</code>で統一的に描画することを検討するなら，<code>coupe</code>も何とか使えるようにしたい．</p>
+<p>今回は<code>PyGMT</code>の内部を探り，<code>pygmt.Figure</code>オブジェクトに直接作用する関数を作成して，深さ断面への震源メカニズム解の投影を実現したい．</p>
+<h2 id="はじめに">はじめに</h2>
+<p>地震学では，震源情報や観測点情報などの描画に地図描画プログラムの
+
+<a href="https://docs.generic-mapping-tools.org/latest/index.html" title="Generic Mapping Tools" target="_blank" rel="noopener noreferrer">GMT (Generic Mapping Tools)</a>
+
+を用いることが多く，様々な地図描画法に対応している．GMTは直交座標系でのプロットにも対応しているため，地図だけではなく，一般的な図の作成にも使える有用なツールである．</p>
+<p>しかし，GMTのコマンドは<strong>直感的に分かりにくい</strong><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>．①コマンドライン（シェルスクリプト）で実行してPostScriptファイルを作成し，GhostScriptで描画するといった手間が多く，微調整に時間が掛かる．また，②各コマンドの引数が全てアルファベットで始まるキーワードと文字列のペアで，しかもコマンド毎に異なっている．覚えれば良いのはごもっともだが，慣れるまでおまじないを唱えているような錯覚に陥る <del>（未だにおまじないを唱えている）</del>．</p>
+<p>最近GMTのPythonラッパーとして登場した
+
+<a href="https://www.pygmt.org/latest/index.html" title="Python interface for the Generic Mapping Tools" target="_blank" rel="noopener noreferrer">PyGMT</a>
+
+は，特にJupyter Notebookなどと組み合わせることで，<strong>インタラクティブな描画を実現</strong>した．シェルスクリプトを実行してPSファイルを作成し，それをGhostScriptで開いて確認する，などという煩わしさは無い．また，引数がよりPythonicなキーワードとなるため，<strong>コードの直感的理解</strong>がしやすい．</p>
+<p>とはいえ，<code>PyGMT</code>は絶賛開発中のツールであることから，<strong>GMTのコマンド全てをサポートできているわけではない</strong>．メカニズム解のビーチボールを他の視点，特に深さ断面に描画する
+
+<a href="https://docs.generic-mapping-tools.org/6.4/supplements/seis/coupe.html" title="gmt coupe (v6.4)" target="_blank" rel="noopener noreferrer">coupe</a>
+
+コマンドは，2023年9月現在<code>PyGMT</code>で実装されていない．また，gridデータを補間してくれる
+
+<a href="https://docs.generic-mapping-tools.org/latest/grdinterpolate.html" target="_blank" rel="noopener noreferrer">grdinterpolate</a>
+
+コマンドなんかもサポートされていない <del>（ツラい）</del>．<code>PyGMT</code>で使いたいが，どうすればよいか&hellip;？</p>
+<ol>
+<li><code>grdinterpolate</code>のようにデータ処理だけなら，普通にターミナルかスクリプトで回す．自分ならjupyter上で<code>!gmt grdinterpolate ...</code>と実行させる</li>
+<li><code>coupe</code>コマンドのようにメモリに保存させる場合は，1の方法は厳しそう．諦める？</li>
+</ol>
+<p>&hellip;なら，<code>PyGMT</code>で使える関数を自作すれば良い！ということで，<code>coupe</code>コマンドのラッパーもどき<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>を作成してみた．とりあえず今回は，<strong>coupe コマンドをPyGMTでも使えるようにする</strong>という表向きの目的を立てつつ，<code>PyGMT</code>が内部でどのようにしてコマンドを呼び，引数を割り当てているかを調べることを副題としたい．</p>
+<div class="box1">
+    <span class="box-title">おことわり</span>
+    <p>
+         筆者
+
+<a href="https://github.com/yasuit21" title="GitHub @yasuit21" target="_blank" rel="noopener noreferrer">@yasuit21</a>
+
+ (Y. Sawaki) は生GMTの経験に乏しいため，不正確な記載をしている可能性があります．真偽の程はご自身でお確かめいただければと思います．
+        
+    </p>
+</div>
+<h2 id="作成したモジュールcoupepyについて">作成したモジュール<code>coupe.py</code>について</h2>
+<p>早速，今回作成したモジュール<code>coupe.py</code>は次の通り．関数<code>coupe.coupe()</code>をインポートすることで使用できる．
+ただし，<strong><code>PyGMT v0.10.0</code>以上で動作</strong>するため注意が必要である．</p>
+
+<script src="https://gist.github.com/yasuit21/db1d676d784769b80365a3528d1ab547.js?file=coupe.py"></script>
+
+<p>基本的には，
+
+<a href="https://github.com/GenericMappingTools/pygmt/blob/v0.10.0/pygmt/src/meca.py" title="pygmt/src/meca.py v0.10.0" target="_blank" rel="noopener noreferrer">meca.py</a>
+
+ をベースにして，引数の設定などを改変した．</p>
+<div class="box1 caution">
+    <span class="box-title">CAUTION</span>
+    <p>
+         <code>coupe.py</code>は当ウェブサイトの管理人
+
+<a href="https://github.com/yasuit21" title="GitHub @yasuit21" target="_blank" rel="noopener noreferrer">@yasuit21</a>
+
+ (Y. Sawaki) が
+
+<a href="https://github.com/GenericMappingTools/pygmt/blob/v0.10.0/pygmt/src/meca.py" title="pygmt/src/meca.py v0.10.0" target="_blank" rel="noopener noreferrer">meca.py</a>
+
+をベースに新規作成したもので，PyGMTのプロジェクトに関連したものではありません．また，<code>coupe.py</code>を使用したことによって発生する一切の問題に対して責任を負いませんので，使用される場合は自己判断でお願いします．
+        
+    </p>
+</div>
+<h3 id="デコレータについて">デコレータについて</h3>
+<p>デコレータは，def文の頭に付いている<code>@func</code>のことで，関数を修飾する働きをする（詳しくは他のサイトで）．<code>coupe()</code>にも複数のデコレータを作用させているが，全てPyGMTから流用した（普通にimportしているだけ）．</p>
+<dl>
+<dt>
+
+<a href="https://github.com/GenericMappingTools/pygmt/blob/main/pygmt/helpers/decorators.py#L499-L606" title="pygmt.helpers.decorators.use_alias" target="_blank" rel="noopener noreferrer">use_alias</a>
+
+</dt>
+<dd>関数名の通り，GMTのコマンドのオプション名とPyGMTの関数やメソッドの引数名を結ぶ</dd>
+<dt>
+
+<a href="https://github.com/GenericMappingTools/pygmt/blob/main/pygmt/helpers/decorators.py#L609-L742" title="pygmt.helpers.decorators.kwargs_to_strings" target="_blank" rel="noopener noreferrer">kwargs_to_strings</a>
+
+</dt>
+<dd>指定したキーワードについては，文字列以外の入力も可能にする</dd>
+<dd>例えば<code>@kwargs_to_strings(A=&quot;sequence&quot;)</code>の場合，<code>A=&quot;1/2/3&quot;</code>だけでなく，<code>A=[1,2,3]</code>とも記載できる．</dd>
+</dl>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="コードの中で行われていること">コードの中で行われていること</h3>
+<p><details>
+  <summary>知りたい方は折りたたみメニューを開いてください．</summary>
+  <p><p>まずは，メカニズム解の引数<code>spec</code>を処理する．ファイルへのパスが記載されている場合は何もせず，それ以外の場合は<code>pandas.DataFrame</code>形式に変換する．</p>
+<div><div class="codeblock--name">coupe.py</div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    <span style="color:#75715e"># Convert spec to pandas.DataFrame unless it&#39;s a file</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> isinstance(spec, (dict, pd<span style="color:#f92672">.</span>DataFrame)):  <span style="color:#75715e"># spec is a dict or pd.DataFrame</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># determine convention from dict keys or pd.DataFrame column names</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> conv <span style="color:#f92672">in</span> [<span style="color:#e6db74">&#34;aki&#34;</span>, <span style="color:#e6db74">&#34;gcmt&#34;</span>, <span style="color:#e6db74">&#34;mt&#34;</span>, <span style="color:#e6db74">&#34;partial&#34;</span>, <span style="color:#e6db74">&#34;pricipal_axis&#34;</span>]:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> set(convention_params(conv))<span style="color:#f92672">.</span>issubset(set(spec<span style="color:#f92672">.</span>keys())):
+</span></span><span style="display:flex;"><span>                convention <span style="color:#f92672">=</span> conv
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># convert dict to pd.DataFrame so columns can be reordered</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> isinstance(spec, dict):
+</span></span><span style="display:flex;"><span>            spec <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(
+</span></span><span style="display:flex;"><span>                {key: np<span style="color:#f92672">.</span>atleast_1d(value) <span style="color:#66d9ef">for</span> key, value <span style="color:#f92672">in</span> spec<span style="color:#f92672">.</span>items()}
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Now spec is a pd.DataFrame or a file</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> isinstance(spec, pd<span style="color:#f92672">.</span>DataFrame):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> longitude <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>            spec[<span style="color:#e6db74">&#34;longitude&#34;</span>] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>atleast_1d(longitude)
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Reorder columns in DataFrame to match convention if necessary</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># expected columns are:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># longitude, latitude, depth, focal_parameters,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#   [event_name]</span>
+</span></span><span style="display:flex;"><span>        newcols <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;longitude&#34;</span>, <span style="color:#e6db74">&#34;latitude&#34;</span>, <span style="color:#e6db74">&#34;depth&#34;</span>] <span style="color:#f92672">+</span> convention_params(convention)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;event_name&#34;</span> <span style="color:#f92672">in</span> spec<span style="color:#f92672">.</span>columns:
+</span></span><span style="display:flex;"><span>            newcols <span style="color:#f92672">+=</span> [<span style="color:#e6db74">&#34;event_name&#34;</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># reorder columns in DataFrame</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> spec<span style="color:#f92672">.</span>columns<span style="color:#f92672">.</span>tolist() <span style="color:#f92672">!=</span> newcols:
+</span></span><span style="display:flex;"><span>            spec <span style="color:#f92672">=</span> spec<span style="color:#f92672">.</span>reindex(newcols, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)</span></span></code></pre></div>
+    </div>
+  </div><p>メカニズム解を記載する記法が選択され，<code>spec</code>は<code>pandas.DataFrame</code>形式に変換される．その後，イベント情報が別で与えられていた場合（<code>longitude</code>など），<code>spec</code>を上書きする．そして，メカニズム解の列情報を再配置して，coupeコマンドに与えられるようにする．</p>
+<p>また，辞書形式の<code>kwargs</code>に，GMTコマンドのオプションを加えていく．例えば，</p>
+<div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>kwargs[<span style="color:#e6db74">&#34;A&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;132/33/134/35&#34;</span></span></span></code></pre></div>
+    </div>
+  </div><p>だと，<code>-A132/33/134/35</code>というオプションが追加されることになる．関数独自の引数についても，GMTのオプションの形になるよう処理が行われる．</p>
+<p><code>kwargs</code>への追加が終わったら，<code>kwargs</code>を
+
+<a href="https://github.com/GenericMappingTools/pygmt/blob/6c933b29a50867ed11ce261decc8df672ef7b25b/pygmt/helpers/utils.py#L313-L435" title="pygmt.helpers.utils.build_arg_string" target="_blank" rel="noopener noreferrer">build_arg_string</a>
+
+関数にて文字列解析する．<code>build_arg_string</code>による解析例を見てみると，</p>
+<div><div class="codeblock--name">pygmt/helpers/utils.py</div>
+    <div class="codeblock--content"><div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">370
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">371
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">372
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">373
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">374
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">375
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">376
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">377
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">378
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>build_arg_string(
+</span></span><span style="display:flex;"><span>    dict(
+</span></span><span style="display:flex;"><span>        R<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1/2/3/4&#34;</span>,
+</span></span><span style="display:flex;"><span>        J<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X4i&#34;</span>,
+</span></span><span style="display:flex;"><span>        B<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;xaf&#34;</span>, <span style="color:#e6db74">&#34;yaf&#34;</span>, <span style="color:#e6db74">&#34;WSen&#34;</span>],
+</span></span><span style="display:flex;"><span>        I<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#34;1/1p,blue&#34;</span>, <span style="color:#e6db74">&#34;2/0.25p,blue&#34;</span>),
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>) 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># -BWSen -Bxaf -Byaf -I1/1p,blue -I2/0.25p,blue -JX4i -R1/2/3/4</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+  </div><p>のように，文字列はキーワードの直後に加えられ，リストやタプルなどの場合は，分割してそれぞれ付記される．</p>
+<p>最終的には，<code>Session</code>にて，GMTのコマンドを呼び出す．</p>
+<div><div class="codeblock--name">coupe.py</div>
+    <div class="codeblock--content"><div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">299
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">300
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">301
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">302
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">303
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">304
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">305
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">306
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">307
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">308
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> Session() <span style="color:#66d9ef">as</span> lib:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Choose how data will be passed into the module</span>
+</span></span><span style="display:flex;"><span>        file_context <span style="color:#f92672">=</span> lib<span style="color:#f92672">.</span>virtualfile_from_data(
+</span></span><span style="display:flex;"><span>            check_kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vector&#34;</span>, data<span style="color:#f92672">=</span>spec
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> file_context <span style="color:#66d9ef">as</span> fname:
+</span></span><span style="display:flex;"><span>            lib<span style="color:#f92672">.</span>call_module(
+</span></span><span style="display:flex;"><span>                module<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;coupe&#34;</span>, 
+</span></span><span style="display:flex;"><span>                args<span style="color:#f92672">=</span>build_arg_string(kwargs, infile<span style="color:#f92672">=</span>fname)
+</span></span><span style="display:flex;"><span>            )</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+  </div><p><code>lib.virtualfile_from_data</code>ではメカニズム解情報を読み込む．<code>kwargs</code>と共にそれらを<code>build_arg_string()</code>に投げることで，コマンドオプションを生成する．そして，コマンドオプションを<code>lib.call_module</code>に与えるとともに，<code>module=&quot;coupe&quot;</code>を指定することで，coupeコマンドを呼び出している．</p>
+</p>
+</details>
+<br></p>
+<h3 id="引数設定について">引数設定について</h3>
+<p><code>coupe.coupe()</code>について，基本的には
+
+<a href="https://www.pygmt.org/latest/api/generated/pygmt.Figure.meca.html" title="pygmt.Figure.meca" target="_blank" rel="noopener noreferrer">Figure.meca</a>
+
+メソッドと共通の引数を与えることができる．相違点として，<strong>第1引数には必ず pygmt.Figure オブジェクトを指定</strong>する．これは，<code>coupe.coupe()</code>を<code>Figure</code>オブジェクトのメソッドとして取り込んでいないためである<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>．普通に関数として使えるだけで，お試しとしては妥協できるレベルだろう．</p>
+<p>少し脱線したが，他に新しく作成した引数を紹介する．</p>
+<ul>
+<li><code>section</code>: gmt coupe でいうところの，Aオプションに対応する．つまり，作成する断面の切り口に対応する線分の情報を与える．例えば，線分の始点・終点における経度緯度を与える場合（Aaに対応），<code>[lon1,lat1,lon2,lat2]</code>といったリストや，<code>&quot;lon1/lat1/lon2/lat2&quot;</code>などの文字列を与える．どのオプションを取った場合でも，4つ以上の小数で構成される必要がある</li>
+<li><code>section_format</code>: Aオプションの小文字(a&ndash;d)オプションを指定する文字列．<code>section</code>に与えるリストはこの引数のフォーマットに従う
+<ul>
+<li><code>&quot;lonlat_lonlat&quot;</code>: Aaに対応（デフォルト）．線分の始点・終点における経度緯度を与える</li>
+<li><code>&quot;lonlat_strlen&quot;</code>: Abに対応．線分の始点の経度緯度と走向(°)，長さ(km)を与える</li>
+<li><code>&quot;xy_xy&quot;</code>: Acに対応．線分の始点・終点における直交座標値を与える</li>
+<li><code>&quot;xy_strlen&quot;</code>: Adに対応．線分の始点の直交座標値と走向(°)，長さ(km)を与える</li>
+</ul>
+</li>
+<li><code>no_file</code>: Qオプションに対応．<code>True</code>などとすると，ファイル出力がなされない．</li>
+</ul>
+<h2 id="動作確認">動作確認</h2>
+<p>PyGMT用の仮想環境を使用した．テストはUbuntu (WSL)で行っており，パッケージのバージョンは次の通り．</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Package</th>
+<th style="text-align:center">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Python</td>
+<td style="text-align:center">3.10.12 (conda-forge)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>pygmt</code></td>
+<td style="text-align:center">0.10.0</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>numpy</code></td>
+<td style="text-align:center">1.25.2</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>pandas</code></td>
+<td style="text-align:center">2.0.3</td>
+</tr>
+</tbody>
+</table>
+<div><div class="codeblock--name">Coupe_in_PyGMT.ipynb [1]</div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pygmt</span></span></code></pre></div>
+    </div>
+  </div><p>作成した<code>coupe.py</code>をインポートするために，ディレクトリを<code>PYTHONPATH</code>に一時的に追加する．</p>
+<div><div class="codeblock--name">Coupe_in_PyGMT.ipynb [2]</div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sys<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#39;/path/to/coupe_dir&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> coupe <span style="color:#f92672">import</span> coupe</span></span></code></pre></div>
+    </div>
+  </div><p>次に，メカニズム解のデータを作成する．実在しないデモデータを含むことに注意．</p>
+<div><div class="codeblock--name">Coupe_in_PyGMT.ipynb [3]</div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df_meca <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(
+</span></span><span style="display:flex;"><span>    [
+</span></span><span style="display:flex;"><span>        [<span style="color:#ae81ff">133.3498</span>, <span style="color:#ae81ff">35.2752</span>, <span style="color:#ae81ff">11.26</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">85</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">241</span>, <span style="color:#ae81ff">81</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">175</span>, <span style="color:#ae81ff">4.97</span>, <span style="color:#ae81ff">18</span>,],
+</span></span><span style="display:flex;"><span>        [<span style="color:#ae81ff">133.33</span>, <span style="color:#ae81ff">35.3</span>, <span style="color:#ae81ff">5.26</span>, <span style="color:#ae81ff">151</span>, <span style="color:#ae81ff">29</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">122</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">67</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">74</span>, <span style="color:#ae81ff">8.62</span>, <span style="color:#ae81ff">18</span>],
+</span></span><span style="display:flex;"><span>        [<span style="color:#ae81ff">133.3668</span>, <span style="color:#ae81ff">35.255</span>, <span style="color:#ae81ff">8.26</span>, <span style="color:#ae81ff">223.5</span>, <span style="color:#ae81ff">61.2</span>, <span style="color:#ae81ff">98</span>, <span style="color:#ae81ff">24.9</span>, <span style="color:#ae81ff">30.3</span>, <span style="color:#ae81ff">72.1</span>, <span style="color:#ae81ff">6.12</span>, <span style="color:#ae81ff">18</span>],
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    columns<span style="color:#f92672">=</span>[
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;longitude&#39;</span>,<span style="color:#e6db74">&#39;latitude&#39;</span>,<span style="color:#e6db74">&#39;depth&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;strike1&#39;</span>,<span style="color:#e6db74">&#39;dip1&#39;</span>,<span style="color:#e6db74">&#39;rake1&#39;</span>,<span style="color:#e6db74">&#39;strike2&#39;</span>,<span style="color:#e6db74">&#39;dip2&#39;</span>,<span style="color:#e6db74">&#39;rake2&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;mantissa&#34;</span>,<span style="color:#e6db74">&#34;exponent&#34;</span>,
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>)</span></span></code></pre></div>
+    </div>
+  </div><table>
+<thead>
+<tr>
+<th style="text-align:right"></th>
+<th style="text-align:right">longitude</th>
+<th style="text-align:right">latitude</th>
+<th style="text-align:right">depth</th>
+<th style="text-align:right">strike1</th>
+<th style="text-align:right">dip1</th>
+<th style="text-align:right">rake1</th>
+<th style="text-align:right">strike2</th>
+<th style="text-align:right">dip2</th>
+<th style="text-align:right">rake2</th>
+<th style="text-align:right">mantissa</th>
+<th style="text-align:right">exponent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0</td>
+<td style="text-align:right">133.35</td>
+<td style="text-align:right">35.2752</td>
+<td style="text-align:right">11.26</td>
+<td style="text-align:right">150</td>
+<td style="text-align:right">85</td>
+<td style="text-align:right">-9</td>
+<td style="text-align:right">241</td>
+<td style="text-align:right">81</td>
+<td style="text-align:right">-175</td>
+<td style="text-align:right">4.97</td>
+<td style="text-align:right">18</td>
+</tr>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:right">133.33</td>
+<td style="text-align:right">35.3</td>
+<td style="text-align:right">5.26</td>
+<td style="text-align:right">151</td>
+<td style="text-align:right">29</td>
+<td style="text-align:right">-122</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">67</td>
+<td style="text-align:right">-74</td>
+<td style="text-align:right">8.62</td>
+<td style="text-align:right">18</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:right">133.367</td>
+<td style="text-align:right">35.255</td>
+<td style="text-align:right">8.26</td>
+<td style="text-align:right">223.5</td>
+<td style="text-align:right">61.2</td>
+<td style="text-align:right">98</td>
+<td style="text-align:right">24.9</td>
+<td style="text-align:right">30.3</td>
+<td style="text-align:right">72.1</td>
+<td style="text-align:right">6.12</td>
+<td style="text-align:right">18</td>
+</tr>
+</tbody>
+</table>
+<p>では，メカニズム解のビーチボール（下半球投影）を地図上に描画してみよう．</p>
+<div><div class="codeblock--name">Coupe_in_PyGMT.ipynb [4]</div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>fig <span style="color:#f92672">=</span> pygmt<span style="color:#f92672">.</span>Figure()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pygmt<span style="color:#f92672">.</span>config(
+</span></span><span style="display:flex;"><span>    FONT_TITLE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;15p,Helvetica,black&#34;</span>,
+</span></span><span style="display:flex;"><span>    MAP_FRAME_TYPE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;plain&#34;</span>,
+</span></span><span style="display:flex;"><span>    MAP_FRAME_PEN<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.5p&#34;</span>,
+</span></span><span style="display:flex;"><span>    FORMAT_GEO_MAP<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ddd.xx&#34;</span>,
+</span></span><span style="display:flex;"><span>    FONT_ANNOT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;11p&#34;</span>,
+</span></span><span style="display:flex;"><span>    MAP_TICK_LENGTH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;6p&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fig<span style="color:#f92672">.</span>basemap(
+</span></span><span style="display:flex;"><span>    region<span style="color:#f92672">=</span>[<span style="color:#ae81ff">133.3</span>,<span style="color:#ae81ff">133.4</span>,<span style="color:#ae81ff">35.22</span>,<span style="color:#ae81ff">35.32</span>],
+</span></span><span style="display:flex;"><span>    projection<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;T133.25/10c&#34;</span>,
+</span></span><span style="display:flex;"><span>    frame<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;WSne&#34;</span>,<span style="color:#e6db74">&#34;xa0.05f0.01&#34;</span>, <span style="color:#e6db74">&#34;ya0.05f0.01&#34;</span>],
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>center <span style="color:#f92672">=</span> [<span style="color:#ae81ff">133.32</span>,<span style="color:#ae81ff">35.31</span>]
+</span></span><span style="display:flex;"><span>azimuth <span style="color:#f92672">=</span> <span style="color:#ae81ff">145</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Cross section</span>
+</span></span><span style="display:flex;"><span>lineA <span style="color:#f92672">=</span> pygmt<span style="color:#f92672">.</span>project(
+</span></span><span style="display:flex;"><span>    generate<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;5k&#39;</span>,
+</span></span><span style="display:flex;"><span>    center<span style="color:#f92672">=</span>center,
+</span></span><span style="display:flex;"><span>    azimuth<span style="color:#f92672">=</span>azimuth,
+</span></span><span style="display:flex;"><span>    length<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">10</span>],
+</span></span><span style="display:flex;"><span>    unit<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fig<span style="color:#f92672">.</span>plot(
+</span></span><span style="display:flex;"><span>    lineA,
+</span></span><span style="display:flex;"><span>    pen<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2p&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>fig<span style="color:#f92672">.</span>text(x<span style="color:#f92672">=</span>lineA[:<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>r,y<span style="color:#f92672">=</span>lineA[:<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>s,text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;A&#39;</span>,font<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;15p&#39;</span>)
+</span></span><span style="display:flex;"><span>fig<span style="color:#f92672">.</span>text(x<span style="color:#f92672">=</span>lineA[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>r,y<span style="color:#f92672">=</span>lineA[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>s,text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;A</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">&#39;</span>,font<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;15p&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pygmt<span style="color:#f92672">.</span>makecpt(cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;jet&#39;</span>, series<span style="color:#f92672">=</span>[<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">14</span>], reverse<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>fig<span style="color:#f92672">.</span>colorbar(frame<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;xa2+lDepth [km]&#39;</span>, position<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;JMR+o0.5c/-1.5c+w-6c+ebf&#34;</span>,)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Plot focal mecanisms on the map</span>
+</span></span><span style="display:flex;"><span>fig<span style="color:#f92672">.</span>meca(
+</span></span><span style="display:flex;"><span>    df_meca,
+</span></span><span style="display:flex;"><span>    scale<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.5c&#34;</span>,
+</span></span><span style="display:flex;"><span>    cmap<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>    pen<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.5p,black,solid&#34;</span>,
+</span></span><span style="display:flex;"><span>    transparency<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>,
+</span></span><span style="display:flex;"><span>    event_name<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;1&#39;</span>,<span style="color:#e6db74">&#39;2&#39;</span>,<span style="color:#e6db74">&#39;3&#39;</span>],
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Cross-sectional view on the top panel</span>
+</span></span><span style="display:flex;"><span>fig<span style="color:#f92672">.</span>shift_origin(yshift<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;14.c&#34;</span>)
+</span></span><span style="display:flex;"><span>fig<span style="color:#f92672">.</span>basemap(
+</span></span><span style="display:flex;"><span>    region<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">20</span>],  <span style="color:#75715e"># x_min, x_max, y_min, y_max</span>
+</span></span><span style="display:flex;"><span>    projection<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X11c/-3c&#34;</span>,
+</span></span><span style="display:flex;"><span>    frame<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;WSrt&#34;</span>, <span style="color:#e6db74">&#34;xa5f1+lDistance [km]&#34;</span>, <span style="color:#e6db74">&#34;ya5+lDepth [km]&#34;</span>],
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#75715e"># Plot focal mecanisms on the cross section</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>coupe(
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    fig,  <span style="color:#75715e"># the first argument must be a Figure object</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    spec<span style="color:#f92672">=</span>df_meca,  <span style="color:#75715e"># dataframe of mechanisms</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    scale<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.5c&#34;</span>,
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    section<span style="color:#f92672">=</span>center<span style="color:#f92672">+</span>[azimuth,<span style="color:#ae81ff">10</span>],   <span style="color:#75715e"># initial point, strike, length</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    section_format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lonlat_strlen&#39;</span>,  <span style="color:#75715e"># &#34;Ab&#34; option</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    cmap<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex; background-color:#3c3d38"><span>    no_file<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,  <span style="color:#75715e"># creates no output file</span>
+</span></span><span style="display:flex; background-color:#3c3d38"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fig<span style="color:#f92672">.</span>show()</span></span></code></pre></div>
+    </div>
+  </div><p><img src="coupe_example.png" alt="coupe_example"></p>
+<br />
+<p>下段の図はmap viewで，
+
+<a href="https://www.pygmt.org/latest/api/generated/pygmt.Figure.meca.html" title="pygmt.Figure.meca" target="_blank" rel="noopener noreferrer">Figure.meca</a>
+
+メソッドを使用した．上段の図は深さ断面を示し，今回作成したモジュール<code>coupe.py</code>の関数<code>coupe()</code>を使用した（ハイライト部）．
+上手く深さ断面に投影できているようだ（多分）．</p>
+<p>なお，作成した<code>coupe.py</code>と<code>Coupe_in_PyGMT.ipynb</code>は，
+
+<a href="https://gist.github.com/yasuit21/db1d676d784769b80365a3528d1ab547" title="yasuit21/Coupe_in_PyGMT.ipynb" target="_blank" rel="noopener noreferrer">GitHub Gist</a>
+
+から確認できる．</p>
+<h2 id="まとめ展望">まとめ・展望</h2>
+<ul>
+<li>PyGMTでも gmt coupe コマンドが使えるように，
+
+<a href="https://gist.github.com/yasuit21/db1d676d784769b80365a3528d1ab547#file-coupe-py" target="_blank" rel="noopener noreferrer">coupe.py</a>
+
+モジュールを作成した</li>
+<li><code>coupe.coupe()</code>を使えば，メカニズム解の深さ断面投影はシンプルな記述で実現できる</li>
+<li><code>Figure</code>の継承クラスを作成し，<code>coupe.coupe()</code>をクラスのメソッドにしてしまえば，よりPyGMTらしい記載ができるだろう（今回はそこまでやっていない）</li>
+<li>PyGMTの方でも，GMTのモジュールを随時Wrapしていくとのことで，coupeもその中に含まれているようだ<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>（2023年9月現在）．そのため，今回作成した<code>coupe.py</code>については，特にPR等することなく個人ベースで使っていく方針で良さそうだ <del>（プロの質には全く適わん）</del>．とりあえず，PyGMTの開発グループには感謝したいと思う．</li>
+</ul>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>
+
+<a href="https://docs.generic-mapping-tools.org/latest/index.html" title="Generic Mapping Tools" target="_blank" rel="noopener noreferrer">The Generic Mapping Tools Documentation</a>
+
+
+<ul>
+<li>
+
+<a href="https://docs.generic-mapping-tools.org/6.4/supplements/seis/coupe.html" title="gmt coupe (v6.4)" target="_blank" rel="noopener noreferrer">gmt coupe (v6.4)</a>
+
+</li>
+</ul>
+</li>
+<li>
+
+<a href="https://www.pygmt.org/latest/index.html" title="Python interface for the Generic Mapping Tools" target="_blank" rel="noopener noreferrer">PyGMT - A Python interface for the Generic Mapping Tools</a>
+
+
+<ul>
+<li>
+
+<a href="https://www.pygmt.org/latest/api/generated/pygmt.Figure.meca.html" title="pygmt.Figure.meca" target="_blank" rel="noopener noreferrer">Figure.meca</a>
+
+</li>
+</ul>
+</li>
+<li>
+
+<a href="https://dandango.pw/archives/893" target="_blank" rel="noopener noreferrer">gmt coupeの使い方 | はじめよう！GMT6</a>
+
+</li>
+<li>
+
+<a href="https://github.com/GenericMappingTools/2020-unavco-course/tree/master/seismology" title="2020-unavco-course/seismology" target="_blank" rel="noopener noreferrer">GMT for Seismology: Plotting beachballs | GenericMappingTools</a>
+
+</li>
+</ul>
+<h2 id="余談">余談</h2>
+<p><code>PyGMT</code>がサポートしているのは，GMT6系（2023年9月現在）なので，その前提で記載しています．現在の主流がどうかは知りませんが，GMT4を使っている研究者は一定数いると思います．自分はGMT4系，5系ともに全く分かりませんが，これらの古いGMTを使っている方が<code>PyGMT</code>を触るなら，「GMTとは別物！」くらい割り切った方が良いかもしれません．関数名も結構GMTと異なっていたりするので<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>．</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>筆者の主観&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>「もどき」と呼んだのは，PyGMTの記法通り実行できるわけではないため．メソッドではなく，ただの関数でしかない状態<sup id="fnref1:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>．ラッパーと呼べるかは不明&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>むろん，<code>Figure</code>クラスを継承した子クラスを作成して，この関数をメソッドとして組み込めば良いのだが，まあ普通に関数として使えれば十分でしょう <del>（そこまでやる必要性を感じない）</del>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>
+
+<a href="https://github.com/orgs/GenericMappingTools/projects/3" target="_blank" rel="noopener noreferrer">https://github.com/orgs/GenericMappingTools/projects/3</a>
+
+&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>
+
+<a href="https://www.pygmt.org/latest/api/index.html" target="_blank" rel="noopener noreferrer">PyGMT API Reference</a>
+
+&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/ja/tags/pygmt/" rel="tag">PyGMT</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/ja/tags/seismology/" rel="tag">Seismology</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/ja/tags/python/" rel="tag">Python</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/ja/post/2023/05/0006/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;前の投稿</span>
+			<p class="pager__title">pygmt.grdtrack()の引数順序</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			<aside class="sidebar">
+<div class="widget-recent widget">
+	<h4 class="widget__title">最近の投稿</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/ja/post/2023/09/0007/">gmt coupeをPyGMTでも使いたい！</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ja/news/2023/08/0012/">科研費に採択されました</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ja/news/2023/08/0011/">久々に東北大学を訪問しました</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ja/news/2023/06/0010/">筑波大学・防災科研訪問</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ja/news/2023/06/0009/">日本地球惑星科学連合2023年大会に参加しました</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ja/post/2023/05/0006/">pygmt.grdtrack()の引数順序</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">カテゴリー</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/hugo/">Hugo</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">1</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/jupyterlab/">JupyterLab</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">1</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/news/">News</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">12</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/obspy/">ObsPy</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">1</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/photo/">Photo</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">1</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/pygmt/">PyGMT</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">3</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/python/">Python</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">4</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/seismology/">Seismology</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">1</span>
+				</li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">タグ</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/anaconda/" title="Anaconda">Anaconda (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/hugo/" title="hugo">hugo (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/jupyterlab/" title="JupyterLab">JupyterLab (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/mainroad/" title="mainroad">mainroad (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/mpi/" title="MPI">MPI (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/obspy/" title="ObsPy">ObsPy (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/pygmt/" title="PyGMT">PyGMT (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/python/" title="Python">Python (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/seismology/" title="Seismology">Seismology (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E5%82%99%E5%BF%98%E9%8C%B2/" title="備忘録">備忘録 (5)</a>
+	</div>
+</div>
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">その他の個人メディア</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/yasuit21" target="_blank">
+				<svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
+				<span>Twitter</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/yasuit21" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="ORCiD"  rel="noopener noreferrer" href="https://orcid.org/0000-0002-4043-3391" target="_blank">
+				<span>ORCiD</span>
+			</a>
+		</div>
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Google Scholar"  rel="noopener noreferrer" href="https://scholar.google.com/citations?user=NyhvdCUAAAAJ&amp;hl=en" target="_blank">
+				<span>Google Scholar</span>
+			</a>
+		</div>
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="researchmap"  rel="noopener noreferrer" href="https://researchmap.jp/YasunoriSawaki" target="_blank">
+				<span>researchmap</span>
+			</a>
+		</div>
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="tayo"  rel="noopener noreferrer" href="https://tayo.jp/users/xw7IseDyQEcMDg3PjO7h7TM3uzl2/" target="_blank">
+				<span>tayo</span>
+			</a>
+		</div>
+		
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+<div class="footer__links">
+	<a class="footer__link" href="/ja/privacy/">プライバシーポリシー</a> | <a class="footer__link" href="/en/">EN</a>
+</div>
+		<div class="footer__copyright">
+			&copy; 2023 Yasunori Sawaki.
+			<span class="footer__copyright-credits">このサイトは <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> と <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> テーマで生成されています。</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

@@ -47,6 +47,14 @@ pre {
     margin-top: 0;
 }
 
+/* gist codes: Sep. 20, 2023 */
+.gist .gist-data{
+    max-height:400px!important;
+}
+table.highlight tr:nth-child(2n+1) td {
+    background: #f8f7fb;
+}
+
 /* scroll */
 .marquee_area {
 	max-width: auto;
