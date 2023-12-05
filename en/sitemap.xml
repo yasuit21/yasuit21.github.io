@@ -2,6 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://yasuit21.github.io/en/categories/</loc>
+    <lastmod>2023-11-30T22:01:55-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/categories/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/news/2023/11/0014/</loc>
+    <lastmod>2023-11-30T22:01:55-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/news/2023/11/0014/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/news/2023/11/0014/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/categories/news/</loc>
+    <lastmod>2023-11-30T22:01:55-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/categories/news/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/categories/news/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/tags/paper/</loc>
+    <lastmod>2023-11-30T22:01:55-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/tags/paper/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/tags/paper/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/tags/seismology/</loc>
+    <lastmod>2023-11-30T22:01:55-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/tags/seismology/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/tags/seismology/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/categories/seismology/</loc>
+    <lastmod>2023-11-30T22:01:55-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/categories/seismology/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/categories/seismology/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/tags/</loc>
+    <lastmod>2023-11-30T22:01:55-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/tags/"
+                />
+  </url><url>
     <loc>https://yasuit21.github.io/en/</loc>
     <lastmod>2023-11-04T00:21:45+09:00</lastmod>
     <xhtml:link
@@ -28,19 +119,6 @@
                 href="https://yasuit21.github.io/en/about/"
                 />
   </url><url>
-    <loc>https://yasuit21.github.io/en/categories/</loc>
-    <lastmod>2023-11-04T00:21:45+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/categories/"
-                />
-  </url><url>
     <loc>https://yasuit21.github.io/en/categories/conference/</loc>
     <lastmod>2023-11-04T00:21:45+09:00</lastmod>
     <xhtml:link
@@ -52,19 +130,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yasuit21.github.io/en/categories/conference/"
-                />
-  </url><url>
-    <loc>https://yasuit21.github.io/en/categories/news/</loc>
-    <lastmod>2023-11-04T00:21:45+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/categories/news/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/categories/news/"
                 />
   </url><url>
     <loc>https://yasuit21.github.io/en/news/2023/11/0013/</loc>
@@ -351,18 +416,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yasuit21.github.io/en/publication/"
-                />
-  </url><url>
-    <loc>https://yasuit21.github.io/en/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/tags/"
                 />
   </url>
 </urlset>
