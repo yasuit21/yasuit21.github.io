@@ -5,8 +5,39 @@
     <link>https://yasuit21.github.io/ja/news/</link>
     <description>Recent content on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sun, 29 Oct 2023 19:37:40 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/ja/news/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 09 Dec 2023 11:20:09 -0700</lastBuildDate><atom:link href="https://yasuit21.github.io/ja/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AGU@サンフランシスコに参加しました</title>
+      <link>https://yasuit21.github.io/ja/news/2023/12/0016/</link>
+      <pubDate>Sat, 16 Dec 2023 10:04:13 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/news/2023/12/0016/</guid>
+      <description>&lt;p&gt;2023年12月11日から15日に，サンフランシスコで開催された
+
+&lt;a href=&#34;https://www.agu.org/fall-meeting&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;AGU秋季大会&lt;/a&gt;
+
+に参加しました．３日目には自身の
+
+&lt;a href=&#34;https://agu.confex.com/agu/fm23/meetingapp.cgi/Paper/1284649&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;ポスター発表&lt;/a&gt;
+
+も行いました．自身としては５年ぶりの海外の国際学会ということで，現地の雰囲気や著名な学者との議論を楽しむことができました．&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>アメリカ地質調査所（コロラド州）に一ヶ月滞在しました</title>
+      <link>https://yasuit21.github.io/ja/news/2023/12/0015/</link>
+      <pubDate>Sun, 10 Dec 2023 09:25:33 -0700</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/news/2023/12/0015/</guid>
+      <description>&lt;p&gt;2023年11月07日から12月10日までアメリカ合衆国コロラド州ゴールデンに滞在し，U.S. Geological Survey (USGS)のDavid Shelly博士と在外研究を行いました．海外での研究生活は初めてでしたが，英語のみで会話や議論を行う良い経験となりました．&lt;/p&gt;
+&lt;p&gt;この後はサンフランシスコに向かい，American Geophysical Union Fall Meeting 2023に参加し，
+
+&lt;a href=&#34;https://agu.confex.com/agu/fm23/meetingapp.cgi/Paper/1284649&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;ポスター発表&lt;/a&gt;
+
+を行います．&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>共著論文が出版されました</title>
       <link>https://yasuit21.github.io/ja/news/2023/11/0014/</link>
@@ -135,7 +166,7 @@ URLはこちらです：
       <pubDate>Mon, 06 Feb 2023 05:35:47 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/ja/news/2023/02/0002/</guid>
-      <description> 研究成果リストを作成しました． 経歴を作成しました． リンク集を作成しました． </description>
+      <description> 研究成果リスト を作成しました． 経歴 を作成しました． リンク集 を作成しました． </description>
     </item>
     
     <item>
@@ -156,7 +187,7 @@ URLはこちらです：
       <pubDate>Wed, 25 Jan 2023 18:22:25 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/ja/news/2023/01/0001/</guid>
-      <description>ただいまホームページ作成中です． Hugoと Mainroadテーマを用いています．</description>
+      <description>ただいまホームページ作成中です． Hugo と Mainroad テーマを用いています．</description>
     </item>
     
   </channel>
