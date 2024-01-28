@@ -327,19 +327,6 @@
                 href="https://yasuit21.github.io/en/news/2023/02/0005/"
                 />
   </url><url>
-    <loc>https://yasuit21.github.io/en/research/</loc>
-    <lastmod>2023-02-12T16:56:53+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/research/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/research/"
-                />
-  </url><url>
     <loc>https://yasuit21.github.io/en/news/2023/02/0004/</loc>
     <lastmod>2023-02-13T06:56:15+09:00</lastmod>
     <xhtml:link
@@ -455,6 +442,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yasuit21.github.io/en/publication/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/research/</loc>
+    <lastmod>2023-02-12T12:26:14+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/research/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/research/"
                 />
   </url>
 </urlset>

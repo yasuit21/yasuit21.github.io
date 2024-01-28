@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://yasuit21.github.io/ja/categories/</loc>
-    <lastmod>2024-01-15T21:00:52+09:00</lastmod>
+    <lastmod>2024-01-15T21:20:18+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,16 +16,16 @@
                 />
   </url><url>
     <loc>https://yasuit21.github.io/ja/tags/earthquake/</loc>
-    <lastmod>2024-01-15T21:00:52+09:00</lastmod>
+    <lastmod>2024-01-15T21:20:18+09:00</lastmod>
   </url><url>
     <loc>https://yasuit21.github.io/ja/categories/earthquake/</loc>
-    <lastmod>2024-01-15T21:00:52+09:00</lastmod>
+    <lastmod>2024-01-15T21:20:18+09:00</lastmod>
   </url><url>
     <loc>https://yasuit21.github.io/ja/tags/noto/</loc>
-    <lastmod>2024-01-15T21:00:52+09:00</lastmod>
+    <lastmod>2024-01-15T21:20:18+09:00</lastmod>
   </url><url>
     <loc>https://yasuit21.github.io/ja/tags/</loc>
-    <lastmod>2024-01-15T21:00:52+09:00</lastmod>
+    <lastmod>2024-01-15T21:20:18+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -38,7 +38,7 @@
                 />
   </url><url>
     <loc>https://yasuit21.github.io/ja/post/2024/01/0008/</loc>
-    <lastmod>2024-01-15T21:00:52+09:00</lastmod>
+    <lastmod>2024-01-15T21:20:18+09:00</lastmod>
   </url><url>
     <loc>https://yasuit21.github.io/ja/news/2024/01/0017/</loc>
     <lastmod>2024-01-01T09:30:53+09:00</lastmod>
@@ -302,19 +302,6 @@
                 href="https://yasuit21.github.io/ja/gallery/"
                 />
   </url><url>
-    <loc>https://yasuit21.github.io/ja/research/</loc>
-    <lastmod>2023-06-19T22:25:20+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/research/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/research/"
-                />
-  </url><url>
     <loc>https://yasuit21.github.io/ja/gallery/photo/202303_taiwan/</loc>
     <lastmod>2023-06-19T22:25:20+09:00</lastmod>
     <xhtml:link
@@ -527,6 +514,19 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://yasuit21.github.io/ja/news/2023/01/0001/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/ja/research/</loc>
+    <lastmod>2024-01-28T09:35:07+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/research/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/research/"
                 />
   </url>
 </urlset>
