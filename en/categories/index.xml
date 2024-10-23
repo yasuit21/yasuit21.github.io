@@ -6,20 +6,11 @@
     <description>Recent content in Categories on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 03 Jun 2024 22:35:49 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/en/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Conference</title>
-      <link>https://yasuit21.github.io/en/categories/conference/</link>
-      <pubDate>Mon, 03 Jun 2024 22:35:49 +0900</pubDate>
-      
-      <guid>https://yasuit21.github.io/en/categories/conference/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Wed, 23 Oct 2024 16:35:47 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/en/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>News</title>
       <link>https://yasuit21.github.io/en/categories/news/</link>
-      <pubDate>Mon, 03 Jun 2024 22:35:49 +0900</pubDate>
+      <pubDate>Wed, 23 Oct 2024 16:35:47 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/en/categories/news/</guid>
       <description></description>
@@ -28,7 +19,7 @@
     <item>
       <title>Research</title>
       <link>https://yasuit21.github.io/en/categories/research/</link>
-      <pubDate>Sun, 14 Apr 2024 14:06:06 +0900</pubDate>
+      <pubDate>Wed, 23 Oct 2024 16:35:47 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/en/categories/research/</guid>
       <description></description>
@@ -37,9 +28,18 @@
     <item>
       <title>Seismology</title>
       <link>https://yasuit21.github.io/en/categories/seismology/</link>
-      <pubDate>Sun, 14 Apr 2024 14:06:06 +0900</pubDate>
+      <pubDate>Wed, 23 Oct 2024 16:35:47 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/en/categories/seismology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conference</title>
+      <link>https://yasuit21.github.io/en/categories/conference/</link>
+      <pubDate>Mon, 03 Jun 2024 22:35:49 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/categories/conference/</guid>
       <description></description>
     </item>
     
