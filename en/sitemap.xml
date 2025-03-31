@@ -2,6 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://yasuit21.github.io/en/</loc>
+    <lastmod>2025-02-16T22:45:58+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/"
+                />
+  </url><url>
     <loc>https://yasuit21.github.io/en/categories/</loc>
     <lastmod>2025-02-16T22:11:25+09:00</lastmod>
     <xhtml:link
@@ -65,19 +78,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yasuit21.github.io/en/tags/"
-                />
-  </url><url>
-    <loc>https://yasuit21.github.io/en/</loc>
-    <lastmod>2025-01-16T08:15:44+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/"
                 />
   </url><url>
     <loc>https://yasuit21.github.io/en/tags/agu/</loc>
@@ -692,7 +692,7 @@
                 />
   </url><url>
     <loc>https://yasuit21.github.io/en/publication/</loc>
-    <lastmod>2025-01-16T08:15:44+09:00</lastmod>
+    <lastmod>2025-02-16T22:45:58+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
