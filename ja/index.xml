@@ -6,7 +6,43 @@
     <description>Recent content on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 31 Mar 2025 22:31:34 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/ja/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Apr 2025 12:50:28 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/ja/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>経歴</title>
+      <link>https://yasuit21.github.io/ja/about/</link>
+      <pubDate>Thu, 03 Apr 2025 12:50:28 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/about/</guid>
+      <description>佐脇 泰典 (SAWAKI, Yasunori, Ph.D.) Download the latest CV (last updated on 03 April 2025) 立命館大学理工学部物理科学科　助教 京都大学博士（理学） 職歴 2025年04月&amp;ndash;現在
+立命館大学理工学部物理科学科・助教
+固体地球物理学研究室（川方研） 2023年04月&amp;ndash;2025年03月
+国立研究開発法人産業技術総合研究所 地質調査総合センター 産総研特別研究員（ポスドク） 受入研究者： 内出崇彦 上級主任研究員（地震テクトニクス研究グループ） 2021年10月&amp;ndash;2023年03月
+京都大学大学院教育支援機構奨励研究員 学歴 2020年04月&amp;ndash;2023年03月
+京都大学　大学院理学研究科地球惑星科学専攻地球物理学分野（博士後期課程） 伊藤喜宏 研究室（ 京都大学防災研究所附属地震災害研究センター ） 2018年04月&amp;ndash;2020年03月</description>
+    </item>
+    
+    <item>
+      <title>令和６年能登半島地震の断層面形状を推定した論文がJGR Solid Earth誌で公開されました</title>
+      <link>https://yasuit21.github.io/ja/news/2025/04/0027/</link>
+      <pubDate>Wed, 02 Apr 2025 20:00:00 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/news/2025/04/0027/</guid>
+      <description>&lt;p&gt;2024年元日に発生した「&lt;strong&gt;令和６年能登半島地震&lt;/strong&gt;」の断層面形状を推定しました．半島直下に，大小5枚の断層面が海岸線に沿うようにして並んでいます．輪島東部ではより反時計回りに回転した面を抽出したほか，西岸では東に傾斜する面が見られます．これらの局所構造は複雑な断層すべりが発生したことを示唆するとともに，重力異常や地質構造ともよく対応していました．能登半島の形成と地震テクトニクスの理解にも繋がる研究成果です．&lt;/p&gt;
+&lt;p&gt;詳細については下記の論文およびソフトウェアをご覧ください&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Sawaki, Y.&lt;/strong&gt;, T. Shiina, K. Sagae, Y. Sato, H. Horikawa, A. Miyakawa, K. Imanishi, and T. Uchide (2025). Fault Geometries of the 2024 Mw 7.5 Noto Peninsula Earthquake from Hypocenter-Based Hierarchical Clustering of Point-Cloud Normal Vectors. &lt;em&gt;Journal of Geophysical Research: Solid Earth&lt;/em&gt;, 130, e2024JB030233. 
+
+&lt;a href=&#34;https://doi.org/10.1029/2024JB030233&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;doi: 10.1029/2024JB030233&lt;/a&gt;
+
+ (Open Access)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;佐脇泰典&lt;/strong&gt;・佐藤圭浩・内出崇彦 (2025) 点群法線ベクトルを用いた震源クラスタリングによる地震断層面抽出法（FaultNVC）地質調査総合センター研究資料集，no. 759，産業技術総合研究所地質調査総合センター．
+
+&lt;a href=&#34;https://www.gsj.jp/publications/pub/openfile/openfile0759.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.gsj.jp/publications/pub/openfile/openfile0759.html&lt;/a&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
     <item>
       <title>国研から大学に異動しました</title>
       <link>https://yasuit21.github.io/ja/news/2025/04/0028/</link>
@@ -14,21 +50,6 @@
       
       <guid>https://yasuit21.github.io/ja/news/2025/04/0028/</guid>
       <description>&lt;p&gt;2025年3月31日をもって2年間在籍した産業技術総合研究所を離れ，同4月1日からは立命館大学理工学部の助教に着任しました．研究活動だけでなく，学生教育にも力を入れていきたいと思います．&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>経歴</title>
-      <link>https://yasuit21.github.io/ja/about/</link>
-      <pubDate>Mon, 31 Mar 2025 22:31:34 +0900</pubDate>
-      
-      <guid>https://yasuit21.github.io/ja/about/</guid>
-      <description>佐脇 泰典 (SAWAKI, Yasunori, Ph.D.) Download the latest CV (last updated on 25 October 2024) 立命館大学理工学部物理科学科　助教 産総研特別研究員（ポスドク研究員）
-（国立研究開発法人産業技術総合研究所 地質調査総合センター 活断層・火山研究部門） 京都大学博士（理学） 職歴 2025年04月&amp;ndash;現在
-立命館大学理工学部物理科学科・助教
-固体地球物理学研究室（川方研究室） 2023年04月&amp;ndash;2025年03月
-国立研究開発法人産業技術総合研究所 地質調査総合センター 産総研特別研究員（ポスドク） 受入研究者： 内出崇彦 上級主任研究員（地震テクトニクス研究グループ） 2021年10月&amp;ndash;2023年03月
-京都大学大学院教育支援機構奨励研究員 学歴 2020年04月&amp;ndash;2023年03月
-京都大学　大学院理学研究科地球惑星科学専攻地球物理学分野（博士後期課程） 伊藤喜宏 研究室（ 京都大学防災研究所附属地震災害研究センター ） 2018年04月&amp;ndash;2020年03月</description>
     </item>
     
     <item>
@@ -502,7 +523,7 @@ URLはこちらです：
       <pubDate>Wed, 25 Jan 2023 20:04:50 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/ja/publication/</guid>
-      <description>投稿済み論文・プレプリント 1 under review, 1 submitted, and 2 in preparation
+      <description>投稿済み論文・プレプリント 1 under review, 1 submitted, and 3 in preparation
 査読付き論文 筆頭著者 責任著者* 共著論文 計 4 編 4 編 2 編 6 編 Sawaki, Y.*, T. Shiina, K. Sagae, Y. Sato, H. Horikawa, A. Miyakawa, K. Imanishi, and T. Uchide (2025).</description>
     </item>
     
