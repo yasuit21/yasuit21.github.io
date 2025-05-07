@@ -2,6 +2,149 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://yasuit21.github.io/ja/categories/</loc>
+    <lastmod>2025-05-07T11:04:42+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/categories/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/ja/tags/fault-geometry/</loc>
+    <lastmod>2025-05-07T11:04:42+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/tags/fault-geometry/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/tags/fault-geometry/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/ja/tags/hypocenter/</loc>
+    <lastmod>2025-05-07T11:04:42+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/tags/hypocenter/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/tags/hypocenter/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/ja/tags/kanagawa/</loc>
+    <lastmod>2025-05-07T11:04:42+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/tags/kanagawa/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/tags/kanagawa/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/ja/tags/kanto-earthquake/</loc>
+    <lastmod>2025-05-07T11:04:42+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/tags/kanto-earthquake/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/tags/kanto-earthquake/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/ja/categories/news/</loc>
+    <lastmod>2025-05-07T11:04:42+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/categories/news/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/categories/news/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/ja/categories/research/</loc>
+    <lastmod>2025-05-07T11:04:42+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/categories/research/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/categories/research/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/ja/tags/seismology/</loc>
+    <lastmod>2025-05-07T11:04:42+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/tags/seismology/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/tags/seismology/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/ja/categories/seismology/</loc>
+    <lastmod>2025-05-07T11:04:42+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/categories/seismology/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/categories/seismology/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/ja/tags/</loc>
+    <lastmod>2025-05-07T11:04:42+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/tags/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/ja/news/2025/05/0029/</loc>
+    <lastmod>2025-05-07T11:04:42+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/news/2025/05/0029/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/news/2025/05/0029/"
+                />
+  </url><url>
     <loc>https://yasuit21.github.io/ja/about/</loc>
     <lastmod>2025-04-06T11:41:26+09:00</lastmod>
     <xhtml:link
@@ -41,47 +184,8 @@
                 href="https://yasuit21.github.io/ja/"
                 />
   </url><url>
-    <loc>https://yasuit21.github.io/ja/categories/</loc>
-    <lastmod>2025-04-03T12:50:28+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/categories/"
-                />
-  </url><url>
-    <loc>https://yasuit21.github.io/ja/tags/hypocenter/</loc>
-    <lastmod>2025-04-03T12:50:28+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/tags/hypocenter/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/tags/hypocenter/"
-                />
-  </url><url>
-    <loc>https://yasuit21.github.io/ja/categories/news/</loc>
-    <lastmod>2025-04-03T12:50:28+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/categories/news/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/categories/news/"
-                />
-  </url><url>
     <loc>https://yasuit21.github.io/ja/tags/noto-peninsula/</loc>
-    <lastmod>2025-04-03T12:50:28+09:00</lastmod>
+    <lastmod>2025-04-06T11:59:54+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -93,47 +197,8 @@
                 href="https://yasuit21.github.io/ja/tags/noto-peninsula/"
                 />
   </url><url>
-    <loc>https://yasuit21.github.io/ja/categories/research/</loc>
-    <lastmod>2025-04-03T12:50:28+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/categories/research/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/categories/research/"
-                />
-  </url><url>
-    <loc>https://yasuit21.github.io/ja/tags/seismology/</loc>
-    <lastmod>2025-04-03T12:50:28+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/tags/seismology/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/tags/seismology/"
-                />
-  </url><url>
-    <loc>https://yasuit21.github.io/ja/categories/seismology/</loc>
-    <lastmod>2025-04-03T12:50:28+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/categories/seismology/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/categories/seismology/"
-                />
-  </url><url>
     <loc>https://yasuit21.github.io/ja/categories/software/</loc>
-    <lastmod>2025-04-03T12:50:28+09:00</lastmod>
+    <lastmod>2025-04-06T11:59:54+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -145,21 +210,8 @@
                 href="https://yasuit21.github.io/ja/categories/software/"
                 />
   </url><url>
-    <loc>https://yasuit21.github.io/ja/tags/</loc>
-    <lastmod>2025-04-03T12:50:28+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/tags/"
-                />
-  </url><url>
     <loc>https://yasuit21.github.io/ja/news/2025/04/0027/</loc>
-    <lastmod>2025-04-03T12:50:28+09:00</lastmod>
+    <lastmod>2025-04-06T11:59:54+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
