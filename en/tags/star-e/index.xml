@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>STAR-E on Yasunori SAWAKI</title>
+    <link>https://yasuit21.github.io/en/tags/star-e/</link>
+    <description>Recent content in STAR-E on Yasunori SAWAKI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 01 Jun 2025 16:20:33 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/en/tags/star-e/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JpGU2025</title>
+      <link>https://yasuit21.github.io/en/news/2025/06/0030/</link>
+      <pubDate>Sun, 01 Jun 2025 16:20:33 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/news/2025/06/0030/</guid>
+      <description>&lt;p&gt;I joined 
+
+&lt;a href=&#34;https://www.jpgu.org/meeting_e2025/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;the Japan Geoscience Union (JpGU) Meeting 2025&lt;/a&gt;
+
+, held at the Makuhari Messe in Chiba, JP, from 25 to 30 May 2025. I made an oral and a poster presentations.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+
+&lt;a href=&#34;https://www.jpgu.org/meeting_e2025/sessionlist_en/detail/S-SS12.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;[SSS12-18]&lt;/a&gt;
+
+ &amp;ldquo;Intraslab reverse faulting adjacent to the hypocenter of the 1923 Kanto earthquake: The Mw 5.0 western Kanagawa earthquake on 9 August 2024&amp;rdquo; by Sawaki, Y., T. Shiina, and T. Uchide&lt;/li&gt;
+&lt;li&gt;
+
+&lt;a href=&#34;https://www.jpgu.org/meeting_e2025/sessionlist_en/detail/S-SS06.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;[SSS06-P01]&lt;/a&gt;
+
+ &amp;ldquo;Mutsu Bay Seismic Cluster along the Volcanic Front in November 2024&amp;rdquo; by Sawaki, Y., K. Sagae, T. Shiina, K. Imanishi, and T. Uchide&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>New preprint</title>
+      <link>https://yasuit21.github.io/en/news/2025/05/0029/</link>
+      <pubDate>Wed, 07 May 2025 11:04:44 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/news/2025/05/0029/</guid>
+      <description>&lt;p&gt;We have posted a new preprint on the fault geometry for the Mw 5.0 western Kanagawa earthquake in eastern Japan on 9 August 2024. This is a preprint (peer-review not completed), but feel free to check it out!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sawaki, Y.&lt;/strong&gt;, T. Shiina, and T. Uchide. Intraslab reverse faulting adjacent to the hypocenter of the 1923 Kanto earthquake: The Mw 5.0 western Kanagawa earthquake in eastern Japan on 9 August 2024 [Preprint v1]. &lt;em&gt;Research Square&lt;/em&gt;. 
+
+&lt;a href=&#34;https://doi.org/10.21203/rs.3.rs-6353744/v1&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://doi.org/10.21203/rs.3.rs-6353744/v1&lt;/a&gt;
+
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Our New Paper in JGR Solid Earth!</title>
+      <link>https://yasuit21.github.io/en/news/2025/04/0027/</link>
+      <pubDate>Wed, 02 Apr 2025 20:00:00 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/news/2025/04/0027/</guid>
+      <description>&lt;p&gt;We have estimated the fault geometry of the 2024 Noto Peninsula Earthquake in central Japan on 1 January 2024. Our analysis reveals major and minor fault planes aligned along the coastline beneath the peninsula. Notably, we identified a more counter-clockwise rotated plane in eastern Wajima and an east-dipping plane along the west coast. These localized structural complexities suggest intricate fault slip behavior and exhibit a strong correlation with gravity anomalies and geological structures. This research contributes to a deeper understanding of the formation and seismotectonics of the Noto Peninsula.&lt;/p&gt;
+&lt;p&gt;We also won the &lt;strong&gt;AIST President Award 2024&lt;/strong&gt; related to 
+
+&lt;a href=&#34;https://www.aist.go.jp/aist_j/aist_award/2024/apa.html#s1&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Contribution to National Earthquake Disaster Prevention Measures: Response to the 2024 Noto Peninsula Earthquake&lt;/a&gt;
+
+ (in Japanese)!&lt;/p&gt;
+&lt;p&gt;Check the paper and software below!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Sawaki, Y.&lt;/strong&gt;, T. Shiina, K. Sagae, Y. Sato, H. Horikawa, A. Miyakawa, K. Imanishi, and T. Uchide (2025). Fault Geometries of the 2024 Mw 7.5 Noto Peninsula Earthquake from Hypocenter-Based Hierarchical Clustering of Point-Cloud Normal Vectors. &lt;em&gt;Journal of Geophysical Research: Solid Earth&lt;/em&gt;, 130, e2024JB030233. 
+
+&lt;a href=&#34;https://doi.org/10.1029/2024JB030233&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;doi: 10.1029/2024JB030233&lt;/a&gt;
+
+ (Open Access)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sawaki, Y.&lt;/strong&gt;, Y. Sato, and T. Uchide (2025). FaultNVC: Earthquake Fault Plane Extractor through Point-Cloud Normal Vector Clustering for Hypocenter Distributions [Software]. &lt;em&gt;Open-File Report of Geological Survey of Japan, AIST&lt;/em&gt;, no. 759. 
+
+&lt;a href=&#34;https://www.gsj.jp/publications/pub/openfile/openfile0759.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.gsj.jp/publications/pub/openfile/openfile0759.html&lt;/a&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>AGU24 in Washington D.C.</title>
+      <link>https://yasuit21.github.io/en/news/2024/12/0025/</link>
+      <pubDate>Tue, 17 Dec 2024 06:20:52 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/news/2024/12/0025/</guid>
+      <description>&lt;p&gt;I participated in American Geophysics Union Annual Meeting 2024 held in Washington D.C. during 9&amp;ndash;13 December 2024 and gave an oral talk about the fault geometry of the 2024 Mw 7.5 Noto Peninsula Earthquake. Interactions with researchers and students ignited my passion for further research.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2024 SSJ Fall Meeting at Niigata</title>
+      <link>https://yasuit21.github.io/en/news/2024/10/0023/</link>
+      <pubDate>Fri, 25 Oct 2024 20:40:10 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/news/2024/10/0023/</guid>
+      <description>&lt;p&gt;I participated in the 
+
+&lt;a href=&#34;https://confit.atlas.jp/guide/event/zisin2024/top&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;2024 Seismological Society of Japan (SSJ) Fall Meeting&lt;/a&gt;
+
+, held at the Toki Messe in Niigata City, JP, from Oct. 21 to 23. I made a following oral presentation.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+
+&lt;a href=&#34;https://confit.atlas.jp/guide/event/zisin2024/subject/S22-03/advanced&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;S22-03&lt;/a&gt;
+
+ &amp;ldquo;Fault Geometries of the 2024 Mw 7.5 Noto Peninsula Earthquake from Hypocenter-Based Hierarchical Clustering&amp;rdquo; Sawaki et al.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>JpGU2024</title>
+      <link>https://yasuit21.github.io/en/news/2024/06/0021/</link>
+      <pubDate>Mon, 03 Jun 2024 22:35:49 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/news/2024/06/0021/</guid>
+      <description>&lt;p&gt;I participated in 
+
+&lt;a href=&#34;https://www.jpgu.org/meeting_e2024/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;the Japan Geoscience Union (JpGU) Meeting 2024&lt;/a&gt;
+
+, held at the Makuhari Messe in Chiba, JP, from May 26 to 31. I made two presentations: one for oral and the other for poster.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+
+&lt;a href=&#34;https://www.jpgu.org/meeting_e2024/sessionlist_en/detail/S-CG50.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;[SCG50-02]&lt;/a&gt;
+
+ Multiscale Fault Estimation in California and Oklahoma. Sawaki, Y., D. Shelly, T. Uchide, K. Sagae, T. Shiina, Y. Sato, and H. Horikawa&lt;/li&gt;
+&lt;li&gt;
+
+&lt;a href=&#34;https://www.jpgu.org/meeting_e2024/sessionlist_en/detail/U-15.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;[U15-P09]&lt;/a&gt;
+
+ Fault geometries of the 2024 Noto Peninsula earthquake estimated by hypocenter clustering. Sawaki, Y., T. Uchide, T. Shiina, K. Sagae, H. Horikawa, and K. Imanishi&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>AGU Fall Meeting 2023 at San Francisco</title>
+      <link>https://yasuit21.github.io/en/news/2023/12/0016/</link>
+      <pubDate>Sat, 16 Dec 2023 10:04:15 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/news/2023/12/0016/</guid>
+      <description>&lt;p&gt;I participated in the 
+
+&lt;a href=&#34;https://www.agu.org/fall-meeting&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;AGU Fall Meeting 2023&lt;/a&gt;
+
+ held at San Francisco during December 11&amp;ndash;15. We had a good 
+
+&lt;a href=&#34;https://agu.confex.com/agu/fm23/meetingapp.cgi/Paper/1284649&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;poster presentation&lt;/a&gt;
+
+ with lively discussions with worldwide researchers. I can&amp;rsquo;t wait the next opportunity to interact with you all!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Visiting U.S. Geologocal Survey in Colorado</title>
+      <link>https://yasuit21.github.io/en/news/2023/12/0015/</link>
+      <pubDate>Sun, 10 Dec 2023 09:25:35 -0700</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/news/2023/12/0015/</guid>
+      <description>&lt;p&gt;I visited the United States Geological Survey in Golden, CO for a month and conducted collaborative studies with Dr. David Shelly. It was a fantastic stay and a good opportunity to proceed my research.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m going to San Francisco for the upcoming meeting of American Geophysical Union. I have 
+
+&lt;a href=&#34;https://agu.confex.com/agu/fm23/meetingapp.cgi/Paper/1284649&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;a poster presentation related to my current study&lt;/a&gt;
+
+.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Start a postdoc life</title>
+      <link>https://yasuit21.github.io/en/news/2023/04/0008/</link>
+      <pubDate>Mon, 03 Apr 2023 08:30:26 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/news/2023/04/0008/</guid>
+      <description>&lt;p&gt;I start a new research life as a postdoc in the Geological Survey of Japan (AIST) in April.
+My job is to participate in the 
+
+&lt;a href=&#34;https://www.mext.go.jp/en/policy/science_technology/research_development/title01/detail01/mext_00001.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;STAR-E (Seismology TowArd Research innovation with data of Earthquake) project&lt;/a&gt;
+
+ organized by the Ministry of Education, Culture, Sports, Science and Technology in Japan.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

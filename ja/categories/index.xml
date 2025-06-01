@@ -6,67 +6,76 @@
     <description>Recent content in Categories on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 07 May 2025 11:04:42 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/ja/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Jun 2025 16:20:23 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/ja/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>News</title>
       <link>https://yasuit21.github.io/ja/categories/news/</link>
-      <pubDate>Wed, 07 May 2025 11:04:42 +0900</pubDate>
+      <pubDate>Sun, 01 Jun 2025 16:20:23 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/ja/categories/news/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Research</title>
-      <link>https://yasuit21.github.io/ja/categories/research/</link>
-      <pubDate>Wed, 07 May 2025 11:04:42 +0900</pubDate>
+      <title>学会・研究集会</title>
+      <link>https://yasuit21.github.io/ja/categories/%E5%AD%A6%E4%BC%9A%E7%A0%94%E7%A9%B6%E9%9B%86%E4%BC%9A/</link>
+      <pubDate>Sun, 01 Jun 2025 16:20:23 +0900</pubDate>
       
-      <guid>https://yasuit21.github.io/ja/categories/research/</guid>
+      <guid>https://yasuit21.github.io/ja/categories/%E5%AD%A6%E4%BC%9A%E7%A0%94%E7%A9%B6%E9%9B%86%E4%BC%9A/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Seismology</title>
-      <link>https://yasuit21.github.io/ja/categories/seismology/</link>
+      <title>プレプリント</title>
+      <link>https://yasuit21.github.io/ja/categories/%E3%83%97%E3%83%AC%E3%83%97%E3%83%AA%E3%83%B3%E3%83%88/</link>
       <pubDate>Wed, 07 May 2025 11:04:42 +0900</pubDate>
       
-      <guid>https://yasuit21.github.io/ja/categories/seismology/</guid>
+      <guid>https://yasuit21.github.io/ja/categories/%E3%83%97%E3%83%AC%E3%83%97%E3%83%AA%E3%83%B3%E3%83%88/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Software</title>
-      <link>https://yasuit21.github.io/ja/categories/software/</link>
+      <title>地震</title>
+      <link>https://yasuit21.github.io/ja/categories/%E5%9C%B0%E9%9C%87/</link>
+      <pubDate>Wed, 07 May 2025 11:04:42 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/categories/%E5%9C%B0%E9%9C%87/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>地震学</title>
+      <link>https://yasuit21.github.io/ja/categories/%E5%9C%B0%E9%9C%87%E5%AD%A6/</link>
+      <pubDate>Wed, 07 May 2025 11:04:42 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/categories/%E5%9C%B0%E9%9C%87%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://yasuit21.github.io/ja/categories/python/</link>
       <pubDate>Wed, 02 Apr 2025 20:00:00 +0900</pubDate>
       
-      <guid>https://yasuit21.github.io/ja/categories/software/</guid>
+      <guid>https://yasuit21.github.io/ja/categories/python/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Conference</title>
-      <link>https://yasuit21.github.io/ja/categories/conference/</link>
-      <pubDate>Tue, 17 Dec 2024 06:20:50 +0900</pubDate>
+      <title>ソフトウェア</title>
+      <link>https://yasuit21.github.io/ja/categories/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2/</link>
+      <pubDate>Wed, 02 Apr 2025 20:00:00 +0900</pubDate>
       
-      <guid>https://yasuit21.github.io/ja/categories/conference/</guid>
+      <guid>https://yasuit21.github.io/ja/categories/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Field</title>
-      <link>https://yasuit21.github.io/ja/categories/field/</link>
-      <pubDate>Sat, 09 Nov 2024 17:00:58 +0900</pubDate>
+      <title>学術論文</title>
+      <link>https://yasuit21.github.io/ja/categories/%E5%AD%A6%E8%A1%93%E8%AB%96%E6%96%87/</link>
+      <pubDate>Wed, 02 Apr 2025 20:00:00 +0900</pubDate>
       
-      <guid>https://yasuit21.github.io/ja/categories/field/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Earthquake</title>
-      <link>https://yasuit21.github.io/ja/categories/earthquake/</link>
-      <pubDate>Mon, 15 Jan 2024 21:00:52 +0900</pubDate>
-      
-      <guid>https://yasuit21.github.io/ja/categories/earthquake/</guid>
+      <guid>https://yasuit21.github.io/ja/categories/%E5%AD%A6%E8%A1%93%E8%AB%96%E6%96%87/</guid>
       <description></description>
     </item>
     
@@ -80,29 +89,11 @@
     </item>
     
     <item>
-      <title>Python</title>
-      <link>https://yasuit21.github.io/ja/categories/python/</link>
-      <pubDate>Sun, 24 Sep 2023 12:45:26 +0900</pubDate>
-      
-      <guid>https://yasuit21.github.io/ja/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Photo</title>
       <link>https://yasuit21.github.io/ja/categories/photo/</link>
       <pubDate>Mon, 19 Jun 2023 22:25:20 +0900</pubDate>
       
       <guid>https://yasuit21.github.io/ja/categories/photo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JupyterLab</title>
-      <link>https://yasuit21.github.io/ja/categories/jupyterlab/</link>
-      <pubDate>Sun, 09 Apr 2023 21:00:40 +0900</pubDate>
-      
-      <guid>https://yasuit21.github.io/ja/categories/jupyterlab/</guid>
       <description></description>
     </item>
     
@@ -113,15 +104,6 @@
       
       <guid>https://yasuit21.github.io/ja/categories/obspy/</guid>
       <description>このページは，学生や研究者がObsPyを使用する際の参考になるような資料を提供することを目指す．</description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://yasuit21.github.io/ja/categories/hugo/</link>
-      <pubDate>Thu, 26 Jan 2023 01:50:57 +0900</pubDate>
-      
-      <guid>https://yasuit21.github.io/ja/categories/hugo/</guid>
-      <description></description>
     </item>
     
   </channel>

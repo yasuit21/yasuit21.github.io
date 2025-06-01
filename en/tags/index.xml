@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 07 May 2025 11:04:44 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Jun 2025 16:20:33 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JpGU</title>
+      <link>https://yasuit21.github.io/en/tags/jpgu/</link>
+      <pubDate>Sun, 01 Jun 2025 16:20:33 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/tags/jpgu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>STAR-E</title>
+      <link>https://yasuit21.github.io/en/tags/star-e/</link>
+      <pubDate>Sun, 01 Jun 2025 16:20:33 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/tags/star-e/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Clustering</title>
+      <link>https://yasuit21.github.io/en/tags/clustering/</link>
+      <pubDate>Wed, 07 May 2025 11:04:44 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/tags/clustering/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Fault geometry</title>
       <link>https://yasuit21.github.io/en/tags/fault-geometry/</link>
@@ -26,20 +53,20 @@
     </item>
     
     <item>
-      <title>Kanagawa</title>
-      <link>https://yasuit21.github.io/en/tags/kanagawa/</link>
+      <title>Kanto EQ</title>
+      <link>https://yasuit21.github.io/en/tags/kanto-eq/</link>
       <pubDate>Wed, 07 May 2025 11:04:44 +0900</pubDate>
       
-      <guid>https://yasuit21.github.io/en/tags/kanagawa/</guid>
+      <guid>https://yasuit21.github.io/en/tags/kanto-eq/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Kanto Earthquake</title>
-      <link>https://yasuit21.github.io/en/tags/kanto-earthquake/</link>
+      <title>Preprint</title>
+      <link>https://yasuit21.github.io/en/tags/preprint/</link>
       <pubDate>Wed, 07 May 2025 11:04:44 +0900</pubDate>
       
-      <guid>https://yasuit21.github.io/en/tags/kanto-earthquake/</guid>
+      <guid>https://yasuit21.github.io/en/tags/preprint/</guid>
       <description></description>
     </item>
     
@@ -53,11 +80,11 @@
     </item>
     
     <item>
-      <title>Noto Peninsula</title>
-      <link>https://yasuit21.github.io/en/tags/noto-peninsula/</link>
+      <title>Noto Peninsula EQ</title>
+      <link>https://yasuit21.github.io/en/tags/noto-peninsula-eq/</link>
       <pubDate>Wed, 02 Apr 2025 20:00:00 +0900</pubDate>
       
-      <guid>https://yasuit21.github.io/en/tags/noto-peninsula/</guid>
+      <guid>https://yasuit21.github.io/en/tags/noto-peninsula-eq/</guid>
       <description></description>
     </item>
     
@@ -80,11 +107,11 @@
     </item>
     
     <item>
-      <title>Active fault</title>
-      <link>https://yasuit21.github.io/en/tags/active-fault/</link>
+      <title>Field trip</title>
+      <link>https://yasuit21.github.io/en/tags/field-trip/</link>
       <pubDate>Sat, 09 Nov 2024 17:01:05 +0900</pubDate>
       
-      <guid>https://yasuit21.github.io/en/tags/active-fault/</guid>
+      <guid>https://yasuit21.github.io/en/tags/field-trip/</guid>
       <description></description>
     </item>
     
@@ -98,38 +125,47 @@
     </item>
     
     <item>
-      <title>Kii Peninsula</title>
-      <link>https://yasuit21.github.io/en/tags/kii-peninsula/</link>
+      <title>Nankai</title>
+      <link>https://yasuit21.github.io/en/tags/nankai/</link>
       <pubDate>Wed, 23 Oct 2024 16:35:47 +0900</pubDate>
       
-      <guid>https://yasuit21.github.io/en/tags/kii-peninsula/</guid>
+      <guid>https://yasuit21.github.io/en/tags/nankai/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>JpGU</title>
-      <link>https://yasuit21.github.io/en/tags/jpgu/</link>
-      <pubDate>Mon, 03 Jun 2024 22:35:49 +0900</pubDate>
+      <title>Receiver function</title>
+      <link>https://yasuit21.github.io/en/tags/receiver-function/</link>
+      <pubDate>Wed, 23 Oct 2024 16:35:47 +0900</pubDate>
       
-      <guid>https://yasuit21.github.io/en/tags/jpgu/</guid>
+      <guid>https://yasuit21.github.io/en/tags/receiver-function/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Preprint</title>
-      <link>https://yasuit21.github.io/en/tags/preprint/</link>
-      <pubDate>Sun, 14 Apr 2024 14:06:06 +0900</pubDate>
+      <title>Slow earthquake</title>
+      <link>https://yasuit21.github.io/en/tags/slow-earthquake/</link>
+      <pubDate>Wed, 23 Oct 2024 16:35:47 +0900</pubDate>
       
-      <guid>https://yasuit21.github.io/en/tags/preprint/</guid>
+      <guid>https://yasuit21.github.io/en/tags/slow-earthquake/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Paper</title>
-      <link>https://yasuit21.github.io/en/tags/paper/</link>
+      <title>USGS</title>
+      <link>https://yasuit21.github.io/en/tags/usgs/</link>
+      <pubDate>Sun, 10 Dec 2023 09:25:35 -0700</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/tags/usgs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Splitting</title>
+      <link>https://yasuit21.github.io/en/tags/splitting/</link>
       <pubDate>Thu, 30 Nov 2023 22:01:55 -0700</pubDate>
       
-      <guid>https://yasuit21.github.io/en/tags/paper/</guid>
+      <guid>https://yasuit21.github.io/en/tags/splitting/</guid>
       <description></description>
     </item>
     

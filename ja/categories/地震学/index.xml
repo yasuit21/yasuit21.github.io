@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>地震学 on Yasunori SAWAKI</title>
+    <link>https://yasuit21.github.io/ja/categories/%E5%9C%B0%E9%9C%87%E5%AD%A6/</link>
+    <description>Recent content in 地震学 on Yasunori SAWAKI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 07 May 2025 11:04:42 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/ja/categories/%E5%9C%B0%E9%9C%87%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>プレプリントを公開しました</title>
+      <link>https://yasuit21.github.io/ja/news/2025/05/0029/</link>
+      <pubDate>Wed, 07 May 2025 11:04:42 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/news/2025/05/0029/</guid>
+      <description>&lt;p&gt;2024年8月9日に発生した神奈川県西部の地震（Mw 5.0）の断層面形状を
+
+&lt;a href=&#34;https://www.gsj.jp/publications/pub/openfile/openfile0759.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;震源クラスタリング&lt;/a&gt;
+
+で推定しました．プレート境界ではなく，スラブ内で発生した地震であることが分かりました．&lt;/p&gt;
+&lt;p&gt;査読前の内容であることにご注意いただき，是非ご覧ください&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sawaki, Y.&lt;/strong&gt;, T. Shiina, and T. Uchide. Intraslab reverse faulting adjacent to the hypocenter of the 1923 Kanto earthquake: The Mw 5.0 western Kanagawa earthquake in eastern Japan on 9 August 2024 [Preprint v1]. &lt;em&gt;Research Square&lt;/em&gt;. 
+
+&lt;a href=&#34;https://doi.org/10.21203/rs.3.rs-6353744/v1&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://doi.org/10.21203/rs.3.rs-6353744/v1&lt;/a&gt;
+
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>令和６年能登半島地震の断層面形状を推定した論文がJGR Solid Earth誌で公開されました</title>
+      <link>https://yasuit21.github.io/ja/news/2025/04/0027/</link>
+      <pubDate>Wed, 02 Apr 2025 20:00:00 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/news/2025/04/0027/</guid>
+      <description>&lt;p&gt;2024年元日に発生した「&lt;strong&gt;令和６年能登半島地震&lt;/strong&gt;」の断層面形状を推定しました．半島直下に，大小5枚の断層面が海岸線に沿うようにして並んでいます．輪島東部ではより反時計回りに回転した面を抽出したほか，西岸では東に傾斜する面が見られます．これらの局所構造は複雑な断層すべりが発生したことを示唆するとともに，重力異常や地質構造ともよく対応していました．能登半島の形成と地震テクトニクスの理解にも繋がる研究成果です．&lt;/p&gt;
+&lt;p&gt;関連して，2024年度&lt;strong&gt;産総研理事長賞&lt;/strong&gt;（特別貢献）も連名で受賞しました．
+
+&lt;a href=&#34;https://www.aist.go.jp/aist_j/aist_award/2024/apa.html#s1&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;「国の地震防災施策への貢献：令和６年能登半島地震への対応」&lt;/a&gt;
+
+ということで，この研究成果が今後の地震防災施策にも貢献できればと思っています．&lt;/p&gt;
+&lt;p&gt;本研究成果の詳細については，下記の論文およびソフトウェアをご覧ください&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Sawaki, Y.&lt;/strong&gt;, T. Shiina, K. Sagae, Y. Sato, H. Horikawa, A. Miyakawa, K. Imanishi, and T. Uchide (2025). Fault Geometries of the 2024 Mw 7.5 Noto Peninsula Earthquake from Hypocenter-Based Hierarchical Clustering of Point-Cloud Normal Vectors. &lt;em&gt;Journal of Geophysical Research: Solid Earth&lt;/em&gt;, 130(4), e2024JB030233. 
+
+&lt;a href=&#34;https://doi.org/10.1029/2024JB030233&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;doi: 10.1029/2024JB030233&lt;/a&gt;
+
+ (Open Access)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;佐脇泰典&lt;/strong&gt;・佐藤圭浩・内出崇彦 (2025) 点群法線ベクトルを用いた震源クラスタリングによる地震断層面抽出法（FaultNVC）地質調査総合センター研究資料集，no. 759，産業技術総合研究所地質調査総合センター．
+
+&lt;a href=&#34;https://www.gsj.jp/publications/pub/openfile/openfile0759.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.gsj.jp/publications/pub/openfile/openfile0759.html&lt;/a&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>主著論文が出版されました</title>
+      <link>https://yasuit21.github.io/ja/news/2024/10/0022/</link>
+      <pubDate>Wed, 23 Oct 2024 16:35:45 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/news/2024/10/0022/</guid>
+      <description>&lt;p&gt;紀伊半島直下の地殻内およびスラブの不均質構造をイメージングしました．&lt;strong&gt;熊野深成岩体&lt;/strong&gt;（&lt;strong&gt;Kumano pluton&lt;/strong&gt;）の上面（または内部）に相当する速度コントラストが上盤内に見られ，深部スロー地震発生域周辺の流体挙動を支配していると考えられます．&lt;/p&gt;
+&lt;p&gt;詳細については下記の論文をご覧ください．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Sawaki, Y.&lt;/strong&gt;, Y. Ito, E. S. M. Garcia, A. Miyakawa, and T. Shibutani (2024). Deep plutonic bodies over low-frequency earthquakes revealed from receiver-side Green&amp;rsquo;s functions. &lt;em&gt;Tectonophysics&lt;/em&gt;, 892, 230536. 
+
+&lt;a href=&#34;https://doi.org/10.1016/j.tecto.2024.230536&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;doi: 10.1016/j.tecto.2024.230536&lt;/a&gt;
+
+ (Open Access)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>新しいプレプリントを掲載しました</title>
+      <link>https://yasuit21.github.io/ja/news/2024/04/0020/</link>
+      <pubDate>Sun, 14 Apr 2024 14:06:04 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/news/2024/04/0020/</guid>
+      <description>&lt;p&gt;紀伊半島直下の地震学的構造について調べた研究の，新しいプレプリントを掲載しました．査読前の内容であることにご注意いただき，是非ご覧ください．&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sawaki, Y.&lt;/strong&gt;, Y. Ito, E. S. M. Garcia, A. Miyakawa, and T. Shibutani. Deep Plutonic Bodies Over Low-Frequency Earthquakes Revealed from Receiver-Side Green&amp;rsquo;s Functions. Available at SSRN: 
+
+&lt;a href=&#34;http://dx.doi.org/10.2139/ssrn.4793654&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;http://dx.doi.org/10.2139/ssrn.4793654&lt;/a&gt;
+
+&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;</description>
+    </item>
+    
+    <item>
+      <title>共著論文が出版されました</title>
+      <link>https://yasuit21.github.io/ja/news/2023/11/0014/</link>
+      <pubDate>Thu, 30 Nov 2023 22:01:52 -0700</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/news/2023/11/0014/</guid>
+      <description>&lt;p&gt;京大の学生が筆頭の共著論文が公開されました．&lt;/p&gt;
+
+Ruan, Yihuan, Yoshihiro Ito, and &lt;strong&gt;&lt;u&gt;Yasunori Sawaki&lt;/u&gt;&lt;/strong&gt;, (2023). Anisotropic Velocity Structure Beneath Shikoku, Japan: Insights From Receiver Function and Shear Wave Splitting Analyses &lt;em&gt;Journal of Geophysical Research: Solid Earth&lt;/em&gt;, 128, e2023JB027178. &lt;a href=&#34;https://doi.org/10.1029/2023JB027178&#34;  target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;doi: 10.1029/2023JB027178&lt;/a&gt;</description>
+    </item>
+    
+    <item>
+      <title>gmt coupeをPyGMTでも使いたい！</title>
+      <link>https://yasuit21.github.io/ja/post/2023/09/0007/</link>
+      <pubDate>Sun, 24 Sep 2023 12:45:26 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/post/2023/09/0007/</guid>
+      <description>&lt;p&gt;2023年9月現在，GMTの
+
+&lt;a href=&#34;https://docs.generic-mapping-tools.org/6.4/supplements/seis/coupe.html&#34; title=&#34;gmt coupe (v6.4)&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;coupe&lt;/a&gt;
+
+コマンドは
+
+&lt;a href=&#34;https://www.pygmt.org/latest/index.html&#34; title=&#34;Python interface for the Generic Mapping Tools&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PyGMT&lt;/a&gt;
+
+で実装されていないため，そのラッパーもどきを作成してみた．&lt;code&gt;coupe&lt;/code&gt;は震源メカニズム解のビーチボールを他の視点から描画するコマンドで，特に深さ断面に投影する際に用いられる．そのため，&lt;code&gt;PyGMT&lt;/code&gt;で統一的に描画することを検討するなら，&lt;code&gt;coupe&lt;/code&gt;も何とか使えるようにしたい．&lt;/p&gt;
+&lt;p&gt;今回は&lt;code&gt;PyGMT&lt;/code&gt;の内部を探り，&lt;code&gt;pygmt.Figure&lt;/code&gt;オブジェクトに直接作用する関数を作成して，深さ断面への震源メカニズム解の投影を実現したい．&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

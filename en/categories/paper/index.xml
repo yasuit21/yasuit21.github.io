@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paper on Yasunori SAWAKI</title>
+    <link>https://yasuit21.github.io/en/categories/paper/</link>
+    <description>Recent content in Paper on Yasunori SAWAKI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 02 Apr 2025 20:00:00 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/en/categories/paper/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Our New Paper in JGR Solid Earth!</title>
+      <link>https://yasuit21.github.io/en/news/2025/04/0027/</link>
+      <pubDate>Wed, 02 Apr 2025 20:00:00 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/news/2025/04/0027/</guid>
+      <description>&lt;p&gt;We have estimated the fault geometry of the 2024 Noto Peninsula Earthquake in central Japan on 1 January 2024. Our analysis reveals major and minor fault planes aligned along the coastline beneath the peninsula. Notably, we identified a more counter-clockwise rotated plane in eastern Wajima and an east-dipping plane along the west coast. These localized structural complexities suggest intricate fault slip behavior and exhibit a strong correlation with gravity anomalies and geological structures. This research contributes to a deeper understanding of the formation and seismotectonics of the Noto Peninsula.&lt;/p&gt;
+&lt;p&gt;We also won the &lt;strong&gt;AIST President Award 2024&lt;/strong&gt; related to 
+
+&lt;a href=&#34;https://www.aist.go.jp/aist_j/aist_award/2024/apa.html#s1&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Contribution to National Earthquake Disaster Prevention Measures: Response to the 2024 Noto Peninsula Earthquake&lt;/a&gt;
+
+ (in Japanese)!&lt;/p&gt;
+&lt;p&gt;Check the paper and software below!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Sawaki, Y.&lt;/strong&gt;, T. Shiina, K. Sagae, Y. Sato, H. Horikawa, A. Miyakawa, K. Imanishi, and T. Uchide (2025). Fault Geometries of the 2024 Mw 7.5 Noto Peninsula Earthquake from Hypocenter-Based Hierarchical Clustering of Point-Cloud Normal Vectors. &lt;em&gt;Journal of Geophysical Research: Solid Earth&lt;/em&gt;, 130, e2024JB030233. 
+
+&lt;a href=&#34;https://doi.org/10.1029/2024JB030233&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;doi: 10.1029/2024JB030233&lt;/a&gt;
+
+ (Open Access)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sawaki, Y.&lt;/strong&gt;, Y. Sato, and T. Uchide (2025). FaultNVC: Earthquake Fault Plane Extractor through Point-Cloud Normal Vector Clustering for Hypocenter Distributions [Software]. &lt;em&gt;Open-File Report of Geological Survey of Japan, AIST&lt;/em&gt;, no. 759. 
+
+&lt;a href=&#34;https://www.gsj.jp/publications/pub/openfile/openfile0759.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.gsj.jp/publications/pub/openfile/openfile0759.html&lt;/a&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Our New Paper Published!</title>
+      <link>https://yasuit21.github.io/en/news/2024/10/0022/</link>
+      <pubDate>Wed, 23 Oct 2024 16:35:47 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/news/2024/10/0022/</guid>
+      <description>&lt;p&gt;We imaged the slab and crustal structure of the Kii Peninsula in the Nankai subduction zone in SW Japan using a receiver-function-like analysis. Positive impedance contrasts in the forearc crust correspond to the top surface or inside &lt;strong&gt;Kumano pluton&lt;/strong&gt;, which may control fluid conditions around slow-earthquake sources.&lt;/p&gt;
+&lt;p&gt;Check it out below!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Sawaki, Y.&lt;/strong&gt;, Y. Ito, E. S. M. Garcia, A. Miyakawa, and T. Shibutani (2024). Deep plutonic bodies over low-frequency earthquakes revealed from receiver-side Green&amp;rsquo;s functions. &lt;em&gt;Tectonophysics&lt;/em&gt;, 892, 230536. 
+
+&lt;a href=&#34;https://doi.org/10.1016/j.tecto.2024.230536&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;doi: 10.1016/j.tecto.2024.230536&lt;/a&gt;
+
+ (Open Access)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>New co-authored paper published!</title>
+      <link>https://yasuit21.github.io/en/news/2023/11/0014/</link>
+      <pubDate>Thu, 30 Nov 2023 22:01:55 -0700</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/news/2023/11/0014/</guid>
+      <description>&lt;p&gt;Our new paper is publishded! We analyzed shear wave splitting from receiver functions in Shikoku Island, SW Japan, and along-dip variation of fast axes is clarified. Check it out!&lt;/p&gt;
+
+Ruan, Yihuan, Yoshihiro Ito, and &lt;strong&gt;&lt;u&gt;Yasunori Sawaki&lt;/u&gt;&lt;/strong&gt;, (2023). Anisotropic Velocity Structure Beneath Shikoku, Japan: Insights From Receiver Function and Shear Wave Splitting Analyses &lt;em&gt;Journal of Geophysical Research: Solid Earth&lt;/em&gt;, 128, e2023JB027178. &lt;a href=&#34;https://doi.org/10.1029/2023JB027178&#34;  target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;doi: 10.1029/2023JB027178&lt;/a&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

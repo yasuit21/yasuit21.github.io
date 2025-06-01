@@ -6,7 +6,34 @@
     <description>Recent content in Python on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 24 Sep 2023 12:45:26 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/ja/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Apr 2025 20:00:00 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/ja/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>令和６年能登半島地震の断層面形状を推定した論文がJGR Solid Earth誌で公開されました</title>
+      <link>https://yasuit21.github.io/ja/news/2025/04/0027/</link>
+      <pubDate>Wed, 02 Apr 2025 20:00:00 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/news/2025/04/0027/</guid>
+      <description>&lt;p&gt;2024年元日に発生した「&lt;strong&gt;令和６年能登半島地震&lt;/strong&gt;」の断層面形状を推定しました．半島直下に，大小5枚の断層面が海岸線に沿うようにして並んでいます．輪島東部ではより反時計回りに回転した面を抽出したほか，西岸では東に傾斜する面が見られます．これらの局所構造は複雑な断層すべりが発生したことを示唆するとともに，重力異常や地質構造ともよく対応していました．能登半島の形成と地震テクトニクスの理解にも繋がる研究成果です．&lt;/p&gt;
+&lt;p&gt;関連して，2024年度&lt;strong&gt;産総研理事長賞&lt;/strong&gt;（特別貢献）も連名で受賞しました．
+
+&lt;a href=&#34;https://www.aist.go.jp/aist_j/aist_award/2024/apa.html#s1&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;「国の地震防災施策への貢献：令和６年能登半島地震への対応」&lt;/a&gt;
+
+ということで，この研究成果が今後の地震防災施策にも貢献できればと思っています．&lt;/p&gt;
+&lt;p&gt;本研究成果の詳細については，下記の論文およびソフトウェアをご覧ください&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Sawaki, Y.&lt;/strong&gt;, T. Shiina, K. Sagae, Y. Sato, H. Horikawa, A. Miyakawa, K. Imanishi, and T. Uchide (2025). Fault Geometries of the 2024 Mw 7.5 Noto Peninsula Earthquake from Hypocenter-Based Hierarchical Clustering of Point-Cloud Normal Vectors. &lt;em&gt;Journal of Geophysical Research: Solid Earth&lt;/em&gt;, 130(4), e2024JB030233. 
+
+&lt;a href=&#34;https://doi.org/10.1029/2024JB030233&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;doi: 10.1029/2024JB030233&lt;/a&gt;
+
+ (Open Access)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;佐脇泰典&lt;/strong&gt;・佐藤圭浩・内出崇彦 (2025) 点群法線ベクトルを用いた震源クラスタリングによる地震断層面抽出法（FaultNVC）地質調査総合センター研究資料集，no. 759，産業技術総合研究所地質調査総合センター．
+
+&lt;a href=&#34;https://www.gsj.jp/publications/pub/openfile/openfile0759.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.gsj.jp/publications/pub/openfile/openfile0759.html&lt;/a&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
     <item>
       <title>gmt coupeをPyGMTでも使いたい！</title>
       <link>https://yasuit21.github.io/ja/post/2023/09/0007/</link>

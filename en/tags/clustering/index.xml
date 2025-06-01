@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clustering on Yasunori SAWAKI</title>
+    <link>https://yasuit21.github.io/en/tags/clustering/</link>
+    <description>Recent content in Clustering on Yasunori SAWAKI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 07 May 2025 11:04:44 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/en/tags/clustering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New preprint</title>
+      <link>https://yasuit21.github.io/en/news/2025/05/0029/</link>
+      <pubDate>Wed, 07 May 2025 11:04:44 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/news/2025/05/0029/</guid>
+      <description>&lt;p&gt;We have posted a new preprint on the fault geometry for the Mw 5.0 western Kanagawa earthquake in eastern Japan on 9 August 2024. This is a preprint (peer-review not completed), but feel free to check it out!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sawaki, Y.&lt;/strong&gt;, T. Shiina, and T. Uchide. Intraslab reverse faulting adjacent to the hypocenter of the 1923 Kanto earthquake: The Mw 5.0 western Kanagawa earthquake in eastern Japan on 9 August 2024 [Preprint v1]. &lt;em&gt;Research Square&lt;/em&gt;. 
+
+&lt;a href=&#34;https://doi.org/10.21203/rs.3.rs-6353744/v1&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://doi.org/10.21203/rs.3.rs-6353744/v1&lt;/a&gt;
+
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Our New Paper in JGR Solid Earth!</title>
+      <link>https://yasuit21.github.io/en/news/2025/04/0027/</link>
+      <pubDate>Wed, 02 Apr 2025 20:00:00 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/news/2025/04/0027/</guid>
+      <description>&lt;p&gt;We have estimated the fault geometry of the 2024 Noto Peninsula Earthquake in central Japan on 1 January 2024. Our analysis reveals major and minor fault planes aligned along the coastline beneath the peninsula. Notably, we identified a more counter-clockwise rotated plane in eastern Wajima and an east-dipping plane along the west coast. These localized structural complexities suggest intricate fault slip behavior and exhibit a strong correlation with gravity anomalies and geological structures. This research contributes to a deeper understanding of the formation and seismotectonics of the Noto Peninsula.&lt;/p&gt;
+&lt;p&gt;We also won the &lt;strong&gt;AIST President Award 2024&lt;/strong&gt; related to 
+
+&lt;a href=&#34;https://www.aist.go.jp/aist_j/aist_award/2024/apa.html#s1&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Contribution to National Earthquake Disaster Prevention Measures: Response to the 2024 Noto Peninsula Earthquake&lt;/a&gt;
+
+ (in Japanese)!&lt;/p&gt;
+&lt;p&gt;Check the paper and software below!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Sawaki, Y.&lt;/strong&gt;, T. Shiina, K. Sagae, Y. Sato, H. Horikawa, A. Miyakawa, K. Imanishi, and T. Uchide (2025). Fault Geometries of the 2024 Mw 7.5 Noto Peninsula Earthquake from Hypocenter-Based Hierarchical Clustering of Point-Cloud Normal Vectors. &lt;em&gt;Journal of Geophysical Research: Solid Earth&lt;/em&gt;, 130, e2024JB030233. 
+
+&lt;a href=&#34;https://doi.org/10.1029/2024JB030233&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;doi: 10.1029/2024JB030233&lt;/a&gt;
+
+ (Open Access)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sawaki, Y.&lt;/strong&gt;, Y. Sato, and T. Uchide (2025). FaultNVC: Earthquake Fault Plane Extractor through Point-Cloud Normal Vector Clustering for Hypocenter Distributions [Software]. &lt;em&gt;Open-File Report of Geological Survey of Japan, AIST&lt;/em&gt;, no. 759. 
+
+&lt;a href=&#34;https://www.gsj.jp/publications/pub/openfile/openfile0759.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.gsj.jp/publications/pub/openfile/openfile0759.html&lt;/a&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
