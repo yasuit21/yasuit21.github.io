@@ -6,7 +6,29 @@
     <description>Recent content in 学術論文 on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 02 Apr 2025 20:00:00 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/ja/categories/%E5%AD%A6%E8%A1%93%E8%AB%96%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Jul 2025 00:15:40 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/ja/categories/%E5%AD%A6%E8%A1%93%E8%AB%96%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>令和６年能登半島地震の余震分布を誤差付きで再決定した共著論文がEPS誌で公開されました</title>
+      <link>https://yasuit21.github.io/ja/news/2025/07/0031/</link>
+      <pubDate>Thu, 03 Jul 2025 00:15:40 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/ja/news/2025/07/0031/</guid>
+      <description>&lt;p&gt;令和６年能登半島地震(Mj7.6)では，半島南西から北東の沖合にかけて広範囲に断層破壊を引き起こし，余震活動も広域に広がっています．従来の震源再決定では簡易な一次元速度構造を用いるケースが多く，特に速度構造が複雑な海域の余震震源位置には，大きな不確実性がありました．本研究では能登半島に適した3次元速度構造と，震源決定の不確実性を定量化するマルコフ連鎖モンテカルロ法を用いることで，余震の震源位置を誤差付きで再決定しました．&lt;/p&gt;
+&lt;p&gt;その結果，北東沿岸の余震活動は深さ15kmよりも浅い場所で発生していることが分かりました．本震によって海底の断層浅部を破壊し，津波発生につながった可能性を示しています．また，半島直下の余震活動の空間分布は，2007年の地震(Mj6.9)の余震分布や半島先端で活発だった群発地震の活動とは大きく異なっており，
+
+&lt;a href=&#34;https://yasuit21.github.io/ja/news/2025/04/0027/&#34;&gt;Sawaki et al. (2025)&lt;/a&gt;
+
+などの先行研究と調和的でした．&lt;/p&gt;
+&lt;p&gt;詳細については，Earth, Planets and Space誌に出版された下記の論文をご覧ください．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Shiina, T., H. Horikawa, &lt;strong&gt;Y. Sawaki&lt;/strong&gt;, K. Sagae, and K. Imanishi (2025). Aftershock distribution of the 2024 Noto Peninsula Earthquake, Japan, determined using a 3D velocity structure and uncertainty quantification. &lt;em&gt;Earth, Planets and Space&lt;/em&gt;, 77, 94. 
+
+&lt;a href=&#34;https://doi.org/10.1186/s40623-025-02227-4&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;doi: 10.1186/s40623-025-02227-4&lt;/a&gt;
+
+ (Open Access)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
     <item>
       <title>令和６年能登半島地震の断層面形状を推定した論文がJGR Solid Earth誌で公開されました</title>
       <link>https://yasuit21.github.io/ja/news/2025/04/0027/</link>
