@@ -2,8 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://yasuit21.github.io/en/news/2025/09/0032/</loc>
+    <lastmod>2025-09-13T19:03:47+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/news/2025/09/0032/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/news/2025/09/0032/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/categories/</loc>
+    <lastmod>2025-09-13T19:03:47+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/categories/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/categories/conference/</loc>
+    <lastmod>2025-09-13T19:03:47+09:00</lastmod>
+  </url><url>
+    <loc>https://yasuit21.github.io/en/categories/news/</loc>
+    <lastmod>2025-09-13T19:03:47+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/categories/news/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/categories/news/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/categories/seismology/</loc>
+    <lastmod>2025-09-13T19:03:47+09:00</lastmod>
+  </url><url>
+    <loc>https://yasuit21.github.io/en/tags/star-e/</loc>
+    <lastmod>2025-09-13T19:03:47+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/tags/star-e/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/tags/star-e/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/tags/</loc>
+    <lastmod>2025-09-13T19:03:47+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/tags/"
+                />
+  </url><url>
     <loc>https://yasuit21.github.io/en/</loc>
-    <lastmod>2025-07-03T00:55:45+09:00</lastmod>
+    <lastmod>2025-07-20T12:00:14+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -28,19 +99,6 @@
                 href="https://yasuit21.github.io/en/about/"
                 />
   </url><url>
-    <loc>https://yasuit21.github.io/en/categories/</loc>
-    <lastmod>2025-07-03T00:55:45+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/categories/"
-                />
-  </url><url>
     <loc>https://yasuit21.github.io/en/tags/hypocenter/</loc>
     <lastmod>2025-07-03T00:55:45+09:00</lastmod>
   </url><url>
@@ -57,19 +115,6 @@
                 href="https://yasuit21.github.io/en/news/2025/07/0031/"
                 />
   </url><url>
-    <loc>https://yasuit21.github.io/en/categories/news/</loc>
-    <lastmod>2025-07-03T00:55:45+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/categories/news/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/categories/news/"
-                />
-  </url><url>
     <loc>https://yasuit21.github.io/en/tags/noto-peninsula-eq/</loc>
     <lastmod>2025-07-03T00:55:45+09:00</lastmod>
   </url><url>
@@ -78,25 +123,6 @@
   </url><url>
     <loc>https://yasuit21.github.io/en/categories/research/</loc>
     <lastmod>2025-07-03T00:55:45+09:00</lastmod>
-  </url><url>
-    <loc>https://yasuit21.github.io/en/categories/seismology/</loc>
-    <lastmod>2025-07-03T00:55:45+09:00</lastmod>
-  </url><url>
-    <loc>https://yasuit21.github.io/en/tags/</loc>
-    <lastmod>2025-07-03T00:55:45+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/tags/"
-                />
-  </url><url>
-    <loc>https://yasuit21.github.io/en/categories/conference/</loc>
-    <lastmod>2025-06-01T21:36:22+09:00</lastmod>
   </url><url>
     <loc>https://yasuit21.github.io/en/tags/jpgu/</loc>
     <lastmod>2025-06-01T21:36:22+09:00</lastmod>
@@ -122,19 +148,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yasuit21.github.io/en/news/2025/06/0030/"
-                />
-  </url><url>
-    <loc>https://yasuit21.github.io/en/tags/star-e/</loc>
-    <lastmod>2025-06-01T21:36:22+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/tags/star-e/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/tags/star-e/"
                 />
   </url><url>
     <loc>https://yasuit21.github.io/en/tags/clustering/</loc>
@@ -677,7 +690,7 @@
                 />
   </url><url>
     <loc>https://yasuit21.github.io/en/publication/</loc>
-    <lastmod>2025-07-03T00:55:45+09:00</lastmod>
+    <lastmod>2025-07-20T12:00:14+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
