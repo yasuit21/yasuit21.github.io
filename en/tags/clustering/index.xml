@@ -6,7 +6,28 @@
     <description>Recent content in Clustering on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 07 May 2025 11:04:44 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/en/tags/clustering/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Nov 2025 23:51:26 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/en/tags/clustering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Our New Paper in EPS</title>
+      <link>https://yasuit21.github.io/en/news/2025/11/0036/</link>
+      <pubDate>Tue, 25 Nov 2025 23:51:26 +0900</pubDate>
+      
+      <guid>https://yasuit21.github.io/en/news/2025/11/0036/</guid>
+      <description>&lt;p&gt;We have published a new paper on the fault geometry for the Mw 5.0 western Kanagawa earthquake in eastern Japan on 9 August 2024. We detected earthquakes using PhaseNet, relocated them with hypoDD, and applied our hypocenter clustering algorithm 
+
+&lt;a href=&#34;https://doi.org/10.1029/2024JB030233&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;(Sawaki et al. 2025, JGR)&lt;/a&gt;
+
+. The results supports intraplate reverse faulting within the subducting Izu–Bonin arc, as opposed to interplate thrusting such as the 1923 Kanto Earthquake (Mw 8.2) or reverse faulting in the continental arc.&lt;/p&gt;
+&lt;p&gt;Check the paper below for details!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Sawaki, Y.&lt;/strong&gt;, T. Shiina, and T. Uchide (2025). Steep intraplate reverse faulting adjacent to the hypocenter of the 1923 Kanto earthquake: The Mw 5.0 western Kanagawa earthquake in eastern Japan on 9 August 2024. &lt;em&gt;Earth, Planets and Space&lt;/em&gt;, 77, 186. 
+
+&lt;a href=&#34;https://doi.org/10.1186/s40623-025-02311-9&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;doi: 10.1186/s40623-025-02311-9&lt;/a&gt;
+
+ (Open Access)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
     <item>
       <title>New preprint</title>
       <link>https://yasuit21.github.io/en/news/2025/05/0029/</link>
