@@ -2,8 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://yasuit21.github.io/en/about/</loc>
+    <lastmod>2026-04-09T11:26:30+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/about/"
+                />
+  </url><url>
+    <loc>https://yasuit21.github.io/en/</loc>
+    <lastmod>2025-12-27T21:39:59+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yasuit21.github.io/ja/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yasuit21.github.io/en/"
+                />
+  </url><url>
     <loc>https://yasuit21.github.io/en/tags/agu/</loc>
-    <lastmod>2025-12-27T19:42:34+09:00</lastmod>
+    <lastmod>2025-12-27T21:39:59+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -16,7 +42,7 @@
                 />
   </url><url>
     <loc>https://yasuit21.github.io/en/news/2025/12/0037/</loc>
-    <lastmod>2025-12-27T19:42:34+09:00</lastmod>
+    <lastmod>2025-12-27T21:39:59+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -29,7 +55,7 @@
                 />
   </url><url>
     <loc>https://yasuit21.github.io/en/categories/</loc>
-    <lastmod>2025-12-27T19:42:34+09:00</lastmod>
+    <lastmod>2025-12-27T21:39:59+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -42,10 +68,10 @@
                 />
   </url><url>
     <loc>https://yasuit21.github.io/en/categories/conference/</loc>
-    <lastmod>2025-12-27T19:42:34+09:00</lastmod>
+    <lastmod>2025-12-27T21:39:59+09:00</lastmod>
   </url><url>
     <loc>https://yasuit21.github.io/en/categories/news/</loc>
-    <lastmod>2025-12-27T19:42:34+09:00</lastmod>
+    <lastmod>2025-12-27T21:39:59+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -58,7 +84,7 @@
                 />
   </url><url>
     <loc>https://yasuit21.github.io/en/tags/star-e/</loc>
-    <lastmod>2025-12-27T19:42:34+09:00</lastmod>
+    <lastmod>2025-12-27T21:39:59+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -71,7 +97,7 @@
                 />
   </url><url>
     <loc>https://yasuit21.github.io/en/tags/</loc>
-    <lastmod>2025-12-27T19:42:34+09:00</lastmod>
+    <lastmod>2025-12-27T21:39:59+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -81,19 +107,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yasuit21.github.io/en/tags/"
-                />
-  </url><url>
-    <loc>https://yasuit21.github.io/en/</loc>
-    <lastmod>2025-11-26T08:44:58+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/"
                 />
   </url><url>
     <loc>https://yasuit21.github.io/en/tags/clustering/</loc>
@@ -126,19 +139,6 @@
   </url><url>
     <loc>https://yasuit21.github.io/en/categories/seismology/</loc>
     <lastmod>2025-11-26T08:44:58+09:00</lastmod>
-  </url><url>
-    <loc>https://yasuit21.github.io/en/about/</loc>
-    <lastmod>2025-10-02T22:30:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yasuit21.github.io/ja/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yasuit21.github.io/en/about/"
-                />
   </url><url>
     <loc>https://yasuit21.github.io/en/tags/earth-science/</loc>
     <lastmod>2025-10-02T22:30:00+09:00</lastmod>
@@ -735,7 +735,7 @@
                 />
   </url><url>
     <loc>https://yasuit21.github.io/en/publication/</loc>
-    <lastmod>2025-11-26T08:44:58+09:00</lastmod>
+    <lastmod>2026-04-09T11:26:30+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
