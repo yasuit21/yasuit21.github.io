@@ -5,124 +5,57 @@
     <link>https://yasuit21.github.io/ja/post/</link>
     <description>Recent content in 投稿一覧 on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Sun, 24 Sep 2023 13:49:23 +0900</lastBuildDate><atom:link href="https://yasuit21.github.io/ja/post/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja</language>
+    <lastBuildDate>Sun, 01 Jun 2025 21:36:22 +0900</lastBuildDate>
+    <atom:link href="https://yasuit21.github.io/ja/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>令和6年能登半島地震の関連情報（GSJ）</title>
       <link>https://yasuit21.github.io/ja/post/2024/01/0008/</link>
       <pubDate>Mon, 15 Jan 2024 21:00:52 +0900</pubDate>
-      
       <guid>https://yasuit21.github.io/ja/post/2024/01/0008/</guid>
-      <description>&lt;p&gt;令和6年01月01日に発生した能登半島地震に関して，地質調査総合センター（GSJ）では関連情報や調査報告等をまとめています．&lt;br&gt;
-詳しくは 
-
-&lt;a href=&#34;https://www.gsj.jp/hazards/earthquake/noto2024/index.html&#34; title=&#34;令和6年（2024年）能登半島地震の関連情報&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;GSJホームページの当該ページ&lt;/a&gt;
-
- をご覧ください．&lt;/p&gt;</description>
+      <description>&lt;p&gt;令和6年01月01日に発生した能登半島地震に関して，地質調査総合センター（GSJ）では関連情報や調査報告等をまとめています．&lt;br&gt;&#xA;詳しくは &#xA;&#xA;&lt;a href=&#34;https://www.gsj.jp/hazards/earthquake/noto2024/index.html&#34; title=&#34;令和6年（2024年）能登半島地震の関連情報&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;GSJホームページの当該ページ&lt;/a&gt;&#xA;&#xA; をご覧ください．&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>gmt coupeをPyGMTでも使いたい！</title>
       <link>https://yasuit21.github.io/ja/post/2023/09/0007/</link>
       <pubDate>Sun, 24 Sep 2023 12:45:26 +0900</pubDate>
-      
       <guid>https://yasuit21.github.io/ja/post/2023/09/0007/</guid>
-      <description>&lt;p&gt;2023年9月現在，GMTの
-
-&lt;a href=&#34;https://docs.generic-mapping-tools.org/6.4/supplements/seis/coupe.html&#34; title=&#34;gmt coupe (v6.4)&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;coupe&lt;/a&gt;
-
-コマンドは
-
-&lt;a href=&#34;https://www.pygmt.org/latest/index.html&#34; title=&#34;Python interface for the Generic Mapping Tools&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PyGMT&lt;/a&gt;
-
-で実装されていないため，そのラッパーもどきを作成してみた．&lt;code&gt;coupe&lt;/code&gt;は震源メカニズム解のビーチボールを他の視点から描画するコマンドで，特に深さ断面に投影する際に用いられる．そのため，&lt;code&gt;PyGMT&lt;/code&gt;で統一的に描画することを検討するなら，&lt;code&gt;coupe&lt;/code&gt;も何とか使えるようにしたい．&lt;/p&gt;
-&lt;p&gt;今回は&lt;code&gt;PyGMT&lt;/code&gt;の内部を探り，&lt;code&gt;pygmt.Figure&lt;/code&gt;オブジェクトに直接作用する関数を作成して，深さ断面への震源メカニズム解の投影を実現したい．&lt;/p&gt;</description>
+      <description>&lt;p&gt;2023年9月現在，GMTの&#xA;&#xA;&lt;a href=&#34;https://docs.generic-mapping-tools.org/6.4/supplements/seis/coupe.html&#34; title=&#34;gmt coupe (v6.4)&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;coupe&lt;/a&gt;&#xA;&#xA;コマンドは&#xA;&#xA;&lt;a href=&#34;https://www.pygmt.org/latest/index.html&#34; title=&#34;Python interface for the Generic Mapping Tools&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PyGMT&lt;/a&gt;&#xA;&#xA;で実装されていないため，そのラッパーもどきを作成してみた．&lt;code&gt;coupe&lt;/code&gt;は震源メカニズム解のビーチボールを他の視点から描画するコマンドで，特に深さ断面に投影する際に用いられる．そのため，&lt;code&gt;PyGMT&lt;/code&gt;で統一的に描画することを検討するなら，&lt;code&gt;coupe&lt;/code&gt;も何とか使えるようにしたい．&lt;/p&gt;&#xA;&lt;p&gt;今回は&lt;code&gt;PyGMT&lt;/code&gt;の内部を探り，&lt;code&gt;pygmt.Figure&lt;/code&gt;オブジェクトに直接作用する関数を作成して，深さ断面への震源メカニズム解の投影を実現したい．&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>pygmt.grdtrack()の引数順序</title>
       <link>https://yasuit21.github.io/ja/post/2023/05/0006/</link>
       <pubDate>Sun, 07 May 2023 23:53:19 +0900</pubDate>
-      
       <guid>https://yasuit21.github.io/ja/post/2023/05/0006/</guid>
-      <description>&lt;p&gt;ここ2年ほどは地図情報の描画のために
-
-&lt;a href=&#34;https://www.pygmt.org/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PyGMT&lt;/a&gt;
-
-を用いている．
-「生
-
-&lt;a href=&#34;https://www.generic-mapping-tools.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;GMT&lt;/a&gt;
-
-」のような特殊な記載を極力減らし，
-Pythonicな分かりやすい関数や引数が与えられている点は，
-（自分のような）GMTをあまり使っていない人にとっても恩恵を授かれる．&lt;/p&gt;
-&lt;p&gt;ここでは，PyGMTの関数
-
-&lt;a href=&#34;https://www.pygmt.org/latest/api/generated/pygmt.grdtrack.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;grdtrack()&lt;/a&gt;
-
-で少し気になった点を記載する．&lt;/p&gt;</description>
+      <description>&lt;p&gt;ここ2年ほどは地図情報の描画のために&#xA;&#xA;&lt;a href=&#34;https://www.pygmt.org/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PyGMT&lt;/a&gt;&#xA;&#xA;を用いている．&#xA;「生&#xA;&#xA;&lt;a href=&#34;https://www.generic-mapping-tools.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;GMT&lt;/a&gt;&#xA;&#xA;」のような特殊な記載を極力減らし，&#xA;Pythonicな分かりやすい関数や引数が与えられている点は，&#xA;（自分のような）GMTをあまり使っていない人にとっても恩恵を授かれる．&lt;/p&gt;&#xA;&lt;p&gt;ここでは，PyGMTの関数&#xA;&#xA;&lt;a href=&#34;https://www.pygmt.org/latest/api/generated/pygmt.grdtrack.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;grdtrack()&lt;/a&gt;&#xA;&#xA;で少し気になった点を記載する．&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Intel® OneAPIをローカル環境に導入する</title>
       <link>https://yasuit21.github.io/ja/post/2023/04/0005/</link>
       <pubDate>Fri, 28 Apr 2023 16:12:08 +0900</pubDate>
-      
       <guid>https://yasuit21.github.io/ja/post/2023/04/0005/</guid>
-      <description>&lt;p&gt;Intel® OneAPIの登場によって，気楽に&lt;code&gt;ifort&lt;/code&gt;などが使えるようになった．
-Ubuntuだと&lt;code&gt;apt&lt;/code&gt;で簡単に導入できるが，非&lt;code&gt;sudo&lt;/code&gt;環境でのセットアップということで，
-以下自分向けの備忘録．&lt;/p&gt;</description>
+      <description>&lt;p&gt;Intel® OneAPIの登場によって，気楽に&lt;code&gt;ifort&lt;/code&gt;などが使えるようになった．&#xA;Ubuntuだと&lt;code&gt;apt&lt;/code&gt;で簡単に導入できるが，非&lt;code&gt;sudo&lt;/code&gt;環境でのセットアップということで，&#xA;以下自分向けの備忘録．&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>PyGMTをAnacondaに入れて若干躓いた話</title>
       <link>https://yasuit21.github.io/ja/post/2023/04/0004/</link>
       <pubDate>Sun, 09 Apr 2023 21:00:40 +0900</pubDate>
-      
       <guid>https://yasuit21.github.io/ja/post/2023/04/0004/</guid>
-      <description>&lt;p&gt;新しいラップトップPCにAnacondaで環境を作っている時に生じた問題&lt;br&gt;
-「&lt;code&gt;PyGMT&lt;/code&gt;で描画が上手くいかない&amp;hellip;」&lt;/p&gt;</description>
+      <description>&lt;p&gt;新しいラップトップPCにAnacondaで環境を作っている時に生じた問題&lt;br&gt;&#xA;「&lt;code&gt;PyGMT&lt;/code&gt;で描画が上手くいかない&amp;hellip;」&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>ObsPy解説記事の執筆予定</title>
       <link>https://yasuit21.github.io/ja/post/2023/02/0002/</link>
       <pubDate>Sun, 12 Feb 2023 23:24:45 +0900</pubDate>
-      
       <guid>https://yasuit21.github.io/ja/post/2023/02/0002/</guid>
-      <description>&lt;p&gt;
-
-&lt;a href=&#34;https://docs.obspy.org/master/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;ObsPy&lt;/a&gt;
-
-は地震波形解析などを行うPythonパッケージである&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;．
-地震波形データの基本処理には
-
-&lt;a href=&#34;https://ds.iris.edu/ds/nodes/dmc/software/downloads/sac/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Seismic Analysis Code (SAC)&lt;/a&gt;
-
-が用いられることが多いが，&lt;code&gt;ObsPy&lt;/code&gt;は地震カタログや波形データのダウンロードから基本処理，スペクトル解析，描画など，多様な処理をPythonフレームワークで実現できる．&lt;/p&gt;</description>
+      <description>&lt;p&gt;&#xA;&#xA;&lt;a href=&#34;https://docs.obspy.org/master/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;ObsPy&lt;/a&gt;&#xA;&#xA;は地震波形解析などを行うPythonパッケージである&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;．&#xA;地震波形データの基本処理には&#xA;&#xA;&lt;a href=&#34;https://ds.iris.edu/ds/nodes/dmc/software/downloads/sac/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Seismic Analysis Code (SAC)&lt;/a&gt;&#xA;&#xA;が用いられることが多いが，&lt;code&gt;ObsPy&lt;/code&gt;は地震カタログや波形データのダウンロードから基本処理，スペクトル解析，描画など，多様な処理をPythonフレームワークで実現できる．&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Hugoの設定（備忘録）</title>
       <link>https://yasuit21.github.io/ja/post/2023/01/0001/</link>
       <pubDate>Thu, 26 Jan 2023 01:50:57 +0900</pubDate>
-      
       <guid>https://yasuit21.github.io/ja/post/2023/01/0001/</guid>
-      <description>&lt;h3 id=&#34;いずれ自分の役に立つかも&#34;&gt;いずれ自分の役に立つかも&amp;hellip;？&lt;/h3&gt;
-&lt;p&gt;とりあえず試してみた
-
-&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Hugo&lt;/a&gt;
-
-の設定やらなんやらをメモ．
-基本的に自分用．&lt;/p&gt;
-&lt;h3 id=&#34;hugoのインストール&#34;&gt;&lt;code&gt;Hugo&lt;/code&gt;のインストール&lt;/h3&gt;
-&lt;p&gt;WSL Ubuntu なら apt install で一発&lt;/p&gt;
-&lt;div&gt;
-    &lt;div class=&#34;codeblock--content&#34;&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install hugo&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;</description>
+      <description>&lt;h3 id=&#34;いずれ自分の役に立つかも&#34;&gt;いずれ自分の役に立つかも&amp;hellip;？&lt;/h3&gt;&#xA;&lt;p&gt;とりあえず試してみた&#xA;&#xA;&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Hugo&lt;/a&gt;&#xA;&#xA;の設定やらなんやらをメモ．&#xA;基本的に自分用．&lt;/p&gt;&#xA;&lt;h3 id=&#34;hugoのインストール&#34;&gt;&lt;code&gt;Hugo&lt;/code&gt;のインストール&lt;/h3&gt;&#xA;&lt;p&gt;WSL Ubuntu なら apt install で一発&lt;/p&gt;&#xA;&lt;div&gt;&#xA;    &lt;div class=&#34;codeblock--content&#34;&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install hugo&lt;/code&gt;&lt;/pre&gt;&#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt;</description>
     </item>
-    
   </channel>
 </rss>
