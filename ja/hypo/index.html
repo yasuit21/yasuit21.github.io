@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ja">
+<head>
+	
+	
+	
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-594401RXHW"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-594401RXHW');
+</script>
+
+	
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>震源分布から推定した断層面形状 - Yasunori SAWAKI</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta itemprop="name" content="震源分布から推定した断層面形状">
+<meta itemprop="description" content="Personal website">
+		<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="震源分布から推定した断層面形状"/>
+<meta name="twitter:description" content="Personal website"/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/fontawesome-6.3.0/css/all.css">
+	<link rel="alternate" type="application/rss+xml" href="/ja/hypo/index.xml" title="Yasunori SAWAKI">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/ja/" title="Yasunori Sawaki&#39;s homepage" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/myicon.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Yasunori Sawaki&#39;s homepage</div>
+					<div class="logo__tagline">Promoting Python seismology</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+  <button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+    <span class="menu__btn-title" tabindex="-1">メニュー</span>
+  </button>
+  <ul class="menu__list">
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/">
+        
+          <span class="menu__text">ホーム</span>
+        
+      </a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/news/">
+        
+          <span class="menu__text">おしらせ</span>
+        
+      </a>
+    </li>
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/about/">
+        
+        <span class="menu__text">About Me</span>
+        <label class="drop-icon" for="About Me">▾</label>
+        
+      </a>
+      <input type="checkbox" id="About Me">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E8%81%B7%E6%AD%B4">
+            
+            <span class="menu__text">職歴</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E5%AD%A6%E6%AD%B4">
+            
+            <span class="menu__text">学歴</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E6%95%99%E8%82%B2%E7%B5%8C%E9%A8%93">
+            
+            <span class="menu__text">教育経験</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E5%8F%97%E8%B3%9E%E6%AD%B4">
+            
+            <span class="menu__text">受賞歴</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E7%AB%B6%E4%BA%89%E7%9A%84%E8%B3%87%E9%87%91%E7%AD%89%E3%81%AE%E7%A0%94%E7%A9%B6%E8%AA%B2%E9%A1%8C">
+            
+            <span class="menu__text">競争的資金</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E5%AD%A6%E8%A1%93%E8%AA%BF%E6%9F%BB%E7%B5%8C%E9%A8%93%E6%B5%B7%E5%BA%95%E5%9C%B0%E9%9C%87%E8%A6%B3%E6%B8%AC">
+            
+            <span class="menu__text">学術調査経験</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/publication/">
+        
+        <span class="menu__text">学術出版物など</span>
+        <label class="drop-icon" for="学術出版物など">▾</label>
+        
+      </a>
+      <input type="checkbox" id="学術出版物など">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/publication/#%E6%9F%BB%E8%AA%AD%E4%BB%98%E8%AB%96%E6%96%87">
+            
+            <span class="menu__text">査読付き論文</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/publication/#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">
+            
+            <span class="menu__text">ソフトウェア</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/publication/#%E5%AD%A6%E4%BC%9A%E7%99%BA%E8%A1%A8%E7%A0%94%E7%A9%B6%E9%9B%86%E4%BC%9A">
+            
+            <span class="menu__text">学会発表</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/hypo">
+        
+          <span class="menu__text">震源分布</span>
+        
+      </a>
+    </li>
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/research/">
+        
+        <span class="menu__text">研究成果</span>
+        <label class="drop-icon" for="研究成果">▾</label>
+        
+      </a>
+      <input type="checkbox" id="研究成果">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/hypo">
+            
+            <span class="menu__text">震源分布</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/post/">
+        
+        <span class="menu__text">投稿一覧</span>
+        <label class="drop-icon" for="投稿一覧">▾</label>
+        
+      </a>
+      <input type="checkbox" id="投稿一覧">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/obspy/">
+            
+            <span class="menu__text">ObsPy</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/pygmt">
+            
+            <span class="menu__text">PyGMT</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/python">
+            
+            <span class="menu__text">Python</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/hugo">
+            
+            <span class="menu__text">Hugo</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/gallery/">
+        
+        <span class="menu__text">ギャラリー</span>
+        <label class="drop-icon" for="ギャラリー">▾</label>
+        
+      </a>
+      <input type="checkbox" id="ギャラリー">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/photo/">
+            
+            <span class="menu__text">写真</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/link/">
+        
+          <span class="menu__text">リンク集</span>
+        
+      </a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="/en/">
+        
+          <span class="menu__text">English [EN]</span>
+        
+      </a>
+    </li>
+  </ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			<main class="main list post" role="main">
+    <header class="main__header post__header">
+        <h1 class="main__title post__title">震源分布から推定した断層面形状</h1>
+            <p class="post__lead">震源クラスタリングによる断層面形状を3Dで描画しました</p>
+            
+            <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2026-07-05T20:00:00&#43;09:00">2026-07-05</time></div>
+<div class="meta__item-translations meta__item">
+	<span class="meta__text">翻訳: <a class="meta__link" href="/en/hypo/">EN</a>
+	</span>
+</div></div>
+    </header>
+<div class="post__toc toc">
+	<div class="toc__title">目次</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#概要">概要</a></li>
+    <li><a href="#2024年能登半島地震">2024年能登半島地震</a></li>
+    <li><a href="#2024年8月神奈川県西部の地震">2024年8月神奈川県西部の地震</a></li>
+    <li><a href="#参考文献">参考文献</a></li>
+  </ul>
+</nav>
+	</div>
+</div>
+        <div class="content main__content post__content clearfix">
+            <h2 id="概要">概要</h2>
+<ul>
+<li>震源クラスタリング(
+
+<a href="https://doi.org/10.1186/s40623-025-02311-9" target="_blank" rel="noopener noreferrer">Sawaki et al., 2025</a>
+
+)による断層面形状を3Dで示したページです</li>
+<li>Pythonパッケージは
+
+<a href="https://www.gsj.jp/publications/pub/openfile/openfile0759.html" target="_blank" rel="noopener noreferrer">産総研地質調査総合センター研究資料集</a>
+
+からダウンロードできます</li>
+</ul>
+<h2 id="2024年能登半島地震">2024年能登半島地震</h2>
+
+
+
+
+
+
+  
+
+  <script src="https://cdn.plot.ly/plotly-3.6.0.min.js"></script>
+
+  <div id="noto2024" style="width: 100%;"></div>
+
+  <script>
+    (function() {
+      fetch('https:\/\/yasuit21.github.io\/hypo\/noto2024faults.json')
+        .then(response => {
+          if (!response.ok) throw new Error('Network response was not ok');
+          return response.json();
+        })
+        .then(data => {
+          
+          if (data.layout) {
+            delete data.layout.height; 
+            delete data.layout.width;
+          }
+
+          Plotly.newPlot('noto2024', data.data, data.layout, {
+            responsive: true,
+            displaylogo: false
+          });
+
+          setTimeout(() => {
+            Plotly.Plots.resize(document.getElementById('noto2024'));
+          }, 100);
+
+        })
+        .catch(error => {
+          console.error("Plotly loading error:", error);
+        });
+    })();
+  </script>
+
+<ul>
+<li>2024年元日に発生した「<strong>令和６年能登半島地震(Mw 7.5)</strong>」の断層面形状を震源クラスタリングで推定しました</li>
+<li>気象庁カタログに含まれる2005年1月から2024年1月31日までのイベントをtomoDDで再決定し，そのうち2024年1月1日から31日までの余震分布を震源クラスタリングに適用しました</li>
+<li>半島直下に，大小5枚の断層面が海岸線に沿うようにして並んでいます．輪島東部ではより反時計回りに回転した面を抽出したほか，西岸では東に傾斜する面が見られます．これらの局所構造は複雑な断層すべりが発生したことを示唆するとともに，重力異常や地質構造ともよく対応していました．能登半島の形成と地震テクトニクスの理解にも繋がる研究成果と言えます</li>
+<li>詳細は以下の論文をご確認ください
+<ul>
+<li>Sawaki, Y., T. Shiina, K. Sagae, Y. Sato, H. Horikawa, A. Miyakawa, K. Imanishi, and T. Uchide (2025). Fault Geometries of the 2024 Mw 7.5 Noto Peninsula Earthquake from Hypocenter-Based Hierarchical Clustering of Point-Cloud Normal Vectors. <em>Journal of Geophysical Research: Solid Earth</em>, 130(4), e2024JB030233. 
+
+<a href="https://doi.org/10.1029/2024JB030233" target="_blank" rel="noopener noreferrer">doi: 10.1029/2024JB030233</a>
+
+ (Open Access)</li>
+</ul>
+</li>
+<li>おしらせは
+
+<a href="/ja/news/2025/04/0027/">こちら</a>
+
+</li>
+</ul>
+<h2 id="2024年8月神奈川県西部の地震">2024年8月神奈川県西部の地震</h2>
+
+
+
+
+
+
+  
+
+  <script src="https://cdn.plot.ly/plotly-3.6.0.min.js"></script>
+
+  <div id="sagami2024" style="width: 100%;"></div>
+
+  <script>
+    (function() {
+      fetch('https:\/\/yasuit21.github.io\/hypo\/sagami2024faults.json')
+        .then(response => {
+          if (!response.ok) throw new Error('Network response was not ok');
+          return response.json();
+        })
+        .then(data => {
+          
+          if (data.layout) {
+            delete data.layout.height; 
+            delete data.layout.width;
+          }
+
+          Plotly.newPlot('sagami2024', data.data, data.layout, {
+            responsive: true,
+            displaylogo: false
+          });
+
+          setTimeout(() => {
+            Plotly.Plots.resize(document.getElementById('sagami2024'));
+          }, 100);
+
+        })
+        .catch(error => {
+          console.error("Plotly loading error:", error);
+        });
+    })();
+  </script>
+
+<ul>
+<li>2024年8月9日に神奈川県西部で発生したMw 5.0の地震の余震活動から断層面形状を調べました</li>
+<li>微小地震は深層学習で検出し（2024年7月から10月まで），波形相関を含む震源再決定を行っています</li>
+<li>スラブ上面より深い南落ちの高角傾斜の分布が見られ，発震機構解の節面に対応する断層面を抽出しました．よって，島弧地殻内やプレート境界ではなく，<strong>伊豆弧地殻内</strong>のイベントであると考えられます．また，南西領域では走向の異なる面構造も抽出しました．伊豆弧衝突帯の複雑な構造を反映しています</li>
+<li>詳細は以下の論文をご確認ください
+<ul>
+<li>Sawaki, Y., T. Shiina, and T. Uchide (2025). Steep intraplate reverse faulting adjacent to the hypocenter of the 1923 Kanto earthquake: The Mw 5.0 western Kanagawa earthquake in eastern Japan on 9 August 2024. <em>Earth, Planets and Space</em>, 77, 186. 
+
+<a href="https://doi.org/10.1186/s40623-025-02311-9" target="_blank" rel="noopener noreferrer">doi: 10.1186/s40623-025-02311-9</a>
+
+ (Open Access)</li>
+</ul>
+</li>
+<li>おしらせは
+
+<a href="/ja/news/2025/11/0036/">こちら</a>
+
+</li>
+</ul>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>佐脇泰典・佐藤圭浩・内出崇彦 (2025) 点群法線ベクトルを用いた震源クラスタリングによる地震断層面抽出法（FaultNVC）地質調査総合センター研究資料集，no. 759，産業技術総合研究所地質調査総合センター．
+
+<a href="https://www.gsj.jp/publications/pub/openfile/openfile0759.html" target="_blank" rel="noopener noreferrer">https://www.gsj.jp/publications/pub/openfile/openfile0759.html</a>
+
+</li>
+<li>Sawaki, Y., T. Shiina, K. Sagae, Y. Sato, H. Horikawa, A. Miyakawa, K. Imanishi, and T. Uchide (2025). Fault Geometries of the 2024 Mw 7.5 Noto Peninsula Earthquake from Hypocenter-Based Hierarchical Clustering of Point-Cloud Normal Vectors. <em>Journal of Geophysical Research: Solid Earth</em>, 130(4), e2024JB030233. 
+
+<a href="https://doi.org/10.1029/2024JB030233" target="_blank" rel="noopener noreferrer">doi: 10.1029/2024JB030233</a>
+
+ (Open Access)</li>
+<li>Sawaki, Y., T. Shiina, and T. Uchide (2025). Steep intraplate reverse faulting adjacent to the hypocenter of the 1923 Kanto earthquake: The Mw 5.0 western Kanagawa earthquake in eastern Japan on 9 August 2024. <em>Earth, Planets and Space</em>, 77, 186. 
+
+<a href="https://doi.org/10.1186/s40623-025-02311-9" target="_blank" rel="noopener noreferrer">doi: 10.1186/s40623-025-02311-9</a>
+
+ (Open Access)</li>
+</ul>
+
+        </div>
+</main>
+
+
+
+			</div>
+			
+
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+<div class="footer__links">
+	<a class="footer__link" href="/ja/privacy/">プライバシーポリシー</a> | <a class="footer__link" href="/en/">EN</a>
+</div>
+		<div class="footer__copyright">
+			&copy; 2026 Yasunori Sawaki.
+			<span class="footer__copyright-credits">このサイトは <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> と <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> テーマで生成されています。</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Earth Structure on Yasunori SAWAKI</title>
+    <link>http://localhost:1313/en/tags/earth-structure/</link>
+    <description>Recent content in Earth Structure on Yasunori SAWAKI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 28 Jan 2024 10:02:55 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/tags/earth-structure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Seismological Structures on Bimodal Distribution of Deep Tectonic Tremor</title>
+      <link>http://localhost:1313/en/research/001/</link>
+      <pubDate>Sun, 28 Jan 2024 09:11:42 +0900</pubDate>
+      <guid>http://localhost:1313/en/research/001/</guid>
+      <description>This finding was published in Geophysical Research Letters on March 31, 2021. Please refer to the article below for details.&#xA;Sawaki, Y., Y. Ito, K. Ohta, T. Shibutani, and T. Iwata, (2021). Seismological structures on bimodal distribution of deep tectonic tremor.</description>
+    </item>
+  </channel>
+</rss>

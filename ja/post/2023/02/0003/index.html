@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ja">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	
+	
+	
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-594401RXHW"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-594401RXHW');
+</script>
+
+	
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ObsPy解説記事 [01]: 基本・地震波形のダウンロード - Yasunori SAWAKI</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta itemprop="name" content="ObsPy解説記事 [01]: 基本・地震波形のダウンロード">
+<meta itemprop="description" content="
+
+ObsPy
+
+は地震波形解析などを行うPythonパッケージである1．
+地震カタログや波形データのダウンロードから基本処理，スペクトル解析，描画など，多様な処理をPythonフレームワークで実現できる．
+第01回では，ObsPyの基本と波形の表示やダウンロード方法を示したい．一覧は
+
+こちら
+
+．"><meta itemprop="datePublished" content="2023-02-20T18:31:27+09:00" />
+<meta itemprop="dateModified" content="2023-06-19T22:25:20+09:00" />
+<meta itemprop="wordCount" content="169">
+<meta itemprop="keywords" content="ObsPy,Python,備忘録," />
+		<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="ObsPy解説記事 [01]: 基本・地震波形のダウンロード"/>
+<meta name="twitter:description" content="
+
+ObsPy
+
+は地震波形解析などを行うPythonパッケージである1．
+地震カタログや波形データのダウンロードから基本処理，スペクトル解析，描画など，多様な処理をPythonフレームワークで実現できる．
+第01回では，ObsPyの基本と波形の表示やダウンロード方法を示したい．一覧は
+
+こちら
+
+．"/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/fontawesome-6.3.0/css/all.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/ja/" title="Yasunori Sawaki&#39;s homepage" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/myicon.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Yasunori Sawaki&#39;s homepage</div>
+					<div class="logo__tagline">Promoting Python seismology</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+  <button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+    <span class="menu__btn-title" tabindex="-1">メニュー</span>
+  </button>
+  <ul class="menu__list">
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/">
+        
+          <span class="menu__text">ホーム</span>
+        
+      </a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/news/">
+        
+          <span class="menu__text">おしらせ</span>
+        
+      </a>
+    </li>
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/about/">
+        
+        <span class="menu__text">About Me</span>
+        <label class="drop-icon" for="About Me">▾</label>
+        
+      </a>
+      <input type="checkbox" id="About Me">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E8%81%B7%E6%AD%B4">
+            
+            <span class="menu__text">職歴</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E5%AD%A6%E6%AD%B4">
+            
+            <span class="menu__text">学歴</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E6%95%99%E8%82%B2%E7%B5%8C%E9%A8%93">
+            
+            <span class="menu__text">教育経験</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E5%8F%97%E8%B3%9E%E6%AD%B4">
+            
+            <span class="menu__text">受賞歴</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E7%AB%B6%E4%BA%89%E7%9A%84%E8%B3%87%E9%87%91%E7%AD%89%E3%81%AE%E7%A0%94%E7%A9%B6%E8%AA%B2%E9%A1%8C">
+            
+            <span class="menu__text">競争的資金</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/about/#%E5%AD%A6%E8%A1%93%E8%AA%BF%E6%9F%BB%E7%B5%8C%E9%A8%93%E6%B5%B7%E5%BA%95%E5%9C%B0%E9%9C%87%E8%A6%B3%E6%B8%AC">
+            
+            <span class="menu__text">学術調査経験</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/publication/">
+        
+        <span class="menu__text">学術出版物など</span>
+        <label class="drop-icon" for="学術出版物など">▾</label>
+        
+      </a>
+      <input type="checkbox" id="学術出版物など">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/publication/#%E6%9F%BB%E8%AA%AD%E4%BB%98%E8%AB%96%E6%96%87">
+            
+            <span class="menu__text">査読付き論文</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/publication/#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">
+            
+            <span class="menu__text">ソフトウェア</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/publication/#%E5%AD%A6%E4%BC%9A%E7%99%BA%E8%A1%A8%E7%A0%94%E7%A9%B6%E9%9B%86%E4%BC%9A">
+            
+            <span class="menu__text">学会発表</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/hypo">
+        
+          <span class="menu__text">震源分布</span>
+        
+      </a>
+    </li>
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/research/">
+        
+        <span class="menu__text">研究成果</span>
+        <label class="drop-icon" for="研究成果">▾</label>
+        
+      </a>
+      <input type="checkbox" id="研究成果">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/hypo">
+            
+            <span class="menu__text">震源分布</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/post/">
+        
+        <span class="menu__text">投稿一覧</span>
+        <label class="drop-icon" for="投稿一覧">▾</label>
+        
+      </a>
+      <input type="checkbox" id="投稿一覧">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/obspy/">
+            
+            <span class="menu__text">ObsPy</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/pygmt">
+            
+            <span class="menu__text">PyGMT</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/python">
+            
+            <span class="menu__text">Python</span>
+            
+          </a>
+          </li>
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/hugo">
+            
+            <span class="menu__text">Hugo</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/gallery/">
+        
+        <span class="menu__text">ギャラリー</span>
+        <label class="drop-icon" for="ギャラリー">▾</label>
+        
+      </a>
+      <input type="checkbox" id="ギャラリー">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/photo/">
+            
+            <span class="menu__text">写真</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
+    <li class="menu__item">
+      <a class="menu__link" href="/ja/link/">
+        
+          <span class="menu__text">リンク集</span>
+        
+      </a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="/en/">
+        
+          <span class="menu__text">English [EN]</span>
+        
+      </a>
+    </li>
+  </ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">ObsPy解説記事 [01]: 基本・地震波形のダウンロード</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2023-02-20T18:31:27&#43;09:00">2023-02-20</time>
+	<time class="meta__text" datetime="2023-06-19T22:25:20&#43;09:00">(最終更新: 2023-06-19)</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/ja/categories/obspy/" rel="category">ObsPy</a>, <a class="meta__link" href="/ja/categories/python/" rel="category">Python</a>
+	</span>
+</div></div>
+		</header>
+		
+<div class="post__toc toc">
+	<div class="toc__title">目次</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#obspyとは">ObsPyとは?</a>
+      <ul>
+        <li><a href="#obspyのインストール">ObsPyのインストール</a></li>
+        <li><a href="#obspyのインポート">ObsPyのインポート</a></li>
+        <li><a href="#波形データの格納構造">波形データの格納構造</a></li>
+      </ul>
+    </li>
+    <li><a href="#obspyにおける波形データの取り扱い">ObsPyにおける波形データの取り扱い</a>
+      <ul>
+        <li><a href="#地震波形の読み込み">地震波形の読み込み</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p>
+
+<a href="https://docs.obspy.org/master/index.html" target="_blank" rel="noopener noreferrer">ObsPy</a>
+
+は地震波形解析などを行うPythonパッケージである<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>．
+地震カタログや波形データのダウンロードから基本処理，スペクトル解析，描画など，多様な処理をPythonフレームワークで実現できる．<br>
+第01回では，<code>ObsPy</code>の基本と波形の表示やダウンロード方法を示したい．一覧は
+
+<a href="/categories/obspy/">こちら</a>
+
+．</p>
+<h2 id="obspyとは">ObsPyとは?</h2>
+<p>地震学データを扱うためのオープンソースプロジェクト．
+多種の信号処理ルーチンによる時系列解析が可能な上，
+複数のフォーマットファイルの読み書きに対応し，
+データセンターへのアクセスもできる．</p>
+<p>今回は，
+
+<a href="https://docs.obspy.org/tutorial/index.html" target="_blank" rel="noopener noreferrer">Tutorial</a>
+
+ の内容を主に紹介する</p>
+<ul>
+<li><code>ObsPy</code>ホームページ : 
+
+<a href="https://docs.obspy.org/" target="_blank" rel="noopener noreferrer">https://docs.obspy.org/</a>
+
+</li>
+<li>Documentation Contents : 
+
+<a href="https://docs.obspy.org/contents.html" target="_blank" rel="noopener noreferrer">https://docs.obspy.org/contents.html</a>
+
+</li>
+<li>Library Reference : 
+
+<a href="https://docs.obspy.org/packages/index.html" target="_blank" rel="noopener noreferrer">https://docs.obspy.org/packages/index.html</a>
+
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<div class="box1">
+    <span class="box-title">NOTE</span>
+    <p>
+         YouTubeに
+
+<a href="https://www.youtube.com/watch?v=kFwdjfiK4gk" target="_blank" rel="noopener noreferrer">ObsPyの公式解説動画（約1時間）</a>
+
+が公開されているが，最新の情報ではないことに注意
+        
+    </p>
+</div>
+<!-- raw HTML omitted -->
+<h3 id="obspyのインストール">ObsPyのインストール</h3>
+<p>⇒ <strong><code>conda</code>環境が好ましい</strong><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<ul>
+<li><code>conda-forge</code>チャンネルからインストール
+<div>
+    <div class="codeblock--content"><pre tabindex="0"><code>(base)$ conda activate &lt;env&gt; python=3.10 ...  # &lt;env&gt;は任意の仮想環境名
+(env)$ conda install -c conda-forge obspy</code></pre>
+    </div>
+  </div><div class="box1">
+    <span class="box-title">NOTE</span>
+    <p>
+         既に<code>mamba</code>をbase環境にインストールしている場合は<code>conda</code>を置き換え可能
+        
+    </p>
+</div></li>
+</ul>
+<h3 id="obspyのインポート">ObsPyのインポート</h3>
+<ul>
+<li><code>obspy</code>: <strong><code>ob</code></strong> という省略名を与える場合が多い
+<div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#75715e">## Good</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> obspy <span style="color:#66d9ef">as</span> ob
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> obspy.clients.fdsn <span style="color:#f92672">import</span> Client</span></span></code></pre></div>
+    </div>
+  </div><div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">## Possible</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> obspy</span></span></code></pre></div>
+    </div>
+  </div><div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">## AVOID THIS!</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> obspy <span style="color:#f92672">import</span> <span style="color:#f92672">*</span></span></span></code></pre></div>
+    </div>
+  </div></li>
+<li>次のパッケージも読み込んでおく
+<ul>
+<li><code>numpy</code>: C言語で書かれた高速計算パッケージ</li>
+<li><code>matplotlib.pyplot</code>: 図作成モジュール</li>
+<li><code>pandas</code>: データ解析に有用なデータ構造を提供</li>
+</ul>
+</li>
+</ul>
+<h3 id="波形データの格納構造">波形データの格納構造</h3>
+<p>ObsPyでは1成分の地震波形データを <strong><code>Trace</code></strong> オブジェクトに格納する．</p>
+<ul>
+<li><code>Trace</code>オブジェクトは複数の属性を持つ
+<ul>
+<li><code>.data</code>: <code>ndarray</code>形式で格納された波形データにアクセスできる</li>
+<li><code>.stats</code>: 波形データのヘッダー情報などを含む<code>dict</code>構造</li>
+<li>その他多種多様なメソッド</li>
+</ul>
+</li>
+</ul>
+<p>複数の<code>Trace</code>は <strong><code>Stream</code></strong> オブジェクトに集約できる</p>
+<p>図で表すと以下の通り：
+<img alt="Stream_Trace" src="./Stream_Trace.png">
+Reference: 
+
+<a href="https://docs.obspy.org/packages/obspy.core.html" target="_blank" rel="noopener noreferrer">https://docs.obspy.org/packages/obspy.core.html</a>
+
+</p>
+<p>また，<code>Stream</code>オブジェクトにも<code>Trace</code>と同様のメソッドが用意されており，
+<code>Stream</code>のメソッドを適用することで，一括で全ての<code>Trace</code>に変更を加えられる．</p>
+<h2 id="obspyにおける波形データの取り扱い">ObsPyにおける波形データの取り扱い</h2>
+<h3 id="地震波形の読み込み">地震波形の読み込み</h3>
+<p>基本的に 
+
+<a href="https://docs.obspy.org/packages/autogen/obspy.core.stream.read.html" target="_blank" rel="noopener noreferrer">obspy.read()</a>
+
+ 関数を
+用いて地震波形データを読み込み，<code>Stream</code>オブジェクトを作成する．</p>
+<p><code>ObsPy</code>が提供する波形サンプルを読み込んでみよう．</p>
+<div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>st <span style="color:#f92672">=</span> ob<span style="color:#f92672">.</span>read(<span style="color:#e6db74">&#39;http://examples.obspy.org/RJOB_061005_072159.ehz.new&#39;</span>)
+</span></span><span style="display:flex;"><span>print(st)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Number of traces: &#39;</span>, len(st))</span></span></code></pre></div>
+    </div>
+  </div><p><code>SAC</code>形式のファイルも，<code>format</code>を指定することで読み取れる</p>
+<div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ob<span style="color:#f92672">.</span>read(<span style="color:#e6db74">&#34;/path/to/file.sac&#34;</span>, format<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;SAC&#34;</span>)</span></span></code></pre></div>
+    </div>
+  </div><p>複数ファイルを読み込む場合は文字列中にアスタリスク<code>'*'</code>を含むことができる．
+詳しくは，
+
+<a href="https://docs.obspy.org/packages/obspy.io.sac.html" target="_blank" rel="noopener noreferrer">obspy.io.sac</a>
+
+ などを参照</p>
+<p><code>Stream</code>の情報は<code>print()</code>などで表示できる．</p>
+<ul>
+<li><code>print()</code>関数: <code>Stream</code>内に含まれる<code>Trace</code>の情報を参照
+<div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(st)</span></span></code></pre></div>
+    </div>
+  </div></li>
+<li><code>len()</code>関数: <code>Stream</code>内の<code>Trace</code>数
+<div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Number of traces: &#39;</span>, len(st))</span></span></code></pre></div>
+    </div>
+  </div></li>
+<li><code>st[i]</code>は<code>i+1</code>番目の<code>Trace</code>
+<div>
+    <div class="codeblock--content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>tr <span style="color:#f92672">=</span> st[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>print(tr)</span></span></code></pre></div>
+    </div>
+  </div></li>
+</ul>
+<p>ヘッダー情報は属性<code>.stats</code>で参照</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Beyreuther, M., Barsch, R., Krischer, L., Megies, T., Behr, Y., and Wassermann, J. (2010), ObsPy: A Python Toolbox for Seismology, Seismological Research Letters, 81 (3), 530-533. 
+
+<a href="https://doi.org/10.1785/gssrl.81.3.530" target="_blank" rel="noopener noreferrer">https://doi.org/10.1785/gssrl.81.3.530</a>
+
+&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>
+
+<a href="https://github.com/obspy/obspy/wiki#installation" target="_blank" rel="noopener noreferrer">https://github.com/obspy/obspy/wiki#installation</a>
+
+&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/ja/tags/obspy/" rel="tag">ObsPy</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/ja/tags/python/" rel="tag">Python</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/ja/tags/%E5%82%99%E5%BF%98%E9%8C%B2/" rel="tag">備忘録</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/ja/post/2023/02/0002/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;前の投稿</span>
+			<p class="pager__title">ObsPy解説記事の執筆予定</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/ja/post/2023/04/0004/" rel="next">
+			<span class="pager__subtitle">次の投稿&thinsp;»</span>
+			<p class="pager__title">PyGMTをAnacondaに入れて若干躓いた話</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			<aside class="sidebar">
+<div class="widget-recent widget">
+	<h4 class="widget__title">最近の投稿</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/ja/news/2026/06/0039/">科研費若手研究採択！</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ja/news/2026/06/0038/">JpGU-AGU Joint Meeting 2026</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ja/news/2025/12/0037/">AGU25@New Orleans</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ja/news/2025/11/0036/">筆頭論文がEPS誌で公開されました</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ja/news/2025/10/0035/">地震学会2025年秋季大会＠福岡に参加しました</a></li>
+			<li class="widget__item"><a class="widget__link" href="/ja/news/2025/09/0034/">一般教養科目『地球科学』の講義が始まりました</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">カテゴリー</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/news/">News</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">39</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/obspy/">ObsPy</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">2</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/photo/">Photo</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">1</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/pygmt/">PyGMT</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">3</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/python/">Python</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">6</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/seismology/">Seismology</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">1</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2/">ソフトウェア</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">1</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/%E3%83%97%E3%83%AC%E3%83%97%E3%83%AA%E3%83%B3%E3%83%88/">プレプリント</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">2</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/%E5%9C%B0%E9%9C%87/">地震</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">5</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/%E5%9C%B0%E9%9C%87%E5%AD%A6/">地震学</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">8</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/%E5%AD%A6%E4%BC%9A%E7%A0%94%E7%A9%B6%E9%9B%86%E4%BC%9A/">学会・研究集会</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">15</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/%E5%AD%A6%E8%A1%93%E8%AB%96%E6%96%87/">学術論文</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">5</span>
+				</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/ja/categories/%E8%AC%9B%E7%BE%A9%E5%AE%9F%E7%BF%92/">講義・実習</a>&nbsp;
+				<span class="widget__counter widget__counter--bubble">1</span>
+				</li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">タグ</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/agu/" title="AGU">AGU (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/anaconda/" title="Anaconda">Anaconda (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/hugo/" title="Hugo">Hugo (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/jpgu/" title="JpGU">JpGU (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/jupyterlab/" title="JupyterLab">JupyterLab (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/mainroad/" title="Mainroad">Mainroad (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/mpi/" title="MPI">MPI (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/obspy/" title="ObsPy">ObsPy (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/pygmt/" title="PyGMT">PyGMT (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/python/" title="Python">Python (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/sf%E5%9C%B0%E9%9C%87%E5%AD%A6/" title="SF地震学">SF地震学 (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/star-e/" title="STAR-E">STAR-E (14)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/s%E6%B3%A2%E5%81%8F%E5%90%91%E7%95%B0%E6%96%B9%E6%80%A7/" title="S波偏向異方性">S波偏向異方性 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/usgs/" title="USGS">USGS (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0/" title="クラスタリング">クラスタリング (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E3%82%B9%E3%83%AD%E3%83%BC%E5%9C%B0%E9%9C%87/" title="スロー地震">スロー地震 (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E3%83%AC%E3%82%B7%E3%83%BC%E3%83%90%E9%96%A2%E6%95%B0/" title="レシーバ関数">レシーバ関数 (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E5%82%99%E5%BF%98%E9%8C%B2/" title="備忘録">備忘録 (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E5%8F%B0%E6%B9%BE/" title="台湾">台湾 (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E5%9B%9B%E5%9B%BD/" title="四国">四国 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E5%9C%B0%E7%90%83%E7%A7%91%E5%AD%A6/" title="地球科学">地球科学 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E5%9C%B0%E9%9C%87%E5%AD%A6%E4%BC%9A/" title="地震学会">地震学会 (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E5%9C%B0%E9%9C%87%E5%AD%A6%E7%9A%84%E6%A7%8B%E9%80%A0/" title="地震学的構造">地震学的構造 (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E6%96%AD%E5%B1%A4%E9%9D%A2%E5%BD%A2%E7%8A%B6/" title="断層面形状">断層面形状 (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E8%A5%BF%E9%83%A8%E5%9C%B0%E9%9C%87/" title="神奈川県西部地震">神奈川県西部地震 (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E7%A7%91%E7%A0%94%E8%B2%BB/" title="科研費">科研費 (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E7%B4%80%E4%BC%8A%E5%8D%8A%E5%B3%B6/" title="紀伊半島">紀伊半島 (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E8%83%BD%E7%99%BB%E5%8D%8A%E5%B3%B6%E5%9C%B0%E9%9C%87/" title="能登半島地震">能登半島地震 (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E9%87%8E%E5%A4%96%E5%B7%A1%E6%A4%9C/" title="野外巡検">野外巡検 (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E9%96%A2%E6%9D%B1%E5%9C%B0%E9%9C%87/" title="関東地震">関東地震 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E9%9C%87%E6%BA%90%E5%88%86%E5%B8%83/" title="震源分布">震源分布 (5)</a>
+	</div>
+</div>
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">その他の個人メディア</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/yasuit21" target="_blank">
+				<svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
+				<span>Twitter</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/yasuit21" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="ORCID"  rel="noopener noreferrer" href="https://orcid.org/0000-0002-4043-3391" target="_blank">
+				<span>ORCID</span>
+			</a>
+		</div>
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Google Scholar"  rel="noopener noreferrer" href="https://scholar.google.com/citations?user=NyhvdCUAAAAJ&amp;hl=en" target="_blank">
+				<span>Google Scholar</span>
+			</a>
+		</div>
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="researchmap"  rel="noopener noreferrer" href="https://researchmap.jp/YasunoriSawaki" target="_blank">
+				<span>researchmap</span>
+			</a>
+		</div>
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Web of Science"  rel="noopener noreferrer" href="https://www.webofscience.com/wos/author/record/HZL-1211-2023" target="_blank">
+				<span>Web of Science</span>
+			</a>
+		</div>
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="tayo"  rel="noopener noreferrer" href="https://tayo.jp/users/xw7IseDyQEcMDg3PjO7h7TM3uzl2/" target="_blank">
+				<span>tayo</span>
+			</a>
+		</div>
+		
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+<div class="footer__links">
+	<a class="footer__link" href="/ja/privacy/">プライバシーポリシー</a> | <a class="footer__link" href="/en/">EN</a>
+</div>
+		<div class="footer__copyright">
+			&copy; 2026 Yasunori Sawaki.
+			<span class="footer__copyright-credits">このサイトは <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> と <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> テーマで生成されています。</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

@@ -172,12 +172,33 @@ gtag('config', 'G-594401RXHW');
     </li>
     
     <li class="menu__item">
-      <a class="menu__link" href="/ja/research/">
+      <a class="menu__link" href="/ja/hypo">
         
-          <span class="menu__text">研究成果</span>
+          <span class="menu__text">震源分布</span>
         
       </a>
     </li>
+    <li class="menu__item menu__dropdown">
+      <a class="menu__link" href="/ja/research/">
+        
+        <span class="menu__text">研究成果</span>
+        <label class="drop-icon" for="研究成果">▾</label>
+        
+      </a>
+      <input type="checkbox" id="研究成果">
+      <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/hypo">
+            
+            <span class="menu__text">震源分布</span>
+            
+          </a>
+          </li>
+        
+      </ul>
+    </li>
+    
     <li class="menu__item menu__dropdown">
       <a class="menu__link" href="/ja/post/">
         
@@ -187,6 +208,14 @@ gtag('config', 'G-594401RXHW');
       </a>
       <input type="checkbox" id="投稿一覧">
       <ul class="submenu__list">
+        
+          <li class="menu__item">
+          <a class="menu__link" href="/ja/categories/obspy/">
+            
+            <span class="menu__text">ObsPy</span>
+            
+          </a>
+          </li>
         
           <li class="menu__item">
           <a class="menu__link" href="/ja/categories/pygmt">
@@ -215,13 +244,6 @@ gtag('config', 'G-594401RXHW');
       </ul>
     </li>
     
-    <li class="menu__item">
-      <a class="menu__link" href="/ja/categories/obspy/">
-        
-          <span class="menu__text">ObsPy</span>
-        
-      </a>
-    </li>
     <li class="menu__item menu__dropdown">
       <a class="menu__link" href="/ja/gallery/">
         
@@ -264,11 +286,10 @@ gtag('config', 'G-594401RXHW');
 </header>
 		<div class="wrapper flex">
 			<div class="primary">
-			
-<main class="main list" role="main">
-	<header class="main__header">
-		<h1 class="main__title">News</h1>
-	</header><article class="list__item post">
+			<main class="main list post" role="main">
+    <header class="main__header post__header">
+        <h1 class="main__title post__title">News</h1>
+    </header><article class="list__item post">
 	
 	<figure class="list__thumbnail thumbnail">
 		<a class="thumbnail__link" href="/ja/news/2024/04/0019/">
@@ -559,6 +580,7 @@ Ruan, Yihuan, Yoshihiro Ito, and <strong><u>Yasunori Sawaki</u></strong>, (2023)
 </article>
 </main>
 
+
 <div class="pagination">
 	<a class="pagination__item pagination__item--prev btn" href="/ja/categories/news/page/2/">«</a>
 	<span class="pagination__item pagination__item--current">3/4</span>
@@ -662,14 +684,14 @@ Ruan, Yihuan, Yoshihiro Ito, and <strong><u>Yasunori Sawaki</u></strong>, (2023)
 		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E5%9C%B0%E7%90%83%E7%A7%91%E5%AD%A6/" title="地球科学">地球科学 (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E5%9C%B0%E9%9C%87%E5%AD%A6%E4%BC%9A/" title="地震学会">地震学会 (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E5%9C%B0%E9%9C%87%E5%AD%A6%E7%9A%84%E6%A7%8B%E9%80%A0/" title="地震学的構造">地震学的構造 (3)</a>
-		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E6%96%AD%E5%B1%A4%E9%9D%A2%E5%BD%A2%E7%8A%B6/" title="断層面形状">断層面形状 (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E6%96%AD%E5%B1%A4%E9%9D%A2%E5%BD%A2%E7%8A%B6/" title="断層面形状">断層面形状 (4)</a>
 		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E8%A5%BF%E9%83%A8%E5%9C%B0%E9%9C%87/" title="神奈川県西部地震">神奈川県西部地震 (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E7%A7%91%E7%A0%94%E8%B2%BB/" title="科研費">科研費 (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E7%B4%80%E4%BC%8A%E5%8D%8A%E5%B3%B6/" title="紀伊半島">紀伊半島 (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E8%83%BD%E7%99%BB%E5%8D%8A%E5%B3%B6%E5%9C%B0%E9%9C%87/" title="能登半島地震">能登半島地震 (4)</a>
 		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E9%87%8E%E5%A4%96%E5%B7%A1%E6%A4%9C/" title="野外巡検">野外巡検 (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E9%96%A2%E6%9D%B1%E5%9C%B0%E9%9C%87/" title="関東地震">関東地震 (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E9%9C%87%E6%BA%90%E5%88%86%E5%B8%83/" title="震源分布">震源分布 (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/ja/tags/%E9%9C%87%E6%BA%90%E5%88%86%E5%B8%83/" title="震源分布">震源分布 (5)</a>
 	</div>
 </div>
 <div class="widget-social widget">
