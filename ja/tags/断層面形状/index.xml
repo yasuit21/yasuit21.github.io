@@ -6,14 +6,21 @@
     <description>Recent content in 断層面形状 on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 05 Jul 2026 23:26:15 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 12:38:46 +0900</lastBuildDate>
     <atom:link href="https://yasuit21.github.io/ja/tags/%E6%96%AD%E5%B1%A4%E9%9D%A2%E5%BD%A2%E7%8A%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>断層面形状の3D表示を公開</title>
+      <link>https://yasuit21.github.io/ja/post/2026/07/0009/</link>
+      <pubDate>Mon, 06 Jul 2026 11:53:30 +0900</pubDate>
+      <guid>https://yasuit21.github.io/ja/post/2026/07/0009/</guid>
+      <description>&lt;p&gt;&#xA;&#xA;&lt;a href=&#34;https://yasuit21.github.io/ja/hypo/&#34;&gt;震源分布と断層面形状を三次元でインタラクティブに確認できるページ&lt;/a&gt;&#xA;&#xA;を作成しました！現在のところ，これまで出版してきた2編の論文（&#xA;&#xA;&lt;a href=&#34;https://doi.org/10.1029/2024JB030233&#34; title=&#34;Sawaki et al. (2025, JGR)&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;2024年能登半島地震&lt;/a&gt;&#xA;&#xA;・&#xA;&#xA;&lt;a href=&#34;https://doi.org/10.1186/s40623-025-02311-9&#34; title=&#34;Sawaki et al. (2025, EPS)&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;2024年8月神奈川県西部の地震&lt;/a&gt;&#xA;&#xA;）が対象です&lt;/p&gt;</description>
+    </item>
     <item>
       <title>震源分布から推定した断層面形状</title>
       <link>https://yasuit21.github.io/ja/hypo/</link>
       <pubDate>Sun, 05 Jul 2026 20:00:00 +0900</pubDate>
       <guid>https://yasuit21.github.io/ja/hypo/</guid>
-      <description>概要 震源クラスタリング( Sawaki et al., 2025 )による断層面形状を3Dで示したページです Pythonパッケージは 産総研地質調査総合センター研究資料集 からダウンロードできます 2024年能登半島地震 2024年元日に発生した「令和６年能登半島地震(Mw 7.5)」の断層面形状を震源クラスタリングで推定しました 気象庁カタログに含まれる2005年1月から2024年1月31日までのイベントをtomoDDで再決定し，そのうち2024年1月1日から31日までの余震分布を震源クラスタリングに適用しました 半島直下に，大小5枚の断層面が海岸線に沿うようにして並んでいます．輪島東部ではより反時計回りに回転した面を抽出したほか，西岸では東に傾斜する面が見られます．これらの局所構造は複雑な断層すべりが発生したことを示唆するとともに，重力異常や地質構造ともよく対応していました．能登半島の形成と地震テクトニクスの理解にも繋がる研究成果と言えます 詳細は以下の論文をご確認ください Sawaki, Y., T. Shiina, K. Sagae, Y. Sato, H. Horikawa, A. Miyakawa, K. Imanishi, and T. Uchide (2025). Fault Geometries of the 2024 Mw 7.</description>
+      <description>概要 震源クラスタリング( Sawaki et al., 2025 )による断層面形状を3Dで示したページです Pythonパッケージは 産総研地質調査総合センター研究資料集（佐脇ほか，2025） からダウンロードできます 下記の震源分布や断層面形状のデジタルデータは各論文の付録に付けています 予告なく追記・変更・公開停止する場合があります 2024年能登半島地震 2024年元日に発生した「令和６年能登半島地震(Mw 7.5)」の断層面形状を震源クラスタリングで推定しました 気象庁カタログに含まれる2005年1月から2024年1月31日までのイベントをtomoDDで再決定し，そのうち2024年1月1日から31日までの余震分布を震源クラスタリングに適用しました 半島直下に，大小5枚の断層面が海岸線に沿うようにして並んでいます．北岸では南傾斜ですが，輪島東部ではより反時計回りに回転した屈曲面が抽出されています(ID #142)．この周辺には地質境界や貫入閃緑岩体が見られるほか，断層すべり挙動の変化が示唆されています(Ando et al., 2025; Honda et al., 2025)．また西岸では，東傾斜の低角面(ID #148)が見られます．こうした局所的な断層構造の抽出は，能登半島の形成や地震テクトニクスの理解にも繋がる研究成果と言えます 詳細は以下の論文をご確認ください Sawaki, Y., T. Shiina, K. Sagae, Y. Sato, H. Horikawa, A. Miyakawa, K. Imanishi, and T.</description>
     </item>
     <item>
       <title>筆頭論文がEPS誌で公開されました</title>

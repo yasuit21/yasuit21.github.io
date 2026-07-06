@@ -6,8 +6,15 @@
     <description>Recent content in 地震 on Yasunori SAWAKI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 05 Jul 2026 23:26:15 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 12:38:46 +0900</lastBuildDate>
     <atom:link href="https://yasuit21.github.io/ja/categories/%E5%9C%B0%E9%9C%87/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>断層面形状の3D表示を公開</title>
+      <link>https://yasuit21.github.io/ja/post/2026/07/0009/</link>
+      <pubDate>Mon, 06 Jul 2026 11:53:30 +0900</pubDate>
+      <guid>https://yasuit21.github.io/ja/post/2026/07/0009/</guid>
+      <description>&lt;p&gt;&#xA;&#xA;&lt;a href=&#34;https://yasuit21.github.io/ja/hypo/&#34;&gt;震源分布と断層面形状を三次元でインタラクティブに確認できるページ&lt;/a&gt;&#xA;&#xA;を作成しました！現在のところ，これまで出版してきた2編の論文（&#xA;&#xA;&lt;a href=&#34;https://doi.org/10.1029/2024JB030233&#34; title=&#34;Sawaki et al. (2025, JGR)&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;2024年能登半島地震&lt;/a&gt;&#xA;&#xA;・&#xA;&#xA;&lt;a href=&#34;https://doi.org/10.1186/s40623-025-02311-9&#34; title=&#34;Sawaki et al. (2025, EPS)&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;2024年8月神奈川県西部の地震&lt;/a&gt;&#xA;&#xA;）が対象です&lt;/p&gt;</description>
+    </item>
     <item>
       <title>筆頭論文がEPS誌で公開されました</title>
       <link>https://yasuit21.github.io/ja/news/2025/11/0036/</link>
